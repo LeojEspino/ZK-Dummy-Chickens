@@ -464,6 +464,11 @@
 		"description" : "Swarmer",
 		"helptext" : "Where the Dummies came from are unknown, but they came to destroy everything. This Dummies are the first ones to appear, weak but appears in overwhelming numbers"
 	},
+	"chicken_warrior" : {
+		"name" : "Dummy Warrior",
+		"description" : "Basic Brawler",
+		"helptext" : "Basically an upgrade to the normal Dummies, still relatively weak, but their firepower has skyrocketed, getting into their melee range will shred you."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
