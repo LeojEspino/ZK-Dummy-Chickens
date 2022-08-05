@@ -469,6 +469,11 @@
 		"description" : "Basic Brawler",
 		"helptext" : "Basically an upgrade to the normal Dummies, still relatively weak, but their firepower has skyrocketed, getting into their melee range will shred you."
 	},
+    "chicken_gunner" : {
+		"name" : "Dummy Gunner",
+		"description" : "Basic Marksman",
+		"helptext" : "What should be the first ranged Dummy you see. Their high fire rate gives them high dps, however their range is somewhat shorter than the other Marksmans"
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
