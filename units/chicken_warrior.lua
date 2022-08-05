@@ -62,7 +62,7 @@ return { chicken_warrior = {
     {
       def                = [[WEAPON]],
       mainDir            = [[0 0 1]],
-      maxAngleDif        = 360,
+      maxAngleDif        = 120,
       onlyTargetCategory = [[SWIM LAND SUB SINK TURRET FLOAT SHIP HOVER FIXEDWING GUNSHIP]],
     },
 
