@@ -127,6 +127,8 @@ function script.AimWeapon(num, heading, pitch)
 	SetSignalMask(SIG_Aim)
 	aiming = true
 
+        Turn(larm, x_axis, math.rad(15), 12)
+	Turn(larm, y_axis, math.rad(75), 12)
 	if not swung then
 	    Turn(body, z_axis, math.rad(-75), 12)
 		Turn(head, z_axis, math.rad(75), 12)
