@@ -474,6 +474,11 @@
 		"description" : "Basic Marksman",
 		"helptext" : "What should be the first ranged Dummy you see. Their high fire rate gives them high dps, however their range is somewhat shorter than the other Marksmans"
 	},
+	"chicken_mage" : {
+		"name" : "Dummy Mage",
+		"description" : "Basic Burst",
+		"helptext" : "A Dummy that shoots orbs. Has rather low hp and slightly slow but has aoe, enough of them can turn low hp groups to nothing."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
