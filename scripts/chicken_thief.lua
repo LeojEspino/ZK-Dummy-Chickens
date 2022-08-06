@@ -97,6 +97,10 @@ function script.StopMoving()
 	StartThread(StopWalk)
 end
 
+function script.Create()
+	Spring.SetUnitCloak(unitID, 2)	--free cloak
+end
+
 local function RestoreAfterDelay()
 	Sleep(1000)
 	aiming = false
