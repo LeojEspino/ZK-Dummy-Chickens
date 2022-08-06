@@ -479,6 +479,11 @@
 		"description" : "Basic Burst",
 		"helptext" : "A Dummy that shoots orbs. Has rather low hp and slightly slow but has aoe, enough of them can turn low hp groups to nothing."
 	},
+	"chicken_defender" : {
+		"name" : "Dummy Defender",
+		"description" : "Basic Tank",
+		"helptext" : "A rather bulky Dummy, its slower than other Dummies but boasts more durability than the others."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
