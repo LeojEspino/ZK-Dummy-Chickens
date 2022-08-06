@@ -484,6 +484,11 @@
 		"description" : "Basic Tank",
 		"helptext" : "A rather bulky Dummy, its slower than other Dummies but boasts more durability than the others."
 	},
+	"chicken_thief" : {
+		"name" : "Dummy Thief",
+		"description" : "Basic Assassin",
+		"helptext" : "A fragile melee Dummy, it has the same dps as Warriors, however they move faster and have cloak to use as an advantage."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
