@@ -87,7 +87,6 @@ return { chicken_mage = {
 
       explosionGenerator      = [[custom:magic_wand]],
 	  model                   = [[magicwand.dae]],
-      interceptedByShieldType = 0,
       range                   = 350,
       reloadtime              = 0.5,
       soundStart              = [[dummy/magicshot]],

@@ -91,7 +91,6 @@ return { chicken_gunner = {
       impactOnly              = true,
       impulseBoost            = 0,
       impulseFactor           = 0.4,
-      interceptedByShieldType = 0,
       range                   = 450,
       reloadtime              = 0.4,
       size                    = 5,
