@@ -74,6 +74,12 @@ eggDefs.chicken_defender_egg = MergeTable(defaultEgg, {
   object      = [[stud2.dae]],
 })
 
+eggDefs.chicken_thief_egg = MergeTable(defaultEgg, {
+  metal       = 40,
+  reclaimTime = 40,
+  object      = [[stud2.dae]],
+})
+
 -- specify origin unit (for tooltip/contextmenu)
 for name,data in pairs(eggDefs) do
 	local unitname = name
