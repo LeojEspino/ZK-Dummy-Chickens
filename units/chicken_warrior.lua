@@ -54,7 +54,7 @@ return { chicken_warrior = {
   sightDistance       = 512,
   sonarDistance       = 512,
   turnRate            = 967,
-  upright             = false,
+  upright             = true,
   workerTime          = 0,
 
   weapons             = {
