@@ -9,6 +9,7 @@ local lleg = piece 'lleg'
 local rleg = piece 'rleg'
 local wand = piece 'wand'
 local book = piece 'book'
+local emitter = piece 'emitter'
 
 local step = true
 local aiming = false
