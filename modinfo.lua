@@ -2,7 +2,7 @@ return {
 	name = 'Dummy Invaders',
 	description = 'Replaces Chickens with Dummies',
 	shortname = 'ZKDI',
-	version = 'v0.5.0',
+	version = 'v0.5.1',
 	mutator = '1',
 	game = 'Zero-K',
 	shortGame = 'ZK',
