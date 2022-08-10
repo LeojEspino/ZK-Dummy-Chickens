@@ -8,7 +8,7 @@ return { chicken_mercenary = {
   buildCostEnergy     = 0,
   buildCostMetal      = 200,
   builder             = false,
-  buildPic            = [[gunner.png]],
+  buildPic            = [[mercenary.png]],
   buildTime           = 200,
   canGuard            = true,
   canMove             = true,
@@ -137,7 +137,7 @@ return { chicken_mercenary = {
       turret                  = true,
       waterWeapon             = true,
       weaponType              = [[Cannon]],
-      weaponVelocity          = 750,
+      weaponVelocity          = 1000,
     },
 
   },
