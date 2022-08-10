@@ -56,6 +56,7 @@ eggDefs.chicken_egg = MergeTable(defaultEgg, {
   object      = [[stud1.dae]],
 })
 
+--Basic Tier
 eggDefs.chicken_warrior_egg = MergeTable(defaultEgg, {
   metal       = 40,
   reclaimTime = 40,
@@ -84,6 +85,13 @@ eggDefs.chicken_thief_egg = MergeTable(defaultEgg, {
   metal       = 40,
   reclaimTime = 40,
   object      = [[stud2.dae]],
+})
+
+--Advanced Tier
+eggDefs.chicken_mercenary_egg = MergeTable(defaultEgg, {
+  metal       = 80,
+  reclaimTime = 80,
+  object      = [[stud3.dae]],
 })
 
 eggDefs.chicken_pigeon_egg = MergeTable(defaultEgg, {
