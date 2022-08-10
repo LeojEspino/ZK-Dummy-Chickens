@@ -489,6 +489,11 @@
 		"description" : "Basic Assassin",
 		"helptext" : "A fragile melee Dummy, it has the same dps as Warriors, however they move faster and have cloak to use as an advantage."
 	},
+	"chicken_mercenary" : {
+		"name" : "Dummy Mercenary",
+		"description" : "Advanced Marksman",
+		"helptext" : "An advanced highly damaging Marksman, they buff their damage for a short period of time and gain heal from it too, however they stay still when buffing."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
