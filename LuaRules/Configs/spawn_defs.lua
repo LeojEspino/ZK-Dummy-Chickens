@@ -140,16 +140,16 @@ end
 local chickenTypes = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_offense) or {
 	chicken				=  {time = -60,  squadSize = 3.2, obsolete = 6},
 -- Brawler
-	chicken_warrior     =  {time = 6,  squadSize = 1.6},
+	chicken_warrior     =  {time = 6,  squadSize = 1.6, obsolete = 24},
 -- Marksman
-	chicken_gunner      =  {time = 6,  squadSize = 1.6},
+	chicken_gunner      =  {time = 6,  squadSize = 1.6, obsolete = 24},
 	chicken_mercenary   =  {time = 12, squadSize = 0.8},
 -- Burst
-	chicken_mage        =  {time = 6,  squadSize = 1.6},
+	chicken_mage        =  {time = 6,  squadSize = 1.6, obsolete = 24},
 -- Tank
-	chicken_defender    =  {time = 6,  squadSize = 1.6},
+	chicken_defender    =  {time = 6,  squadSize = 1.6, obsolete = 24},
 -- Thief
-	chicken_thief       =  {time = 6,  squadSize = 1.6},
+	chicken_thief       =  {time = 6,  squadSize = 1.6, obsolete = 24},
 	--chicken_pigeon		=  {time = 6,  squadSize = 1.4, obsolete = 35},
 	--chickens			=  {time = 12,  squadSize = 1, obsolete = 35},
 	--chickena			=  {time = 18,  squadSize = 0.5, obsolete = 40},
