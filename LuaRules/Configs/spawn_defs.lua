@@ -141,6 +141,7 @@ local chickenTypes = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOption
 	chicken				=  {time = -60,  squadSize = 3.2, obsolete = 6},
 -- Brawler
 	chicken_warrior     =  {time = 6,  squadSize = 1.6, obsolete = 24},
+	chicken_destroyer   =  {time = 12, squadSize = 0.8},
 -- Marksman
 	chicken_gunner      =  {time = 6,  squadSize = 1.6, obsolete = 24},
 	chicken_mercenary   =  {time = 12, squadSize = 0.8},
