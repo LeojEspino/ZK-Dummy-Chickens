@@ -494,6 +494,11 @@
 		"description" : "Advanced Marksman",
 		"helptext" : "An advanced highly damaging Marksman, they buff their damage for a short period of time and gain heal from it too, however they stay still when buffing."
 	},
+	"chicken_destroyer" : {
+		"name" : "Dummy Destroyer",
+		"description" : "Advanced Brawler",
+		"helptext" : "A Dummy Warrior with a bigger sword, they hit harder and can take more hits. They can do an aoe attack that flings small units away."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
