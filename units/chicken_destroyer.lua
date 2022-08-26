@@ -14,7 +14,7 @@ return { chicken_destroyer = {
   canMove             = true,
   canPatrol           = true,
   category            = [[LAND SINK SMALL]],
-  collisionVolumeScales  = [[27 42 27]],
+  collisionVolumeScales  = [[36 56 36]],
   collisionVolumeType    = [[cylY]],
   usePieceSelectionVolumes = true,
 
@@ -116,7 +116,7 @@ return { chicken_destroyer = {
       collideFeature          = false,
       collideFriendly         = false,
 	  range                   = 0,
-	  size                    = 1,
+	  size                    = 0,
 	  reloadtime              = 7,
       areaOfEffect            = 300,
       craterBoost             = 0,
