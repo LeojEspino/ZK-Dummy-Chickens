@@ -499,6 +499,11 @@
 		"description" : "Advanced Brawler",
 		"helptext" : "A Dummy Warrior with a bigger sword, they hit harder and can take more hits. They can do an aoe attack that flings small units away."
 	},
+	"chicken_juggernaut" : {
+		"name" : "Dummy Juggernaut",
+		"description" : "Advanced Tank",
+		"helptext" : "A strong and bulky Dummy wielding a large Morning star, they can take much more hits and hit much harder than the other dummies in their tier, however they are much slower. They have an ability to do a shocking aoe slam."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
