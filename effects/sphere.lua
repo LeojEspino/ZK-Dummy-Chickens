@@ -54,4 +54,30 @@ return {
             color              = [[1.0, 1.0, 1.0]],
         },
     },
+	["wrecking_ball"] = {
+        usedefaultexplosions = false,
+		groundflash = {
+            alwaysvisible      = true,
+            circlealpha        = 1,
+            circlegrowth       = 10,
+            flashalpha         = 1,
+            flashsize          = 5,
+            ttl                = 20,
+            color              = [[0.0, 1.0, 0.0]],
+        },
+        sphere = {
+            air                = true,
+            class              = [[CSpherePartSpawner]],
+            count              = 1,
+            ground             = true,
+            water              = true,
+            underwater         = true,
+            properties = {
+                alpha              = 1, -- how transparent it is (1 is not, 0 is transparent)
+                color              = [[0.0, 1.0, 0.0]], -- change color here. RGBA
+                expansionspeed     = 5, -- how fast it expands
+                ttl                = 20, -- how long it lives
+            },
+        },
+    },
 }
