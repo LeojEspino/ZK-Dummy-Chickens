@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 3.2.2 commit date:2022-08-02, commit time:18:15, hash:bcfdb14560e7</authoring_tool>
     </contributor>
-    <created>2022-08-05T20:43:15</created>
-    <modified>2022-08-05T20:43:15</modified>
+    <created>2022-08-30T20:07:26</created>
+    <modified>2022-08-30T20:07:26</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -39,7 +39,7 @@
     <geometry id="Cube_008-mesh" name="Cube.008">
       <mesh>
         <source id="Cube_008-mesh-positions">
-          <float_array id="Cube_008-mesh-positions-array" count="192">0 0 8 0 0 16 0 8 8 0 8 16 8 0 8 8 0 16 8 8 8 8 8 16 0 0 0 0 0 8 0 8 0 0 8 8 8 0 0 8 0 8 8 8 0 8 8 8 -8 0 0 -8 0 8 -8 8 0 -8 8 8 0 0 0 0 0 8 0 8 0 0 8 8 -8 -8 0 -8 -8 8 -8 0 0 -8 0 8 0 -8 0 0 -8 8 0 0 0 0 0 8 0 -8 0 0 -8 8 0 0 0 0 0 8 8 -8 0 8 -8 8 8 0 0 8 0 8 0 -8 8 0 -8 16 0 0 8 0 0 16 8 -8 8 8 -8 16 8 0 8 8 0 16 -8 -8 8 -8 -8 16 -8 0 8 -8 0 16 0 -8 8 0 -8 16 0 0 8 0 0 16 -8 0 8 -8 0 16 -8 8 8 -8 8 16 0 0 8 0 0 16 0 8 8 0 8 16</float_array>
+          <float_array id="Cube_008-mesh-positions-array" count="192">0 0 6 0 0 12 0 6 6 0 6 12 6 0 6 6 0 12 6 6 6 6 6 12 0 0 0 0 0 6 0 6 0 0 6 6 6 0 0 6 0 6 6 6 0 6 6 6 -6 0 0 -6 0 6 -6 6 0 -6 6 6 0 0 0 0 0 6 0 6 0 0 6 6 -6 -6 0 -6 -6 6 -6 0 0 -6 0 6 0 -6 0 0 -6 6 0 0 0 0 0 6 0 -6 0 0 -6 6 0 0 0 0 0 6 6 -6 0 6 -6 6 6 0 0 6 0 6 0 -6 6 0 -6 12 0 0 6 0 0 12 6 -6 6 6 -6 12 6 0 6 6 0 12 -6 -6 6 -6 -6 12 -6 0 6 -6 0 12 0 -6 6 0 -6 12 0 0 6 0 0 12 -6 0 6 -6 0 12 -6 6 6 -6 6 12 0 0 6 0 0 12 0 6 6 0 6 12</float_array>
           <technique_common>
             <accessor source="#Cube_008-mesh-positions-array" count="64" stride="3">
               <param name="X" type="float"/>
