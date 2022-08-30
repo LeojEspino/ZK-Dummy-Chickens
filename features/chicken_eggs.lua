@@ -106,6 +106,12 @@ eggDefs.chicken_juggernaut_egg = MergeTable(defaultEgg, {
   object      = [[stud3.dae]],
 })
 
+eggDefs.chicken_grenadier_egg = MergeTable(defaultEgg, {
+  metal       = 80,
+  reclaimTime = 80,
+  object      = [[stud3.dae]],
+})
+
 eggDefs.chicken_pigeon_egg = MergeTable(defaultEgg, {
   metal       = 15,
   reclaimTime = 15,
