@@ -504,6 +504,11 @@
 		"description" : "Advanced Tank",
 		"helptext" : "A strong and bulky Dummy wielding a large Morning star, they can take much more hits and hit much harder than the other dummies in their tier, however they are much slower. They have an ability to do a shocking aoe slam."
 	},
+	"chicken_grenadier" : {
+		"name" : "Dummy Grenadier",
+		"description" : "Advanced Burst",
+		"helptext" : "A Dummy holding a grenade launcher, it shoots explosive bouncing balls, and has an ability to shoot a spreadshot of mini balls, giving this dummy great crowd control. It is slightly slower than other Dummies but boast decent health."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
