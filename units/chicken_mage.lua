@@ -84,6 +84,9 @@ return { chicken_mage = {
         default = 100,
         planes  = 100,
       },
+      customparams = {
+	    nofriendlyfire = 1,
+      },
 
       explosionGenerator      = [[custom:magic_wand]],
 	  model                   = [[magicwand.dae]],
