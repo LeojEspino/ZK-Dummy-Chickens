@@ -34,6 +34,7 @@ return { chicken_thief = {
   maxDamage           = 400,
   maxSlope            = 36,
   maxVelocity         = 3.3,
+  initCloaked         = true,
   minCloakDistance    = 100,
   movementClass       = [[AKBOT2]],
   noAutoFire          = false,
