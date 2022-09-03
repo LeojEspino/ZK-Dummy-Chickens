@@ -29,9 +29,9 @@ local function Walk()
 
 	while true do
 	    if not aiming then
-	    Turn(body, x_axis, math.rad(-15), 6)
-		Turn(head, x_axis, math.rad(15), 6)
-		Turn(rarm, z_axis, math.rad(60), 6)
+	        Turn(body, x_axis, math.rad(-15), 6)
+		    Turn(head, x_axis, math.rad(15), 6)
+		    Turn(rarm, z_axis, math.rad(60), 6)
 		end
 		Turn(lleg, y_axis, math.rad(-15), 12)
 		Turn(rleg, y_axis, math.rad(15), 12)
@@ -72,13 +72,16 @@ end
 local function StopWalk()
     Signal(SIG_Walk)
 	
-	Move(body, z_axis, 0, 60)
-	Turn(body, x_axis, math.rad(0), 6)
-	Turn(body, z_axis, math.rad(-75), 6)
-	Turn(head, x_axis, math.rad(0), 6)
-	Turn(head, y_axis, math.rad(0), 6)
-	Turn(head, z_axis, math.rad(75), 6)
-    Turn(lleg, x_axis, math.rad(-15), 12)
+	if not aiming then
+	    Move(body, z_axis, 0, 60)
+	    Turn(body, x_axis, math.rad(0), 6)
+	    Turn(body, z_axis, math.rad(-75), 6)
+	    Turn(head, x_axis, math.rad(0), 6)
+	    Turn(head, y_axis, math.rad(0), 6)
+	    Turn(head, z_axis, math.rad(75), 6)
+	    Turn(rarm, z_axis, math.rad(75), 6)
+	end
+	Turn(lleg, x_axis, math.rad(-15), 12)
 	Turn(lleg, y_axis, math.rad(0), 12)
 	Turn(lleg, z_axis, math.rad(0), 12)
 	Move(lleg, y_axis, 0, 60)
@@ -86,7 +89,6 @@ local function StopWalk()
     Turn(rleg, x_axis, math.rad(15), 12)
 	Turn(rleg, y_axis, math.rad(0), 12)
 	Move(rleg, y_axis, 0, 60)
-	Turn(rarm, z_axis, math.rad(75), 6)
 end
 
 function script.StartMoving()

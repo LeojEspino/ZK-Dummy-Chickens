@@ -22,12 +22,12 @@ local function Walk()
 
 	while true do
 	    if not aiming then
-	    Turn(body, x_axis, math.rad(-15), 6)
-		Turn(head, x_axis, math.rad(15), 6)
-		Turn(larm, x_axis, math.rad(45), 12)
-		Turn(larm, y_axis, math.rad(45), 12)
-		Turn(rarm, x_axis, math.rad(-45), 12)
-		Turn(rarm, y_axis, math.rad(-45), 12)
+	        Turn(body, x_axis, math.rad(-15), 6)
+		    Turn(head, x_axis, math.rad(15), 6)
+		    Turn(larm, x_axis, math.rad(45), 12)
+		    Turn(larm, y_axis, math.rad(45), 12)
+		    Turn(rarm, x_axis, math.rad(-45), 12)
+		    Turn(rarm, y_axis, math.rad(-45), 12)
 		end
 		Turn(lleg, y_axis, math.rad(-15), 12)
 		Turn(rleg, y_axis, math.rad(15), 12)
@@ -68,21 +68,23 @@ end
 local function StopWalk()
     Signal(SIG_Walk)
 	
-	Move(body, z_axis, 0, 60)
-	Turn(body, x_axis, math.rad(0), 6)
-	Turn(body, z_axis, math.rad(-45), 6)
-	Turn(head, x_axis, math.rad(0), 6)
-	Turn(head, y_axis, math.rad(0), 6)
-	Turn(head, z_axis, math.rad(45), 6)
-    Turn(lleg, x_axis, math.rad(-15), 12)
+	if not aiming then
+	    Move(body, z_axis, 0, 60)
+	    Turn(body, x_axis, math.rad(0), 6)
+	    Turn(body, z_axis, math.rad(-45), 6)
+	    Turn(head, x_axis, math.rad(0), 6)
+	    Turn(head, y_axis, math.rad(0), 6)
+	    Turn(head, z_axis, math.rad(45), 6)
+        Turn(larm, x_axis, math.rad(0), 12)
+	    Turn(larm, y_axis, math.rad(15), 12)
+        Turn(rarm, x_axis, math.rad(0), 12)
+	    Turn(rarm, y_axis, math.rad(-15), 12)
+	    Turn(rarm, z_axis, math.rad(0), 24)
+	end
+	Turn(lleg, x_axis, math.rad(-15), 12)
 	Turn(lleg, y_axis, math.rad(0), 12)
     Turn(rleg, x_axis, math.rad(15), 12)
 	Turn(rleg, y_axis, math.rad(0), 12)
-    Turn(larm, x_axis, math.rad(0), 12)
-	Turn(larm, y_axis, math.rad(15), 12)
-    Turn(rarm, x_axis, math.rad(0), 12)
-	Turn(rarm, y_axis, math.rad(-15), 12)
-	Turn(rarm, z_axis, math.rad(0), 24)
 end
 
 function script.StartMoving()
@@ -127,7 +129,7 @@ function script.AimWeapon(num, heading, pitch)
 	SetSignalMask(SIG_Aim)
 	aiming = true
 
-        Turn(larm, x_axis, math.rad(15), 12)
+    Turn(larm, x_axis, math.rad(15), 12)
 	Turn(larm, y_axis, math.rad(75), 12)
 	if not swung then
 	    Turn(body, z_axis, math.rad(-75), 12)
