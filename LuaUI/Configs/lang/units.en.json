@@ -487,7 +487,7 @@
 	"chicken_thief" : {
 		"name" : "Dummy Thief",
 		"description" : "Basic Assassin",
-		"helptext" : "A fragile melee Dummy, it has the same dps as Warriors, however they move faster and have cloak to use as an advantage."
+		"helptext" : "A fragile melee Dummy, it has the same dps as Warriors, however they move faster and have cloak to use as an advantage, however has low hp."
 	},
 	"chicken_mercenary" : {
 		"name" : "Dummy Mercenary",
@@ -508,6 +508,11 @@
 		"name" : "Dummy Grenadier",
 		"description" : "Advanced Burst",
 		"helptext" : "A Dummy holding a grenade launcher, it shoots explosive bouncing balls, and has an ability to shoot a spreadshot of mini balls, giving this dummy great crowd control. It is slightly slower than other Dummies but boast decent health."
+	},
+	"chicken_stalker" : {
+		"name" : "Dummy Stalker",
+		"description" : "Advanced Assassin",
+		"helptext" : "A deadly cloaked Dummy, it wields two scimitars to attack and has a devastating but small spin attack that deals high damage on the second spin, however just like other Assassins it has relatively low hp."
 	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
