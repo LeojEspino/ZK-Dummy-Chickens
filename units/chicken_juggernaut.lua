@@ -128,7 +128,7 @@ return { chicken_juggernaut = {
       },
 	  customparams = {
 	    nofriendlyfire = 1,
-		extra_damage = 450,
+		extra_damage = 900,
 	  },
 	  turret                  = true,
 	  waterWeapon             = true,
