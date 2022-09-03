@@ -227,6 +227,8 @@ function script.AimWeapon(num, heading, pitch)
 		return false
     elseif num == 1 and not buff and not ability1 then
 	    SetSignalMask(SIG_Aim)
+		Turn(body, x_axis, math.rad(0), 6)
+	    Turn(head, x_axis, math.rad(0), 6)
 	    Turn(body, z_axis, math.rad(90), 24)
 		Move(body, z_axis, 0, 60)
 	    Turn(head, z_axis, math.rad(-90), 24)
@@ -244,6 +246,8 @@ function script.AimWeapon(num, heading, pitch)
 	    return true
 	elseif num == 2 and buff and not ability1 then
 	    SetSignalMask(SIG_Aim)
+		Turn(body, x_axis, math.rad(0), 6)
+	    Turn(head, x_axis, math.rad(0), 6)
 	    Turn(body, z_axis, math.rad(90), 24)
 		Move(body, z_axis, 0, 60)
 	    Turn(head, z_axis, math.rad(-90), 24)

@@ -132,6 +132,8 @@ function script.AimWeapon(num, heading, pitch)
 	Signal(SIG_Aim)
 	aiming = true
 	
+	Turn(body, x_axis, math.rad(0), 6)
+	Turn(head, x_axis, math.rad(0), 6)
     if num == 2 then
 	    SetSignalMask(SIG_Aim)
 	    Turn(body, z_axis, math.rad(-75), 12)
