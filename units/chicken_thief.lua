@@ -34,6 +34,7 @@ return { chicken_thief = {
   maxDamage           = 400,
   maxSlope            = 36,
   maxVelocity         = 3.3,
+  minCloakDistance    = 100,
   movementClass       = [[AKBOT2]],
   noAutoFire          = false,
   noChaseCategory     = [[SHIP FLOAT SWIM TERRAFORM FIXEDWING SATELLITE GUNSHIP]],
