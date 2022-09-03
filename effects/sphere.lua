@@ -114,4 +114,16 @@ return {
             },
         },
     },
+	["lethality_edge"] = {
+        usedefaultexplosions = false,
+		groundflash = {
+            alwaysvisible      = true,
+            circlealpha        = 0.5,
+            circlegrowth       = 20,
+            flashalpha         = 0.5,
+            flashsize          = 5,
+            ttl                = 5,
+            color              = [[1.0, 1.0, 1.0]],
+        },
+    },
 }
