@@ -166,7 +166,7 @@ local chickenTypes = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOption
 	--chickenc			=  {time = 40,  squadSize = 0.5},
 	--chickenblobber		=  {time = 40,  squadSize = 0.3},
 	--chicken_blimpy		=  {time = 48,  squadSize = 0.2},
-	chicken_tiamat		=  {time = 55,  squadSize = 0.2},
+	--chicken_tiamat		=  {time = 55,  squadSize = 0.2},
 }
 
 local defenders = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_defense) or {
@@ -185,10 +185,10 @@ local supporters = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions(
 -- TODO
 -- cooldown is in waves
 local specialPowers = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_special) or {
-	{name = "Digger Ambush", maxAggro = -2, time = 15, obsolete = 40, unit = "chicken_digger", burrowRatio = 1.25, minDist = 100, maxDist = 450, cooldown = 3, targetHuman = true},
+	--{name = "Digger Ambush", maxAggro = -2, time = 15, obsolete = 40, unit = "chicken_digger", burrowRatio = 1.25, minDist = 100, maxDist = 450, cooldown = 3, targetHuman = true},
 	--{name = "Wurmsign", maxAggro = -3, time = 40, unit = "chickenwurm", burrowRatio = 0.2, cooldown = 4},
 	{name = "Spire Sprout", maxAggro = -4.5, time = 20, unit = "chickenspire", burrowRatio = 0.15, tieToBurrow = true, cooldown = 3},
-	{name = "Rising Dragon", maxAggro = -8, time = 30, unit = "chicken_dragon", burrowRatio = 1/12, minDist = 250, maxDist = 1200, cooldown = 5, targetHuman = true},
+	--{name = "Rising Dragon", maxAggro = -8, time = 30, unit = "chicken_dragon", burrowRatio = 1/12, minDist = 250, maxDist = 1200, cooldown = 5, targetHuman = true},
 	--{name = "Dino Killer", maxAggro = -12, time = 40, unit = "chicken_silo", minDist = 1500},
 }
 
@@ -210,9 +210,7 @@ difficulties = {
 		waveSizeMult     = 0.5,
 		timeSpawnBonus   = 0.010, -- how much each time level increases spawn size
 		queenTime        = 60*60,
-		queenName        = "chicken_dragon",
-		queenMorphName   = '',
-		miniQueenName    = "chicken_tiamat",
+		queenHealthMod	 = 0.25,
 		maxBurrows       = 4,
 		specialPowers    = {},
 		techAccelPerPlayer = 1.3,
@@ -228,9 +226,7 @@ difficulties = {
 		waveSizeMult	 = 0.6,
 		timeSpawnBonus   = .025,	 -- how much each time level increases spawn size
 		queenTime		 = 40*60,
-		queenName		= "chicken_dragon",
-		queenMorphName	 = '',
-		miniQueenName	 = "chicken_tiamat",
+		queenHealthMod	 = 0.33,
 		maxBurrows	   = 10,
 		specialPowers	 = {},
 		techAccelPerPlayer = 2,
@@ -358,9 +354,9 @@ for _, d in pairs(difficulties) do
 	TimeModifier(d.supporters, d.timeModifier or 1)
 end
 
-difficulties['Chicken: Very Easy'].chickenTypes.chicken_tiamat.time = 999999
+--difficulties['Chicken: Very Easy'].chickenTypes.chicken_tiamat.time = 999999
 
-difficulties['Chicken: Beginner'].chickenTypes.chicken_tiamat.time = 999999
+--difficulties['Chicken: Beginner'].chickenTypes.chicken_tiamat.time = 999999
 
 defaultDifficulty = 'Chicken: Normal'
 
