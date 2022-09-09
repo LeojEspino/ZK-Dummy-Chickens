@@ -675,9 +675,9 @@
 		"helptext" : "The Racketeer launches long range missiles that can disarm key enemy defences or units before assaulting them. Only one Racketeer is needed to keep a target disarmed, so pick a different target for each Racketeer. It is excellent at depleting the energy of enemy shields and rendering large units harmless."
 	},
 	"roost" : {
-		"name" : "Roost",
-		"description" : "Spawns Chicken",
-		"helptext" : "Roosts such as this one are the hatching grounds of the Thunderbirds."
+		"name" : "Spawner",
+		"description" : "Spawns Dummies",
+		"helptext" : "The Spawner of the Dummy Invaders, they appear around the area, spawning progressively stronger Dummies until the end. It has no defenses, relying on turrets to keep it from being destroyed."
 	},
 	"dynsupport1" : {
 		"name" : "Engineer Commander",
