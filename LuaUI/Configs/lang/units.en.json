@@ -514,6 +514,11 @@
 		"description" : "Advanced Assassin",
 		"helptext" : "A deadly cloaked Dummy, it wields two scimitars to attack and has a devastating but small spin attack that deals high damage on the second spin, however just like other Assassins it has relatively low hp."
 	},
+	"chicken_lotus" : {
+		"name" : "Dummy Lotus",
+		"description" : "Burst Laser Tower",
+		"helptext" : "The Dummies are now copying some of our defenses. Dummy Lotuses shoots a high power laser instead of a continous laser."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
