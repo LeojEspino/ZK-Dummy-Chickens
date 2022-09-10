@@ -170,9 +170,7 @@ local chickenTypes = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOption
 }
 
 local defenders = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_defense) or {
-  chickend = {time = 10, squadSize = 0.6, cost = 1 },
-  chicken_dodo = {time = 24,  squadSize = 1, cost = 1},
-  chicken_rafflesia =  {time = 25, squadSize = 0.4, cost = 2 },
+  chicken_lotus = {time = 6, squadSize = 1, cost = 1 },
 }
 
 local supporters = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_support) or {
