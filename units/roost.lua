@@ -14,7 +14,7 @@ return { roost = {
   },
   
   energyMake        = 5,
-  explodeAs         = [[NOWEAPON]],
+  explodeAs         = [[MEDIUM_BUILDINGEX]],
   footprintX        = 4,
   footprintZ        = 4,
   iconType          = [[special]],
@@ -28,7 +28,7 @@ return { roost = {
   noAutoFire        = false,
   objectName        = [[spawner.dae]],
   script            = [[roost.lua]],
-  selfDestructAs    = [[NOWEAPON]],
+  selfDestructAs    = [[MEDIUM_BUILDINGEX]],
   sightDistance     = 512,
   upright           = false,
   waterline         = 0,
