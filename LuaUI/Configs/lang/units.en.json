@@ -519,6 +519,11 @@
 		"description" : "Burst Laser Tower",
 		"helptext" : "The Dummies are now copying some of our defenses. Dummy Lotuses shoots a high power laser instead of a continous laser."
 	},
+	"chicken_picket" : {
+		"name" : "Dummy Picket",
+		"description" : "Light Flamethrower Tower",
+		"helptext" : "The Dummy Picket is a light tower, shooting piercing fireballs at enemies. The Dummies may have done something wrong to turn a missile tower into a flamethrower."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
