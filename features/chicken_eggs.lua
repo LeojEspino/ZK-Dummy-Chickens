@@ -50,6 +50,16 @@ eggDefs.chicken_dodo_egg = MergeTable(defaultEgg, {
   object      = [[chickeneggcrimson.s3o]],
 })
 
+--Turrets
+
+eggDefs.chicken_egg = MergeTable(defaultEgg, {
+  metal       = 40,
+  reclaimTime = 40,
+  object      = [[stud2.dae]],
+})
+
+--The Dummy
+
 eggDefs.chicken_egg = MergeTable(defaultEgg, {
   metal       = 20,
   reclaimTime = 20,
