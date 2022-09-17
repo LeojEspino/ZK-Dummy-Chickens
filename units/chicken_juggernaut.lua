@@ -88,8 +88,8 @@ return { chicken_juggernaut = {
 	  turret                  = true,
 
       damage                  = {
-        default = 225,
-        planes  = 225,
+        default = 187.5,
+        planes  = 187.5,
       },
 
       explosionGenerator      = [[custom:NONE]],
@@ -124,11 +124,11 @@ return { chicken_juggernaut = {
       explosionSpeed          = 10,
       soundHit                = [[dummy/macethunk]],
       damage = {
-        default               = 450,
+        default               = 375,
       },
 	  customparams = {
 	    nofriendlyfire = 1,
-		extra_damage = 900,
+		extra_damage = 750,
 	  },
 	  turret                  = true,
 	  waterWeapon             = true,
