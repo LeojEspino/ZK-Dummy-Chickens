@@ -30,7 +30,7 @@ return { chicken_destroyer = {
   iconType            = [[chicken]],
   idleAutoHeal        = 20,
   idleTime            = 300,
-  maxDamage           = 1300,
+  maxDamage           = 1450,
   maxSlope            = 36,
   maxVelocity         = 2.5,
   movementClass       = [[AKBOT2]],
@@ -88,8 +88,8 @@ return { chicken_destroyer = {
 	  turret                  = true,
 
       damage                  = {
-        default = 180,
-        planes  = 180,
+        default = 120,
+        planes  = 120,
       },
 
       explosionGenerator      = [[custom:NONE]],
@@ -127,7 +127,7 @@ return { chicken_destroyer = {
       impulseFactor           = 10,
       soundHit                = [[dummy/swordlunge]],
       damage = {
-        default               = 150,
+        default               = 100,
       },
 	  customparams = {
 	    nofriendlyfire = 1,
