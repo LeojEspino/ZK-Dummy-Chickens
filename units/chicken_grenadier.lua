@@ -89,8 +89,8 @@ return { chicken_grenadier = {
 	  numBounce               = 3,
 
       damage                  = {
-        default = 150,
-        planes  = 150,
+        default = 125,
+        planes  = 125,
       },
 	  customparams = {
 	    nofriendlyfire = 1,
@@ -122,8 +122,8 @@ return { chicken_grenadier = {
 	  numBounce               = 3,
 
       damage                  = {
-        default = 75,
-        planes  = 75,
+        default = 62.5,
+        planes  = 62.5,
       },
 	  customparams = {
 	    nofriendlyfire = 1,
