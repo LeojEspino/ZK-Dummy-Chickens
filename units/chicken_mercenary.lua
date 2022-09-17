@@ -88,8 +88,8 @@ return { chicken_mercenary = {
 	  turret                  = true,
 
       damage                  = {
-        default = 180,
-        planes  = 180,
+        default = 150,
+        planes  = 150,
       },
 
       explosionGenerator      = [[custom:NONE]],
@@ -119,8 +119,8 @@ return { chicken_mercenary = {
 	  turret                  = true,
 
       damage                  = {
-        default = 255,
-        planes  = 255,
+        default = 212.5,
+        planes  = 212.5,
       },
 
       explosionGenerator      = [[custom:NONE]],
@@ -137,7 +137,7 @@ return { chicken_mercenary = {
       turret                  = true,
       waterWeapon             = true,
       weaponType              = [[Cannon]],
-      weaponVelocity          = 1000,
+      weaponVelocity          = 750,
     },
 
   },
