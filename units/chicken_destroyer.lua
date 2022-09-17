@@ -88,8 +88,8 @@ return { chicken_destroyer = {
 	  turret                  = true,
 
       damage                  = {
-        default = 120,
-        planes  = 120,
+        default = 150,
+        planes  = 150,
       },
 
       explosionGenerator      = [[custom:NONE]],
@@ -127,7 +127,7 @@ return { chicken_destroyer = {
       impulseFactor           = 10,
       soundHit                = [[dummy/swordlunge]],
       damage = {
-        default               = 100,
+        default               = 125,
       },
 	  customparams = {
 	    nofriendlyfire = 1,
