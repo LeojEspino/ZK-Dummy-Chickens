@@ -30,7 +30,7 @@ return { chicken_grenadier = {
   iconType            = [[chicken]],
   idleAutoHeal        = 20,
   idleTime            = 300,
-  maxDamage           = 1100,
+  maxDamage           = 1250,
   maxSlope            = 36,
   maxVelocity         = 2.5,
   movementClass       = [[AKBOT2]],
@@ -89,8 +89,8 @@ return { chicken_grenadier = {
 	  numBounce               = 3,
 
       damage                  = {
-        default = 125,
-        planes  = 125,
+        default = 100,
+        planes  = 100,
       },
 	  customparams = {
 	    nofriendlyfire = 1,
@@ -122,8 +122,8 @@ return { chicken_grenadier = {
 	  numBounce               = 3,
 
       damage                  = {
-        default = 62.5,
-        planes  = 62.5,
+        default = 50,
+        planes  = 50,
       },
 	  customparams = {
 	    nofriendlyfire = 1,

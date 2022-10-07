@@ -30,7 +30,7 @@ return { chicken_juggernaut = {
   iconType            = [[chicken]],
   idleAutoHeal        = 20,
   idleTime            = 300,
-  maxDamage           = 2500,
+  maxDamage           = 2650,
   maxSlope            = 36,
   maxVelocity         = 2,
   movementClass       = [[AKBOT2]],
@@ -88,8 +88,8 @@ return { chicken_juggernaut = {
 	  turret                  = true,
 
       damage                  = {
-        default = 187.5,
-        planes  = 187.5,
+        default = 150,
+        planes  = 150,
       },
 
       explosionGenerator      = [[custom:NONE]],
@@ -124,11 +124,11 @@ return { chicken_juggernaut = {
       explosionSpeed          = 10,
       soundHit                = [[dummy/macethunk]],
       damage = {
-        default               = 375,
+        default               = 300,
       },
 	  customparams = {
 	    nofriendlyfire = 1,
-		extra_damage = 750,
+		extra_damage = 600,
 	  },
 	  turret                  = true,
 	  waterWeapon             = true,

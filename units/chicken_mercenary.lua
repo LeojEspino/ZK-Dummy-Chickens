@@ -30,7 +30,7 @@ return { chicken_mercenary = {
   iconType            = [[chicken]],
   idleAutoHeal        = 20,
   idleTime            = 300,
-  maxDamage           = 950,
+  maxDamage           = 1050,
   maxSlope            = 36,
   maxVelocity         = 2.5,
   movementClass       = [[AKBOT2]],
@@ -88,8 +88,8 @@ return { chicken_mercenary = {
 	  turret                  = true,
 
       damage                  = {
-        default = 150,
-        planes  = 150,
+        default = 120,
+        planes  = 120,
       },
 
       explosionGenerator      = [[custom:NONE]],
@@ -119,8 +119,8 @@ return { chicken_mercenary = {
 	  turret                  = true,
 
       damage                  = {
-        default = 212.5,
-        planes  = 212.5,
+        default = 170,
+        planes  = 170,
       },
 
       explosionGenerator      = [[custom:NONE]],
