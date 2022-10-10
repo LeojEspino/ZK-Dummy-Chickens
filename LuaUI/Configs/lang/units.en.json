@@ -524,6 +524,11 @@
 		"description" : "Light Flamethrower Tower",
 		"helptext" : "The Dummy Picket is a light tower, shooting piercing fireballs at enemies. The Dummies may have done something wrong to turn a missile tower into a flamethrower."
 	},
+	"chicken_stardust" : {
+		"name" : "Dummy Stardust",
+		"description" : "Cannon Tower",
+		"helptext" : "The Dummy Stardust is a riot tower, shooting a damaging riot cannon."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
