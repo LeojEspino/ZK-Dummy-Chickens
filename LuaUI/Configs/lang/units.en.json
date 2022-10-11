@@ -522,12 +522,17 @@
 	"chicken_picket" : {
 		"name" : "Dummy Picket",
 		"description" : "Light Flamethrower Tower",
-		"helptext" : "The Dummy Picket is a light tower, shooting piercing fireballs at enemies. The Dummies may have done something wrong to turn a missile tower into a flamethrower."
+		"helptext" : "The Dummy Picket is a light tower, shooting piercing fireballs at enemies."
 	},
 	"chicken_stardust" : {
 		"name" : "Dummy Stardust",
 		"description" : "Cannon Tower",
 		"helptext" : "The Dummy Stardust is a riot tower, shooting a damaging riot cannon."
+	},
+	"chicken_faraday" : {
+		"name" : "Dummy Faraday",
+		"description" : "Disruption Tower",
+		"helptext" : "The Dummy Faraday is turned into a Disruptor, shooting a disruption bomb that slows everything it hits."
 	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
