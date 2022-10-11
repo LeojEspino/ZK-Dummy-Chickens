@@ -69,7 +69,7 @@ return { chicken_picket = {
 	  interceptedByShieldType = 1,
 
       damage                  = {
-        default = 33,
+        default = 50,
       },
 	  
 	  customParams            = {

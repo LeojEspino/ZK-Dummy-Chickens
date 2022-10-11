@@ -71,7 +71,7 @@ return { chicken_lotus = {
       craterMult              = 0,
 
       damage                  = {
-          default = 200,
+          default = 300,
       },
 
       explosionGenerator      = [[custom:NONE]],
