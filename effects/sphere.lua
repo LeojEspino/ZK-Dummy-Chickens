@@ -126,4 +126,34 @@ return {
             color              = [[1.0, 1.0, 1.0]],
         },
     },
+	["turret_disruption_bomb"] = {
+		usedefaultexplosions = false,
+		groundflash = {
+			alwaysvisible      = true,
+			circlealpha        = 0.4,
+			circlegrowth       = 4.5,
+			flashalpha         = 0.5,
+			flashsize          = 160,
+			ttl                = 64,
+			color = {
+				[1]  = 1,
+				[2]  = 0,
+				[3]  = 1,
+			},
+		},
+		sphere = {
+			air                = true,
+			class              = [[CSpherePartSpawner]],
+			count              = 1,
+			ground             = true,
+			water              = true,
+			underwater         = true,
+			properties = {
+				alpha              = 0.5,
+				color              = [[1,0,1]],
+				expansionspeed     = 3,
+				ttl                = 45,
+			},
+		},
+	},
 }
