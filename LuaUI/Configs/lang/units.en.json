@@ -534,6 +534,11 @@
 		"description" : "Disruption Tower",
 		"helptext" : "The Dummy Faraday is turned into a Disruptor, shooting a disruption bomb that slows everything it hits."
 	},
+	"chicken_razor" : {
+		"name" : "Dummy Razor",
+		"description" : "Hardened Anti-Air Cluster Missile",
+		"helptext" : "The Dummy Razor is an AA missile launcher, shooting multiple missiles at once to deal high alpha damage, and has rather high dps for it's cost, but it's missiles has a tendency to miss."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
