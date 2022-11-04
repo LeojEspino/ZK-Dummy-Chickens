@@ -82,8 +82,8 @@ return { chicken_defender = {
 	  turret                  = true,
 
       damage                  = {
-        default = 120,
-        planes  = 120,
+        default = 180,
+        planes  = 180,
       },
 
       explosionGenerator      = [[custom:NONE]],
