@@ -150,10 +150,10 @@ local chickenTypes = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOption
 	chicken_grenadier   =  {time = 12, squadSize = 0.9},
 -- Tank
 	chicken_defender    =  {time = 6,  squadSize = 1.8, obsolete = 24},
-	chicken_juggernaut   =  {time = 12, squadSize = 0.9},
+	chicken_juggernaut  =  {time = 12, squadSize = 0.9},
 -- Thief
 	chicken_thief       =  {time = 6,  squadSize = 1.8, obsolete = 24},
-	chicken_stalker   =  {time = 12, squadSize = 0.9},
+	chicken_stalker     =  {time = 12, squadSize = 0.9},
 	--chicken_pigeon		=  {time = 6,  squadSize = 1.4, obsolete = 35},
 	--chickens			=  {time = 12,  squadSize = 1, obsolete = 35},
 	--chickena			=  {time = 18,  squadSize = 0.5, obsolete = 40},
@@ -170,10 +170,11 @@ local chickenTypes = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOption
 }
 
 local defenders = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_defense) or {
-  chicken_lotus = {time = 6, squadSize = 1, cost = 1 },
-  chicken_picket = {time = 6, squadSize = 1, cost = 1 },
-  chicken_stardust = {time = 12, squadSize = 1, cost = 2 },
-  chicken_faraday = {time = 12, squadSize = 1, cost = 2 },
+  chicken_lotus         = {time = 6, squadSize = 1, cost = 1 },
+  chicken_picket        = {time = 6, squadSize = 1, cost = 1 },
+  chicken_stardust      = {time = 12, squadSize = 1, cost = 2 },
+  chicken_faraday       = {time = 12, squadSize = 1, cost = 2 },
+  chicken_razor         = {time = 12, squadSize = 1, cost = 2},
 }
 
 local supporters = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_support) or {
