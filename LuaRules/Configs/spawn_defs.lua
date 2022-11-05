@@ -68,8 +68,8 @@ waveSizeMult			= 1
 --forceBurrowRespawn	 = false	-- burrows always respawn even if the modoption is set otherwise
 queenSpawnMult			= 4		 -- how many times bigger is a queen hatch than a normal burrow hatch
 
-defensePerWave			= 0.5	-- number of turrets added to defense pool every wave, multiplied by playercount
-defensePerBurrowKill	= 0.5	-- number of turrets added to defense pool for each burrow killed
+defensePerWave			= 1	-- number of turrets added to defense pool every wave, multiplied by playercount
+defensePerBurrowKill	= 1	-- number of turrets added to defense pool for each burrow killed
 
 gracePeriod				= 180	   -- no chicken spawn in this period, seconds
 gracePenalty			= 15		-- reduced grace per player over one, seconds
