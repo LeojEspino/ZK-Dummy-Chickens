@@ -539,6 +539,11 @@
 		"description" : "Hardened Anti-Air Cluster Missile",
 		"helptext" : "The Dummy Razor is an AA missile launcher, shooting multiple missiles at once to deal high alpha damage, and has rather high dps for it's cost, but it's missiles has a tendency to miss."
 	},
+	"chicken_hacksaw" : {
+		"name" : "Dummy Hacksaw",
+		"description" : "Disrupting Anti-Air Turret",
+		"helptext" : "The Dummy Hacksaw uses a Disruption Beam to shoot at Aerial targets, slowing them down. The Beam also has some aoe in it."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
