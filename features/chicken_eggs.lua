@@ -88,9 +88,9 @@ eggDefs.chicken_hacksaw_egg = MergeTable(defaultEgg, {
   object      = [[stud3.dae]],
 })
 
-eggDefs.chicken_hacksaw_egg = MergeTable(defaultEgg, {
-  metal       = 160,
-  reclaimTime = 160,
+eggDefs.chicken_stinger_egg = MergeTable(defaultEgg, {
+  metal       = 240,
+  reclaimTime = 240,
   object      = [[stud4.dae]],
 })
 
