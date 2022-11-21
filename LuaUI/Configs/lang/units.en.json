@@ -544,6 +544,11 @@
 		"description" : "Disrupting Anti-Air Turret",
 		"helptext" : "The Dummy Hacksaw uses a Disruption Beam to shoot at Aerial targets, slowing them down. The Beam also has some aoe in it."
 	},
+	"chicken_stinger" : {
+		"name" : "Dummy Stinger",
+		"description" : "High-Energy Laser Tower",
+		"helptext" : "The Dummy Stinger shoots constant bursts of High Power Lasers, having high dps, it also has longer range than the other turrets and has higher than average health."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
