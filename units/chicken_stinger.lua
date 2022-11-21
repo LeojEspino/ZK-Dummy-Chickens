@@ -2,7 +2,7 @@ return { chicken_stinger = {
   unitname                      = [[chicken_stinger]],
   name                          = [[Dummy Stinger]],
   description                   = [[High-Energy Laser Tower]],
-  buildCostMetal                = 400,
+  buildCostMetal                = 600,
   builder                       = false,
   buildingGroundDecalDecaySpeed = 30,
   buildingGroundDecalSizeX      = 4,
@@ -31,7 +31,7 @@ return { chicken_stinger = {
   iconType                      = [[defenseheavy]],
   levelGround                   = false,
   losEmitHeight                 = 80,
-  maxDamage                     = 2450,
+  maxDamage                     = 3050,
   maxSlope                      = 36,
   maxVelocity                   = 0,
   noAutoFire                    = false,
@@ -75,8 +75,8 @@ return { chicken_stinger = {
       craterMult              = 0,
 
       damage                  = {
-        default = 250.1,
-        planes  = 250.1,
+        default = 260.1,
+        planes  = 260.1,
       },
 
       explosionGenerator      = [[custom:flash1bluedark]],
