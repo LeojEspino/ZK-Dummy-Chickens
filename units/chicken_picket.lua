@@ -69,7 +69,7 @@ return { chicken_picket = {
 	  interceptedByShieldType = 1,
 
       damage                  = {
-        default = 50,
+        default = 75,
       },
 	  
 	  customParams            = {
@@ -83,7 +83,7 @@ return { chicken_picket = {
       leadLimit               = 80,
       noExplode               = true,
       noSelfDamage            = true,
-      range                   = 300,
+      range                   = 450,
       reloadtime              = 1,
       size                    = 12,
       soundStart              = [[chickens/acid_fire]],
