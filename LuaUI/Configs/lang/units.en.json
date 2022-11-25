@@ -549,6 +549,11 @@
 		"description" : "High-Energy Laser Tower",
 		"helptext" : "The Dummy Stinger shoots constant bursts of High Power Lasers, having high dps, it also has longer range than the other turrets and has higher than average health."
 	},
+	"chicken_gauss" : {
+		"name" : "Dummy gauss",
+		"description" : "Popup Explosive Tower",
+		"helptext" : "The Dummy Gauss shoots a burst of explosive barrels, dealing high explosive damage, and has quick firing rate. It is also hardy and can take multiple damage, however it's range is low and is susceptible to artillery and skirmishers."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
