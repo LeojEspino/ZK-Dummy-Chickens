@@ -554,6 +554,11 @@
 		"description" : "Popup Explosive Tower",
 		"helptext" : "The Dummy Gauss shoots a burst of explosive barrels, dealing high explosive damage, and has quick firing rate. It is also hardy and can take multiple damage, however it's range is low and is susceptible to artillery and skirmishers."
 	},
+	"chicken_thresher" : {
+		"name" : "Dummy Thresher",
+		"description" : "Anti-Air Flak Tower",
+		"helptext" : "The Dummy Thresher shoots hard hitting flak shots, decimating groups of air units in a few shots. It is also decently durable, able to take in a good amount of aerial attacks. A few of these turrets can shutdown any aerial attacks."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
