@@ -112,23 +112,6 @@ return { chicken_gauss = {
 
 
   featureDefs                   = {
-
-    DEAD  = {
-      blocking         = true,
-      featureDead      = [[HEAP]],
-      footprintX       = 2,
-      footprintZ       = 2,
-      object           = [[gauss_91_dead1.dae]],
-    },
-
-
-    HEAP  = {
-      blocking         = false,
-      footprintX       = 2,
-      footprintZ       = 2,
-      object           = [[debris2x2b.s3o]],
-    },
-
   },
 
 } }
