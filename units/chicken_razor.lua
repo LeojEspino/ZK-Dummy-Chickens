@@ -109,22 +109,6 @@ return { chicken_razor = {
 
 
   featureDefs                   = {
-
-    DEAD  = {
-      blocking         = true,
-      featureDead      = [[HEAP]],
-      footprintX       = 3,
-      footprintZ       = 3,
-      object           = [[aapopup_dead.s3o]],
-    },
-
-    HEAP  = {
-      blocking         = false,
-      footprintX       = 3,
-      footprintZ       = 3,
-      object           = [[debris3x3a.s3o]],
-    },
-
   },
 
 } }
