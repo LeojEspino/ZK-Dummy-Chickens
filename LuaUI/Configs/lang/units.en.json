@@ -559,6 +559,11 @@
 		"description" : "Anti-Air Flak Tower",
 		"helptext" : "The Dummy Thresher shoots hard hitting flak shots, decimating groups of air units in a few shots. It is also decently durable, able to take in a good amount of aerial attacks. A few of these turrets can shutdown any aerial attacks."
 	},
+	"chicken_desolator" : {
+		"name" : "Dummy Desolator",
+		"description" : "Hard-Hitting Defence Fortress",
+		"helptext" : "The Dummy Desolator is very similar to the original Desolator, however the heatray is removed in favor of a second cannon, having much faster fire rate than the original. It can also go to it's armored form significantly faster."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
