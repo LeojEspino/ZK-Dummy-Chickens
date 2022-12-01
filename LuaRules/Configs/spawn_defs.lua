@@ -176,9 +176,10 @@ local defenders = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions()
   chicken_faraday       = {time = 12, squadSize = 1, cost = 2, obsolete = 24 },
   chicken_razor         = {time = 12, squadSize = 1, cost = 2, obsolete = 24 },
   chicken_hacksaw       = {time = 12, squadSize = 1, cost = 2, obsolete = 24 },
-  chicken_stinger       = {time = 24, squadSize = 1, cost = 3 },
-  chicken_gauss         = {time = 24, squadSize = 1, cost = 3 },
-  chicken_thresher      = {time = 24, squadSize = 1, cost = 3 },
+  chicken_stinger       = {time = 24, squadSize = 1, cost = 3, obsolete = 48 },
+  chicken_gauss         = {time = 24, squadSize = 1, cost = 3, obsolete = 48 },
+  chicken_thresher      = {time = 24, squadSize = 1, cost = 3, obsolete = 48 },
+  chicken_desolator     = {time = 48, squadSize = 1, cost = 5 },
 }
 
 local supporters = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_support) or {
