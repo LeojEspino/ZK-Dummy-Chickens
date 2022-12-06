@@ -564,6 +564,11 @@
 		"description" : "Hard-Hitting Defence Fortress",
 		"helptext" : "The Dummy Desolator is very similar to the original Desolator, however the heatray is removed in favor of a second cannon, having much faster fire rate than the original. It can also go to it's armored form significantly faster."
 	},
+	"chicken_lucifer" : {
+		"name" : "Dummy Lucifer",
+		"description" : "Rapid-Firing Laser Tower",
+		"helptext" : "The Dummy Laser rapidly fires laserbeams at targets, dealing significant single-target DPS, and has most of the range of the original Lucifer."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
