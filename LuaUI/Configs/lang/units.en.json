@@ -569,6 +569,11 @@
 		"description" : "Rapid-Firing Laser Tower",
 		"helptext" : "The Dummy Laser rapidly fires laserbeams at targets, dealing significant single-target DPS, and has most of the range of the original Lucifer."
 	},
+	"chicken_chainsaw" : {
+		"name" : "Dummy Chainsaw",
+		"description" : "Long-Range Disrupting Anti-Air Tower",
+		"helptext" : "The Dummy Chainsaw is similar to Dummy Hacksaw, however it shoots extremely fast and has twice the range. It can be very hard to plan a strike with one of these in the field, but it has a slightly hard time dealing with very big groups of targets."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
