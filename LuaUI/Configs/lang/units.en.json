@@ -574,6 +574,11 @@
 		"description" : "Long-Range Disrupting Anti-Air Tower",
 		"helptext" : "The Dummy Chainsaw is similar to Dummy Hacksaw, however it shoots extremely fast and has twice the range. It can be very hard to plan a strike with one of these in the field, but it has a slightly hard time dealing with very big groups of targets."
 	},
+	"chicken_artemis" : {
+		"name" : "Dummy Artemis",
+		"description" : "Long-Range Gauss Anti-Air Tower",
+		"helptext" : "The Dummy Artemis shoots a very fast high-power Gauss shot, dealing heavy damage at targets, the gauss shot also explodes every hit, decimating groups too close together. However it loses its value if the aerial units attack in spread out formations, unable to use its pierce and aoe to it's advantage."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
