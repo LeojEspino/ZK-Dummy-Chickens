@@ -124,6 +124,12 @@ eggDefs.chicken_chainsaw_egg = MergeTable(defaultEgg, {
   object      = [[stud5.dae]],
 })
 
+eggDefs.chicken_artemis_egg = MergeTable(defaultEgg, {
+  metal       = 720,
+  reclaimTime = 720,
+  object      = [[stud5.dae]],
+})
+
 --The Dummy
 
 eggDefs.chicken_egg = MergeTable(defaultEgg, {
