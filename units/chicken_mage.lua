@@ -81,8 +81,7 @@ return { chicken_mage = {
 	  turret                  = true,
 
       damage                  = {
-        default = 100,
-        planes  = 100,
+        default = 50,
       },
       customparams = {
 	    nofriendlyfire = 1,
