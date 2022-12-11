@@ -182,6 +182,7 @@ local defenders = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions()
   chicken_desolator     = {time = 48, squadSize = 1, cost = 5 },
   chicken_lucifer       = {time = 48, squadSize = 1, cost = 5 },
   chicken_chainsaw      = {time = 48, squadSize = 1, cost = 5 },
+  chicken_artemis       = {time = 48, squadSize = 1, cost = 5 },
 }
 
 local supporters = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_support) or {
