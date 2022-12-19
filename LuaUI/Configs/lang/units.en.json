@@ -579,6 +579,11 @@
 		"description" : "Long-Range Gauss Anti-Air Tower",
 		"helptext" : "The Dummy Artemis shoots a very fast high-power Gauss shot, dealing heavy damage at targets, the gauss shot also explodes every hit, decimating groups too close together. However it loses its value if the aerial units attack in spread out formations, unable to use its pierce and aoe to it's advantage."
 	},
+	"chicken_cerberus" : {
+		"name" : "Dummy Cerberus",
+		"description" : "Plasma Artillery Battery",
+		"helptext" : "The Dummy Cerberus is very similar to a normal Cerberus, however has better accuracy but less aoe, in addition to exceptionally fast projectile speed. It is weaker than the Cerberus due to it's lower cost and has less range."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
