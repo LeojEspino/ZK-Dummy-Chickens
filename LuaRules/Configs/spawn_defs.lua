@@ -88,7 +88,7 @@ burrowRespawnChance 	= 0.15
 burrowRegressTime		= 30		-- direct tech time regress from killing a burrow, divided by playercount
 
 humanAggroPerBurrow		= 1			-- divided by playercount
-humanAggroDecay			= 0.25		-- linear rate at which aggro decreases
+humanAggroDecay			= 0.25	 -- linear rate at which aggro decreases
 humanAggroMin			= -100
 humanAggroMax			= 100
 humanAggroWaveFactor	= 1
@@ -197,7 +197,7 @@ local supporters = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions(
 local specialPowers = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_special) or {
 	--{name = "Digger Ambush", maxAggro = -2, time = 15, obsolete = 40, unit = "chicken_digger", burrowRatio = 1.25, minDist = 100, maxDist = 450, cooldown = 3, targetHuman = true},
 	--{name = "Wurmsign", maxAggro = -3, time = 40, unit = "chickenwurm", burrowRatio = 0.2, cooldown = 4},
-	{name = "Spire Sprout", maxAggro = -4.5, time = 20, unit = "chickenspire", burrowRatio = 0.15, tieToBurrow = true, cooldown = 3},
+	{name = "Dummy Cerberus Pop-ups", maxAggro = -2, time = 24, unit = "chicken_cerberus", burrowRatio = 0.3, tieToBurrow = true, cooldown = 3},
 	--{name = "Rising Dragon", maxAggro = -8, time = 30, unit = "chicken_dragon", burrowRatio = 1/12, minDist = 250, maxDist = 1200, cooldown = 5, targetHuman = true},
 	--{name = "Dino Killer", maxAggro = -12, time = 40, unit = "chicken_silo", minDist = 1500},
 }
