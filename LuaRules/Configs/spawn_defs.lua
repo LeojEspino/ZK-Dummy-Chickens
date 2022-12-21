@@ -189,6 +189,7 @@ local supporters = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions(
   --chickenspire =  {time = 50, squadSize = 0.1},
   --chicken_shield =  {time = 30, squadSize = 0.4},
   chicken_dodo = {time = 25, squadSize = 2},
+  seismic      = {time = 24, squadSize = 0.1},
   --chicken_spidermonkey =  {time = 20, squadSize = 0.6},
 }
 
@@ -198,7 +199,6 @@ local specialPowers = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptio
 	--{name = "Digger Ambush", maxAggro = -2, time = 15, obsolete = 40, unit = "chicken_digger", burrowRatio = 1.25, minDist = 100, maxDist = 450, cooldown = 3, targetHuman = true},
 	--{name = "Wurmsign", maxAggro = -3, time = 40, unit = "chickenwurm", burrowRatio = 0.2, cooldown = 4},
 	{name = "Dummy Cerberus Pop-ups", maxAggro = -2, time = 24, unit = "chicken_cerberus", burrowRatio = 0.3, tieToBurrow = true, cooldown = 3},
-	{name = "Seismic Surprise", maxAggro = -3, time = 24, unit = "seismic", burrowRatio = 0.1, tieToBurrow = true, cooldown = 2},
 	--{name = "Rising Dragon", maxAggro = -8, time = 30, unit = "chicken_dragon", burrowRatio = 1/12, minDist = 250, maxDist = 1200, cooldown = 5, targetHuman = true},
 	--{name = "Dino Killer", maxAggro = -12, time = 40, unit = "chicken_silo", minDist = 1500},
 }
