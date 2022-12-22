@@ -183,6 +183,8 @@ local defenders = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions()
   chicken_lucifer       = {time = 48, squadSize = 1, cost = 5 },
   chicken_chainsaw      = {time = 48, squadSize = 1, cost = 5 },
   chicken_artemis       = {time = 48, squadSize = 1, cost = 5 },
+  chicken_cerberus      = {time = 9000, squadSize = 1, cost = 5}, --Used for spawning eggs
+  chicken_bigbertha     = {time = 9000, squadSize = 1, cost = 5}, --Used for spawning eggs
 }
 
 local supporters = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_support) or {
@@ -199,6 +201,7 @@ local specialPowers = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptio
 	--{name = "Digger Ambush", maxAggro = -2, time = 15, obsolete = 40, unit = "chicken_digger", burrowRatio = 1.25, minDist = 100, maxDist = 450, cooldown = 3, targetHuman = true},
 	--{name = "Wurmsign", maxAggro = -3, time = 40, unit = "chickenwurm", burrowRatio = 0.2, cooldown = 4},
 	{name = "Dummy Cerberus Pop-ups", maxAggro = -2, time = 24, unit = "chicken_cerberus", burrowRatio = 0.3, tieToBurrow = true, cooldown = 3},
+	{name = "Dummy Big Bertha Creation", maxAggro = -6, time = 24, unit = "chicken_bigbertha", burrowRatio = 1/12, tieToBurrow = true, cooldown = 5},
 	--{name = "Rising Dragon", maxAggro = -8, time = 30, unit = "chicken_dragon", burrowRatio = 1/12, minDist = 250, maxDist = 1200, cooldown = 5, targetHuman = true},
 	--{name = "Dino Killer", maxAggro = -12, time = 40, unit = "chicken_silo", minDist = 1500},
 }
