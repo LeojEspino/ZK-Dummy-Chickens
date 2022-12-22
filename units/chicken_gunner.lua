@@ -98,7 +98,7 @@ return { chicken_gunner = {
       turret                  = true,
       waterWeapon             = true,
       weaponType              = [[Cannon]],
-      weaponVelocity          = 750,
+      weaponVelocity          = 500,
     },
 
   },

@@ -95,7 +95,7 @@ return { chicken_grenadier = {
 
       explosionGenerator      = [[custom:grenade_launcher]],
 	  model                   = [[grenadelauncher.dae]],
-      range                   = 600,
+      range                   = 1000,
       reloadtime              = 0.6,
       soundStart              = [[dummy/grenadeshot]],
       targetborder            = 10,
@@ -127,7 +127,7 @@ return { chicken_grenadier = {
 
       explosionGenerator      = [[custom:magic_wand]],
 	  model                   = [[magicwand.dae]],
-      range                   = 600,
+      range                   = 1000,
       reloadtime              = 5.0,
       soundStart              = [[dummy/grenadeshot]],
       targetborder            = 10,
