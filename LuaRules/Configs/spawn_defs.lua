@@ -190,8 +190,9 @@ local defenders = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions()
 local supporters = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_support) or {
   --chickenspire =  {time = 50, squadSize = 0.1},
   --chicken_shield =  {time = 30, squadSize = 0.4},
-  chicken_dodo = {time = 20, squadSize = 2},
-  seismic      = {time = 30, squadSize = 0.1},
+  chicken_caretaker     = {time = 20, squadSize = 1},
+  chicken_dodo          = {time = 20, squadSize = 2},
+  seismic               = {time = 30, squadSize = 0.1},
   --chicken_spidermonkey =  {time = 20, squadSize = 0.6},
 }
 
