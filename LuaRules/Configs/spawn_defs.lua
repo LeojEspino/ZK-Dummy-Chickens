@@ -138,22 +138,22 @@ end
 
 -- times in minutes
 local chickenTypes = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_offense) or {
-	chicken				=  {time = -60,  squadSize = 3.6, obsolete = 6},
+	chicken				=  {time = -60,  squadSize = 3.6, obsolete = 5},
 -- Brawler
-	chicken_warrior     =  {time = 6,  squadSize = 1.8, obsolete = 24},
-	chicken_destroyer   =  {time = 12, squadSize = 0.9},
+	chicken_warrior     =  {time = 5,  squadSize = 1.8, obsolete = 20},
+	chicken_destroyer   =  {time = 10, squadSize = 0.9},
 -- Marksman
-	chicken_gunner      =  {time = 6,  squadSize = 1.8, obsolete = 24},
-	chicken_mercenary   =  {time = 12, squadSize = 0.9},
+	chicken_gunner      =  {time = 5,  squadSize = 1.8, obsolete = 20},
+	chicken_mercenary   =  {time = 10, squadSize = 0.9},
 -- Burst
-	chicken_mage        =  {time = 6,  squadSize = 1.8, obsolete = 24},
-	chicken_grenadier   =  {time = 12, squadSize = 0.9},
+	chicken_mage        =  {time = 5,  squadSize = 1.8, obsolete = 20},
+	chicken_grenadier   =  {time = 10, squadSize = 0.9},
 -- Tank
-	chicken_defender    =  {time = 6,  squadSize = 1.8, obsolete = 24},
-	chicken_juggernaut  =  {time = 12, squadSize = 0.9},
+	chicken_defender    =  {time = 5,  squadSize = 1.8, obsolete = 20},
+	chicken_juggernaut  =  {time = 10, squadSize = 0.9},
 -- Assasin
-	chicken_thief       =  {time = 6,  squadSize = 1.8, obsolete = 24},
-	chicken_stalker     =  {time = 12, squadSize = 0.9},
+	chicken_thief       =  {time = 5,  squadSize = 1.8, obsolete = 20},
+	chicken_stalker     =  {time = 10, squadSize = 0.9},
 	--chicken_pigeon		=  {time = 6,  squadSize = 1.4, obsolete = 35},
 	--chickens			=  {time = 12,  squadSize = 1, obsolete = 35},
 	--chickena			=  {time = 18,  squadSize = 0.5, obsolete = 40},
@@ -170,19 +170,19 @@ local chickenTypes = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOption
 }
 
 local defenders = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_defense) or {
-  chicken_lotus         = {time = 6, squadSize = 1, cost = 1, obsolete = 12 },
-  chicken_picket        = {time = 6, squadSize = 1, cost = 1, obsolete = 12 },
-  chicken_stardust      = {time = 12, squadSize = 1, cost = 2, obsolete = 24 },
-  chicken_faraday       = {time = 12, squadSize = 1, cost = 2, obsolete = 24 },
-  chicken_razor         = {time = 12, squadSize = 1, cost = 2, obsolete = 24 },
-  chicken_hacksaw       = {time = 12, squadSize = 1, cost = 2, obsolete = 24 },
-  chicken_stinger       = {time = 24, squadSize = 1, cost = 3, obsolete = 48 },
-  chicken_gauss         = {time = 24, squadSize = 1, cost = 3, obsolete = 48 },
-  chicken_thresher      = {time = 24, squadSize = 1, cost = 3, obsolete = 48 },
-  chicken_desolator     = {time = 48, squadSize = 1, cost = 5 },
-  chicken_lucifer       = {time = 48, squadSize = 1, cost = 5 },
-  chicken_chainsaw      = {time = 48, squadSize = 1, cost = 5 },
-  chicken_artemis       = {time = 48, squadSize = 1, cost = 5 },
+  chicken_lotus         = {time = 5, squadSize = 1, cost = 1, obsolete = 10 },
+  chicken_picket        = {time = 5, squadSize = 1, cost = 1, obsolete = 10 },
+  chicken_stardust      = {time = 10, squadSize = 1, cost = 2, obsolete = 20 },
+  chicken_faraday       = {time = 10, squadSize = 1, cost = 2, obsolete = 20 },
+  chicken_razor         = {time = 10, squadSize = 1, cost = 2, obsolete = 20 },
+  chicken_hacksaw       = {time = 10, squadSize = 1, cost = 2, obsolete = 20 },
+  chicken_stinger       = {time = 20, squadSize = 1, cost = 3, obsolete = 40 },
+  chicken_gauss         = {time = 20, squadSize = 1, cost = 3, obsolete = 40 },
+  chicken_thresher      = {time = 20, squadSize = 1, cost = 3, obsolete = 40 },
+  chicken_desolator     = {time = 40, squadSize = 1, cost = 5 },
+  chicken_lucifer       = {time = 40, squadSize = 1, cost = 5 },
+  chicken_chainsaw      = {time = 40, squadSize = 1, cost = 5 },
+  chicken_artemis       = {time = 40, squadSize = 1, cost = 5 },
   chicken_cerberus      = {time = 9000, squadSize = 1, cost = 5}, --Used for spawning eggs
   chicken_bigbertha     = {time = 9000, squadSize = 1, cost = 5}, --Used for spawning eggs
 }
@@ -190,8 +190,8 @@ local defenders = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions()
 local supporters = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_support) or {
   --chickenspire =  {time = 50, squadSize = 0.1},
   --chicken_shield =  {time = 30, squadSize = 0.4},
-  chicken_dodo = {time = 25, squadSize = 2},
-  seismic      = {time = 24, squadSize = 0.1},
+  chicken_dodo = {time = 20, squadSize = 2},
+  seismic      = {time = 30, squadSize = 0.1},
   --chicken_spidermonkey =  {time = 20, squadSize = 0.6},
 }
 
@@ -200,8 +200,8 @@ local supporters = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions(
 local specialPowers = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_special) or {
 	--{name = "Digger Ambush", maxAggro = -2, time = 15, obsolete = 40, unit = "chicken_digger", burrowRatio = 1.25, minDist = 100, maxDist = 450, cooldown = 3, targetHuman = true},
 	--{name = "Wurmsign", maxAggro = -3, time = 40, unit = "chickenwurm", burrowRatio = 0.2, cooldown = 4},
-	{name = "Dummy Cerberus Pop-ups", maxAggro = -2, time = 24, unit = "chicken_cerberus", burrowRatio = 0.3, tieToBurrow = true, cooldown = 3},
-	{name = "Dummy Big Bertha Creation", maxAggro = -6, time = 24, unit = "chicken_bigbertha", burrowRatio = 1/12, tieToBurrow = true, cooldown = 5},
+	{name = "Dummy Cerberus Pop-ups", maxAggro = -2, time = 20, unit = "chicken_cerberus", burrowRatio = 0.3, tieToBurrow = true, cooldown = 3},
+	{name = "Dummy Big Bertha Creation", maxAggro = -6, time = 20, unit = "chicken_bigbertha", burrowRatio = 1/12, tieToBurrow = true, cooldown = 5},
 	--{name = "Rising Dragon", maxAggro = -8, time = 30, unit = "chicken_dragon", burrowRatio = 1/12, minDist = 250, maxDist = 1200, cooldown = 5, targetHuman = true},
 	--{name = "Dino Killer", maxAggro = -12, time = 40, unit = "chicken_silo", minDist = 1500},
 }
