@@ -297,6 +297,7 @@ local medRangeSkirmieeArray = NameToDefID({
 	"tankriot", -- banisher
 	"striderscorpion",
 	"chicken_mage",
+        "chicken_grenadier",
 })
 
 for name, data in pairs(UnitDefNames) do -- add all comms to mid ranged skirm because they might be short ranged (and also explode)
@@ -335,7 +336,6 @@ local artyRangeSkirmieeArray = NameToDefID({
 	
 	"shipskirm",
 	"chicken_mercenary",
-	"chicken_grenadier",
 })
 
 local slasherSkirmieeArray = NameToDefID({
