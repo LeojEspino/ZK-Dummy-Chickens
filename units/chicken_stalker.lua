@@ -65,19 +65,16 @@ return { chicken_stalker = {
     {
       def                = [[WEAPON]],
       mainDir            = [[0 0 1]],
-      maxAngleDif        = 120,
       onlyTargetCategory = [[SWIM LAND SUB SINK TURRET FLOAT SHIP HOVER FIXEDWING GUNSHIP]],
     },
 	{
       def                = [[ABILITY]],
       mainDir            = [[0 0 1]],
-      maxAngleDif        = 120,
       onlyTargetCategory = [[SWIM LAND SUB SINK TURRET FLOAT SHIP HOVER FIXEDWING GUNSHIP]],
     },
 	{
       def                = [[ABILITY2]],
       mainDir            = [[0 0 1]],
-      maxAngleDif        = 120,
       onlyTargetCategory = [[SWIM LAND SUB SINK TURRET FLOAT SHIP HOVER FIXEDWING GUNSHIP]],
     },
 

@@ -62,13 +62,11 @@ return { chicken_mercenary = {
     {
       def                = [[WEAPON]],
       mainDir            = [[0 0 1]],
-      maxAngleDif        = 120,
       onlyTargetCategory = [[SWIM LAND SUB SINK TURRET FLOAT SHIP HOVER FIXEDWING GUNSHIP]],
     },
 	{
       def                = [[WEAPON2]],
       mainDir            = [[0 0 1]],
-      maxAngleDif        = 120,
       onlyTargetCategory = [[SWIM LAND SUB SINK TURRET FLOAT SHIP HOVER FIXEDWING GUNSHIP]],
     },
 

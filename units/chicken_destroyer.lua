@@ -62,13 +62,11 @@ return { chicken_destroyer = {
     {
       def                = [[WEAPON]],
       mainDir            = [[0 0 1]],
-      maxAngleDif        = 120,
       onlyTargetCategory = [[SWIM LAND SUB SINK TURRET FLOAT SHIP HOVER FIXEDWING GUNSHIP]],
     },
 	{
       def                = [[ABILITY]],
       mainDir            = [[0 0 1]],
-      maxAngleDif        = 360,
       onlyTargetCategory = [[SWIM LAND SUB SINK TURRET FLOAT SHIP HOVER FIXEDWING GUNSHIP]],
     },
 
