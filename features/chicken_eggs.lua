@@ -52,6 +52,12 @@ eggDefs.chicken_dodo_egg = MergeTable(defaultEgg, {
 
 --Turrets
 
+eggDefs.chicken_caretaker_egg = MergeTable(defaultEgg, {
+  metal       = 80,
+  reclaimTime = 80,
+  object      = [[stud3.dae]],
+})
+
 eggDefs.chicken_lotus_egg = MergeTable(defaultEgg, {
   metal       = 40,
   reclaimTime = 40,
