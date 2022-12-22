@@ -589,6 +589,11 @@
 		"description" : "Destructive Quake Cannon",
 		"helptext" : "The Dummy Big Bertha is a force of artillery destruction, it combines the quake's anti-terrain into it's projectile, while also doubling the damage at the cost of firing rate, this thing can ruin bases and defenses. It can only appear when Aggression Rating is very low, but when it does, prioritize removing it, and attempt to reclaim of whats left over as it drops alot of metal. When attempting to shoot it's first shot, it has to recharge first, taking double the time it needs to reload."
 	},
+	"chicken_caretaker" : {
+		"name" : "Dummy Caretaker",
+		"description" : "Construction Assistant"
+		"helptext" : "The Dummy Caretaker is basically the same as the normal caretaker, albeit a bit more durable. We can build this in order to access the Dummy version of the turrets, giving us more defense options to fight against them."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
