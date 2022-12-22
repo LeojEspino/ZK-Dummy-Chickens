@@ -28,8 +28,7 @@ function script.AimWeapon(num, heading, pitch)
 	SetSignalMask(SIG_Aim)
 	
 	Turn(turret, z_axis, heading, 6)
-	WaitForTurn(barrel, x_axis)
-	WaitForTurn(turret, y_axis)
+	WaitForTurn(turret, z_axis)
 	StartThread (RestoreAfterDelay)
 	return true
 end

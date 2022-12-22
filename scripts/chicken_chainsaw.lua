@@ -59,7 +59,7 @@ function script.AimWeapon(num, heading, pitch)
 	Spin(lgun, z_axis, 18)
 	Spin(rgun, z_axis, 18)
 	WaitForTurn(barrel, x_axis)
-	WaitForTurn(turret, y_axis)
+	WaitForTurn(turret, z_axis)
 	StartThread (RestoreAfterDelay)
 	return true
 end

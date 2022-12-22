@@ -33,7 +33,7 @@ function script.AimWeapon(num, heading, pitch)
 	Turn(sleeve, x_axis, -pitch, 6)
 	Turn(turret, z_axis, heading, 6)
 	WaitForTurn(sleeve, x_axis)
-	WaitForTurn(turret, y_axis)
+	WaitForTurn(turret, z_axis)
 	StartThread (RestoreAfterDelay)
 	return true
 end

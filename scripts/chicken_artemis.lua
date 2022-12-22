@@ -39,8 +39,8 @@ function script.AimWeapon(num, heading, pitch)
 	Move(shell, y_axis, 10, 60)
 	Move(rshell, x_axis, -10, 60)
 	Move(lshell, x_axis, 10, 60)
-	WaitForTurn(barrel, x_axis)
-	WaitForTurn(turret, y_axis)
+	WaitForTurn(flare, x_axis)
+	WaitForTurn(turret, z_axis)
 	StartThread (RestoreAfterDelay)
 	return true
 end
