@@ -136,6 +136,12 @@ eggDefs.chicken_cerberus_egg = MergeTable(defaultEgg, {
   object      = [[stud5.dae]],
 })
 
+eggDefs.chicken_bigbertha_egg = MergeTable(defaultEgg, {
+  metal       = 4320,
+  reclaimTime = 4320,
+  object      = [[bigberthaclonedead.dae]],
+})
+
 --The Dummy
 
 eggDefs.chicken_egg = MergeTable(defaultEgg, {
