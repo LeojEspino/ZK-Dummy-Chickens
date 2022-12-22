@@ -53,7 +53,7 @@ return { chicken_gunner = {
   },
   sightDistance       = 512,
   sonarDistance       = 512,
-  turnRate            = 967,
+  turnRate            = 3000,
   upright             = true,
   workerTime          = 0,
 
