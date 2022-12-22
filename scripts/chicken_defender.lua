@@ -1,6 +1,7 @@
 
 include "constants.lua"
 
+local base = piece 'base'
 local body = piece 'body' 
 local head = piece 'head' 
 local larm = piece 'larm'
@@ -119,6 +120,7 @@ local function RestoreAfterDelay()
 	Sleep(1000)
 	aiming = false
     
+	Turn(base, z_axis, math.rad(0), 10)
 	Move(body, z_axis, 0, 60)
 	Turn(body, x_axis, math.rad(0), 6)
 	Turn(body, z_axis, math.rad(-45), 6)
@@ -149,6 +151,7 @@ function script.AimWeapon(num, heading, pitch)
 	SetSignalMask(SIG_Aim)
 	aiming = true
 
+    Turn(base, z_axis, heading, 10)
     Turn(body, x_axis, math.rad(0), 6)
 	Turn(head, x_axis, math.rad(0), 6)
     Turn(larm, x_axis, math.rad(15), 12)
@@ -166,6 +169,7 @@ function script.AimWeapon(num, heading, pitch)
 		Turn(rarm, z_axis, math.rad(0), 12)
 		Move(rarm, y_axis, 0, 20)
 	    Move(rarm, z_axis, 0, 20)
+		WaitForTurn(base, z_axis)
 		WaitForTurn(body, z_axis)
 		WaitForTurn(rarm, x_axis)
 		WaitForTurn(rarm, y_axis)
@@ -185,6 +189,7 @@ function script.AimWeapon(num, heading, pitch)
 		Turn(rarm, z_axis, math.rad(0), 24)
 		Move(rarm, y_axis, 0, 20)
 	    Move(rarm, z_axis, 0, 20)
+		WaitForTurn(base, z_axis)
 		WaitForTurn(body, z_axis)
 		WaitForTurn(larm, x_axis)
 		WaitForTurn(larm, y_axis)

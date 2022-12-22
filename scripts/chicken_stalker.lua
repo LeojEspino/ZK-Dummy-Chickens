@@ -1,6 +1,7 @@
 
 include "constants.lua"
 
+local base = piece 'base'
 local body = piece 'body' 
 local head = piece 'head' 
 local larm = piece 'larm'
@@ -101,6 +102,7 @@ local function RestoreAfterDelay()
 	Sleep(1000)
 	aiming = false
     
+	Turn(base, z_axis, math.rad(0), 10)
 	Move(body, z_axis, 0, 60)
 	Turn(body, x_axis, math.rad(0), 6)
 	Turn(body, z_axis, math.rad(-45), 6)
@@ -157,7 +159,8 @@ end
 function script.AimWeapon(num, heading, pitch)
 	Signal(SIG_Aim)
 	aiming = true
-
+	
+    Turn(base, z_axis, heading, 10)
     Turn(body, x_axis, math.rad(0), 6)
 	Turn(head, x_axis, math.rad(0), 6)
 	if not cooldown1 then
@@ -173,6 +176,7 @@ function script.AimWeapon(num, heading, pitch)
 		Turn(larm, x_axis, math.rad(0), 12)
 	    Turn(larm, y_axis, math.rad(90), 12)
 		Turn(larm, z_axis, math.rad(0), 24)
+		WaitForTurn(base, z_axis)
 		WaitForTurn(body, z_axis)
 		WaitForTurn(rarm, y_axis)
 		WaitForTurn(rarm, z_axis)
@@ -188,6 +192,7 @@ function script.AimWeapon(num, heading, pitch)
 		Turn(larm, x_axis, math.rad(0), 12)
 		Turn(larm, y_axis, math.rad(90), 24)
 		Turn(larm, z_axis, math.rad(-180.1), 24)
+		WaitForTurn(base, z_axis)
 		WaitForTurn(body, z_axis)
 		WaitForTurn(rarm, y_axis)
 		WaitForTurn(rarm, z_axis)
