@@ -74,6 +74,10 @@ local medRangeSwarmieeArray = NameToDefID({
 	"amphfloater",
 	"chickens",
 	"shipskirm",
+	"chicken_gunner",
+	"chicken_mercenary",
+	"chicken_mage",
+	"chicken_grenadier",
 })
 
 local lowRangeSwarmieeArray = NameToDefID({
@@ -297,7 +301,7 @@ local medRangeSkirmieeArray = NameToDefID({
 	"tankriot", -- banisher
 	"striderscorpion",
 	"chicken_mage",
-        "chicken_grenadier",
+	"chicken_grenadier",
 })
 
 for name, data in pairs(UnitDefNames) do -- add all comms to mid ranged skirm because they might be short ranged (and also explode)
@@ -2050,6 +2054,66 @@ local behaviourConfig = {
 		--flees = {},
 		hugs = allGround,
 		hugRange = 150,
+	},
+	{
+		name = "chicken_warrior",
+		swarms = medRangeSwarmieeArray,
+		maxSwarmLeeway = 35,
+	},
+	{
+		name = "chicken_gunner",
+
+		skirms = medRangeSkirmieeArray,
+		swarms = medRangeSwarmieeArray,
+		fightOnlyUnits = medRangeExplodables,
+		maxSwarmLeeway = 30,
+		minSwarmLeeway = 130,
+		skirmLeeway = 10,
+	},
+	{
+		name = "chicken_thief",
+		swarms = lowRangeSwarmieeArray,
+		maxSwarmLeeway = 35,
+	},
+	{
+		name = "chicken_mage",
+
+		skirms = riotRangeSkirmieeArray,
+		swarms = medRangeSwarmieeArray,
+		fightOnlyUnits = medRangeExplodables,
+		maxSwarmLeeway = 50,
+		minSwarmLeeway = 150,
+		skirmLeeway = 10,
+	},
+	{
+		name = "chicken_defender",
+		swarms = longRangeSwarmieeArray,
+		maxSwarmLeeway = 35,
+	},
+	{
+		name = "chicken_destroyer",
+		swarms = medRangeSwarmieeArray,
+		maxSwarmLeeway = 35,
+	},
+	{
+		name = "chicken_mercenary",
+
+		skirms = riotRangeSkirmieeArray,
+		swarms = lowRangeSwarmieeArray,
+		fightOnlyUnits = medRangeExplodables,
+		maxSwarmLeeway = 30,
+		minSwarmLeeway = 100,
+		skirmLeeway = 10,
+	},
+	{
+		name = "chicken_stalker",
+		swarms = lowRangeSwarmieeArray,
+		maxSwarmLeeway = 35,
+	},
+	{
+		name = "chicken_juggernaut",
+		swarms = longRangeSwarmieeArray,
+		maxSwarmLeeway = 35,
 	},
 	
 	-- Ward fire only units.
