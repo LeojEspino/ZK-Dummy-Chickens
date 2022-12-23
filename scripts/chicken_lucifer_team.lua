@@ -37,7 +37,7 @@ function script.AimFromWeapon(num)
 end
 
 function script.AimWeapon(num, heading, pitch)
-    if spGetUnitRulesParam(unitID, "lowpower") == 1) then
+    if (spGetUnitRulesParam(unitID, "lowpower") == 1) then
 	    return false
 	else
 	    Signal(SIG_Aim)
