@@ -10,13 +10,9 @@ local barrel = piece 'barrel'
 local flare = piece 'flare'
 
 local firstshot = true
+local spGetUnitRulesParam = Spring.GetUnitRulesParam
 
 local SIG_Aim = 2
-
-
-function script.Create()
-    Move(barrel, y_axis, 45, 4500)
-end
 
 local function FirstShot()
     Move(shell, y_axis, 40, 50)
@@ -44,8 +40,7 @@ function script.AimFromWeapon(num)
 end
 
 function script.AimWeapon(num, heading, pitch)
-    if firstshot then
-	    StartThread (FirstShot)
+	if (spGetUnitRulesParam(unitID, "lowpower") == 1) then
 	    return false
 	else
 	    Signal(SIG_Aim)
@@ -56,7 +51,7 @@ function script.AimWeapon(num, heading, pitch)
 	    WaitForTurn(sleeve, z_axis)
 	    WaitForTurn(turret, z_axis)
 	    StartThread (RestoreAfterDelay)
-	    return true
+	    return (spGetUnitRulesParam(unitID, "lowpower") == 0)
 	end
 end
 
