@@ -12,6 +12,7 @@ local ring4 = piece 'ring4'
 local flare = piece 'flare'
 
 local SIG_Aim = 2
+local spGetUnitRulesParam = Spring.GetUnitRulesParam
 
 function script.Create()
     Spin(ring1, y_axis, 1)
@@ -36,15 +37,19 @@ function script.AimFromWeapon(num)
 end
 
 function script.AimWeapon(num, heading, pitch)
-	Signal(SIG_Aim)
-	SetSignalMask(SIG_Aim)
-	
-	Turn(barrel, x_axis, -pitch, 6)
-	Turn(turret, z_axis, heading, 6)
-	WaitForTurn(barrel, x_axis)
-	WaitForTurn(turret, z_axis)
-	StartThread (RestoreAfterDelay)
-	return true
+    if spGetUnitRulesParam(unitID, "lowpower") == 1) then
+	    return false
+	else
+	    Signal(SIG_Aim)
+	    SetSignalMask(SIG_Aim)
+	    
+	    Turn(barrel, x_axis, -pitch, 6)
+	    Turn(turret, z_axis, heading, 6)
+	    WaitForTurn(barrel, x_axis)
+	    WaitForTurn(turret, z_axis)
+	    StartThread (RestoreAfterDelay)
+	    return (spGetUnitRulesParam(unitID, "lowpower") == 0)
+	end
 end
 
 function script.FireWeapon(num)

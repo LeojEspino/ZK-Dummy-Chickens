@@ -14,6 +14,7 @@ local rshell = piece 'rshell'
 
 local shot = false
 local on = true
+local spGetUnitRulesParam = Spring.GetUnitRulesParam
 
 local SIG_Aim = 2
 local open = 4
@@ -85,7 +86,9 @@ function script.AimFromWeapon(num)
 end
 
 function script.AimWeapon(num, heading, pitch)
-    if on then
+    if (not on) or (spGetUnitRulesParam(unitID, "lowpower") == 1) then
+	    return false
+	else
 	    Signal(SIG_Aim)
 	    SetSignalMask(SIG_Aim)
 	
@@ -94,9 +97,7 @@ function script.AimWeapon(num, heading, pitch)
 	    WaitForTurn(barrel, x_axis)
 	    WaitForTurn(turret, z_axis)
 	    StartThread (RestoreAfterDelay)
-	    return true
-	else
-	    return false
+	    return (spGetUnitRulesParam(unitID, "lowpower") == 0)
 	end
 end
 

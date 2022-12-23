@@ -14,6 +14,7 @@ local flare3 = piece 'flare3'
 
 local shot1 = false
 local shot2 = false
+local spGetUnitRulesParam = Spring.GetUnitRulesParam
 
 local SIG_Aim = 2
 
@@ -39,15 +40,19 @@ function script.AimFromWeapon(num)
 end
 
 function script.AimWeapon(num, heading, pitch)
-	Signal(SIG_Aim)
-	SetSignalMask(SIG_Aim)
-	
-	Turn(sleeve, z_axis, -pitch, 6)
-	Turn(turret, z_axis, heading, 6)
-	WaitForTurn(sleeve, z_axis)
-	WaitForTurn(turret, z_axis)
-	StartThread (RestoreAfterDelay)
-	return true
+    if spGetUnitRulesParam(unitID, "lowpower") == 1) then
+	    return false
+	else
+	    Signal(SIG_Aim)
+	    SetSignalMask(SIG_Aim)
+	    
+	    Turn(sleeve, z_axis, -pitch, 6)
+	    Turn(turret, z_axis, heading, 6)
+	    WaitForTurn(sleeve, z_axis)
+	    WaitForTurn(turret, z_axis)
+	    StartThread (RestoreAfterDelay)
+	    return (spGetUnitRulesParam(unitID, "lowpower") == 0)
+	end
 end
 
 function script.FireWeapon(num)
