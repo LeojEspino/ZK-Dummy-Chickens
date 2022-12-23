@@ -22,7 +22,6 @@ return { chicken_desolator_team = {
     neededlink     = 50,
     pylonrange     = 50,
 	keeptooltip = [[any string I want]],
-    extradrawrange = 430,
     aimposoffset   = [[0 30 0]],
     midposoffset   = [[0 0 0]],
 
