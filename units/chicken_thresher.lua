@@ -43,7 +43,7 @@ return { chicken_thresher = {
     },
 
   },
-  sightDistance                 = 1024,
+  sightDistance                 = 660,
   useBuildingGroundDecal        = true,
   workerTime                    = 0,
   yardMap                       = [[ooo ooo ooo]],

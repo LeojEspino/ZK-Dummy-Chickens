@@ -40,7 +40,7 @@ return { chicken_gauss_team = {
     },
   },
 
-  sightDistance                 = 512, -- Range*1.1 + 48 for radar overshoot
+  sightDistance                 = 488,
   useBuildingGroundDecal        = true,
   yardmap                       = [[ooooooooo]],
 

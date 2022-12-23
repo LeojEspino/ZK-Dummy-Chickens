@@ -36,7 +36,7 @@ return { chicken_picket = {
 
   sfxtypes                      = {
   },
-  sightDistance                 = 512,
+  sightDistance                 = 543,
   useBuildingGroundDecal        = true,
   workerTime                    = 0,
   yardMap                       = [[oooo]],

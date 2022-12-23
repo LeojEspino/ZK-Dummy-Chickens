@@ -43,7 +43,7 @@ return { chicken_desolator = {
     },
 
   },
-  sightDistance                 = 1024,
+  sightDistance                 = 763,
   useBuildingGroundDecal        = true,
   workerTime                    = 0,
   yardMap                       = [[oooo oooo oooo]],

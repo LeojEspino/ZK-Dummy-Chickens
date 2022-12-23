@@ -41,7 +41,7 @@ return { chicken_stardust_team = {
 
   },
 
-  sightDistance                 = 512,
+  sightDistance                 = 488,
   useBuildingGroundDecal        = true,
   yardMap                       = [[ooo ooo ooo]],
 

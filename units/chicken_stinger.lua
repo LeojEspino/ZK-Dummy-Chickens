@@ -48,7 +48,7 @@ return { chicken_stinger = {
     },
 
   },
-  sightDistance                 = 1024,
+  sightDistance                 = 708,
   useBuildingGroundDecal        = true,
   workerTime                    = 0,
   yardMap                       = [[ooo ooo ooo]],

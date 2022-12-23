@@ -40,7 +40,7 @@ return { chicken_hacksaw = {
     },
 
   },
-  sightDistance                 = 1024,
+  sightDistance                 = 660,
   useBuildingGroundDecal        = true,
   waterline                     = 10,
   workerTime                    = 0,

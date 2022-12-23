@@ -50,7 +50,7 @@ return { chicken_bigbertha = {
 
   },
 
-  sightDistance                 = 1024,
+  sightDistance                 = 660,
   useBuildingGroundDecal        = true,
   yardMap                       = [[oooo oooo oooo oooo]],
 

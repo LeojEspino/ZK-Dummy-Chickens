@@ -41,7 +41,7 @@ return { chicken_faraday_team = {
 
   },
 
-  sightDistance                 = 512,
+  sightDistance                 = 543,
   useBuildingGroundDecal        = true,
   yardMap                       = [[oo oo]],
 

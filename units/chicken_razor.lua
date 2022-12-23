@@ -44,7 +44,7 @@ return { chicken_razor = {
   },
 
   script                        = [[chicken_razor.lua]],
-  sightDistance                 = 512,
+  sightDistance                 = 660,
   useBuildingGroundDecal        = true,
   workerTime                    = 0,
   yardMap                       = [[ooooooooo]],

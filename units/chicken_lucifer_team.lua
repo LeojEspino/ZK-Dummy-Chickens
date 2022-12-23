@@ -33,7 +33,7 @@ return { chicken_lucifer_team = {
   objectName                    = [[luciferclone_team.dae]],
   script                        = [[chicken_lucifer.lua]],
   selfdestructas                = [[ESTOR_BUILDING]],
-  sightDistance                 = 1024,
+  sightDistance                 = 660,
   useBuildingGroundDecal        = true,
   yardMap                       = [[oooo oooo oooo oooo]],
 

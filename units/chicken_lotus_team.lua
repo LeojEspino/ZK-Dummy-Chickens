@@ -39,7 +39,7 @@ return { chicken_lotus_team = {
     },
 
   },
-  sightDistance                 = 512,
+  sightDistance                 = 642,
   useBuildingGroundDecal        = true,
   waterline                     = 5,
   workerTime                    = 0,
