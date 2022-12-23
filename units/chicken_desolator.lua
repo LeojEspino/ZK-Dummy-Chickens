@@ -75,7 +75,7 @@ return { chicken_desolator = {
       },
 
       damage                  = {
-        default = 750.1,
+        default = 625.1,
       },
 
       edgeEffectiveness       = 0.7,

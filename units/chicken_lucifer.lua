@@ -65,7 +65,7 @@ return { chicken_lucifer = {
       },
 
       damage                  = {
-        default = 75,
+        default = 50,
       },
 
       explosionGenerator      = [[custom:BEAMWEAPON_HIT_RED]],
