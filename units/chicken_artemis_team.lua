@@ -1,7 +1,7 @@
 return { chicken_artemis_team = {
   unitname                      = [[chicken_artemis_team]],
   name                          = [[Dummy Artemis]],
-  description                   = [[Long-Range Gauss Anti-Air Turret]],
+  description                   = [[Long-Range Gauss Anti-Air Turret - Power by connecting to a 50 energy grid]],
   buildCostMetal                = 1800,
   builder                       = false,
   buildingGroundDecalDecaySpeed = 30,
@@ -16,6 +16,10 @@ return { chicken_artemis_team = {
   corpse                        = [[DEAD]],
 
   customParams                  = {
+    neededlink     = 50,
+    pylonrange     = 50,
+    bait_level_default = 2,
+	priority_misc  = 1, -- Medium
   },
 
   explodeAs                     = [[LARGE_BUILDINGEX]],

@@ -16,6 +16,9 @@ return { chicken_chainsaw_team = {
   corpse                        = [[DEAD]],
 
   customParams                  = {
+    bait_level_default = 1,
+    aimposoffset   = [[0 10 0]],
+    modelradius    = [[19]],
   },
 
   explodeAs                     = [[LARGE_BUILDINGEX]],

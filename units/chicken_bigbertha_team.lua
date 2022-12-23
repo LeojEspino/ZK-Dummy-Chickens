@@ -1,7 +1,7 @@
 return { chicken_bigbertha_team = {
   unitname                      = [[chicken_bigbertha_team]],
   name                          = [[Dummy Big Bertha]],
-  description                   = [[Destructive Quake Cannon]],
+  description                   = [[Destructive Quake Cannon - Power by connecting to a 50 energy grid]],
   buildCostMetal                = 10800,
   builder                       = false,
   buildingGroundDecalDecaySpeed = 30,
@@ -20,6 +20,8 @@ return { chicken_bigbertha_team = {
     aimposoffset = [[0 50 -7]],
     modelradius    = [[35]],
     selectionscalemult = 1,
+	neededlink  = 50,
+    pylonrange  = 50,
 
     outline_x = 270,
     outline_y = 270,

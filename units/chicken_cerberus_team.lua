@@ -1,7 +1,7 @@
 return { chicken_cerberus_team = {
   unitname                      = [[chicken_cerberus_team]],
   name                          = [[Dummy Cerberus]],
-  description                   = [[Plasma Artillery Battery]],
+  description                   = [[Plasma Artillery Battery - Power by connecting to a 50 energy grid]],
   activateWhenBuilt             = true,
   buildCostMetal                = 1800,
   builder                       = false,
@@ -14,8 +14,12 @@ return { chicken_cerberus_team = {
   corpse                        = [[DEAD]],
 
   customParams                  = {
+    keeptooltip = [[any string I want]],
+    neededlink  = 50,
+    pylonrange  = 50,
     aimposoffset   = [[0 26 0]],
     midposoffset   = [[0 10 0]],
+    bait_level_default = 1,
   },
 
   explodeAs                     = [[LARGE_BUILDINGEX]],

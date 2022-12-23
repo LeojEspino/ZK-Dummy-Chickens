@@ -17,6 +17,11 @@ return { chicken_gauss_team = {
   corpse                        = [[DEAD]],
 
   customParams                  = {
+    bait_level_default = 1,
+    bait_level_target_armor = 1,
+    midposoffset   = [[0 15 0]],
+    aimposoffset   = [[0 36 0]],
+    armored_regen  = [[10]],
   },
 
   explodeAs                     = [[SMALL_BUILDINGEX]],

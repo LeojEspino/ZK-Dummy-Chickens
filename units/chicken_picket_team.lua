@@ -16,6 +16,12 @@ return { chicken_picket_team = {
   corpse                        = [[DEAD]],
 
   customParams                  = {
+    aimposoffset   = [[0 20 0]],
+    bait_level_default = 0,
+
+    outline_x = 60,
+    outline_y = 70,
+    outline_yoff = 27.5,
   },
 
   explodeAs                     = [[SMALL_BUILDINGEX]],

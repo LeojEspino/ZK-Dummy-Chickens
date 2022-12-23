@@ -16,6 +16,14 @@ return { chicken_faraday_team = {
   corpse                        = [[DEAD]],
 
   customParams                  = {
+    bait_level_default = 1,
+    bait_level_target_armor = 1,
+    aimposoffset   = [[0 12 0]],
+    aim_lookahead  = 50,
+
+    outline_x = 64,
+    outline_y = 95,
+    outline_yoff = 32,
   },
 
   damageModifier                = 0.333,

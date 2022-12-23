@@ -16,6 +16,7 @@ return { chicken_hacksaw_team = {
   corpse                        = [[DEAD]],
 
   customParams                  = {
+    bait_level_default = 1,
   },
 
   explodeAs                     = [[SMALL_BUILDINGEX]],

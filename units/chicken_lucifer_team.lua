@@ -1,7 +1,7 @@
 return { chicken_lucifer_team = {
   unitname                      = [[chicken_lucifer_team]],
   name                          = [[Dummy Lucifer]],
-  description                   = [[Rapid-Fire Laser Tower]],
+  description                   = [[Rapid-Fire Laser Tower - Power by connecting to a 50 energy grid]],
   activateWhenBuilt             = true,
   buildCostMetal                = 1800,
   builder                       = false,
@@ -17,6 +17,12 @@ return { chicken_lucifer_team = {
   corpse                        = [[DEAD]],
 
   customParams                  = {
+    bait_level_default = 1,
+    bait_level_target_armor = 1,
+
+    neededlink     = 50,
+    pylonrange     = 50,
+
     aimposoffset   = [[0 32 0]],
     midposoffset   = [[0 0 0]],
   },

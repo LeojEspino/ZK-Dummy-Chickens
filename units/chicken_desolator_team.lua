@@ -17,6 +17,17 @@ return { chicken_desolator_team = {
   corpse                        = [[DEAD]],
 
   customParams                  = {
+    bait_level_default = 1,
+    bait_level_target_armor = 1,
+    neededlink     = 50,
+    pylonrange     = 50,
+    extradrawrange = 430,
+    aimposoffset   = [[0 30 0]],
+    midposoffset   = [[0 0 0]],
+
+    outline_x = 130,
+    outline_y = 150,
+    outline_yoff = 47.5,
   },
 
   damageModifier                = 0.333,
