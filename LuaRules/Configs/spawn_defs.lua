@@ -190,7 +190,7 @@ local defenders = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions()
 local supporters = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_support) or {
   --chickenspire =  {time = 50, squadSize = 0.1},
   --chicken_shield =  {time = 30, squadSize = 0.4},
-  chicken_caretaker     = {time = 20, squadSize = 1},
+  chicken_caretaker     = {time = 30, squadSize = 0.1},
   chicken_dodo          = {time = 20, squadSize = 2},
   seismic               = {time = 30, squadSize = 0.1},
   --chicken_spidermonkey =  {time = 20, squadSize = 0.6},
@@ -201,8 +201,8 @@ local supporters = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions(
 local specialPowers = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_special) or {
 	--{name = "Digger Ambush", maxAggro = -2, time = 15, obsolete = 40, unit = "chicken_digger", burrowRatio = 1.25, minDist = 100, maxDist = 450, cooldown = 3, targetHuman = true},
 	--{name = "Wurmsign", maxAggro = -3, time = 40, unit = "chickenwurm", burrowRatio = 0.2, cooldown = 4},
-	{name = "Dummy Cerberus Pop-ups", maxAggro = -2, time = 20, unit = "chicken_cerberus", burrowRatio = 0.3, tieToBurrow = true, cooldown = 3},
-	{name = "Dummy Big Bertha Creation", maxAggro = -6, time = 20, unit = "chicken_bigbertha", burrowRatio = 1/12, tieToBurrow = true, cooldown = 5},
+	{name = "Dummy Cerberus Pop-ups", maxAggro = -3, time = 30, unit = "chicken_cerberus", burrowRatio = 0.15, tieToBurrow = true, cooldown = 3},
+	{name = "Dummy Big Bertha Creation", maxAggro = -8, time = 30, unit = "chicken_bigbertha", burrowRatio = 1/15, tieToBurrow = true, cooldown = 5},
 	--{name = "Rising Dragon", maxAggro = -8, time = 30, unit = "chicken_dragon", burrowRatio = 1/12, minDist = 250, maxDist = 1200, cooldown = 5, targetHuman = true},
 	--{name = "Dino Killer", maxAggro = -12, time = 40, unit = "chicken_silo", minDist = 1500},
 }
