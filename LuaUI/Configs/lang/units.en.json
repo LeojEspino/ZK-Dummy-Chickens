@@ -594,6 +594,86 @@
 		"description" : "Construction Assistant"
 		"helptext" : "The Dummy Caretaker is basically the same as the normal caretaker, albeit a bit more durable. We can build this in order to access the Dummy version of the turrets, giving us more defense options to fight against them."
 	},
+	"chicken_lotus_team" : {
+		"name" : "Dummy Lotus",
+		"description" : "Burst Laser Tower",
+		"helptext" : "The Dummies are now copying some of our defenses. Dummy Lotuses shoots a high power laser instead of a continous laser."
+	},
+	"chicken_picket_team" : {
+		"name" : "Dummy Picket",
+		"description" : "Light Flamethrower Tower",
+		"helptext" : "The Dummy Picket is a light tower, shooting piercing fireballs at enemies."
+	},
+	"chicken_stardust_team" : {
+		"name" : "Dummy Stardust",
+		"description" : "Cannon Tower",
+		"helptext" : "The Dummy Stardust is a riot tower, shooting a damaging riot cannon."
+	},
+	"chicken_faraday_team" : {
+		"name" : "Dummy Faraday",
+		"description" : "Disruption Tower",
+		"helptext" : "The Dummy Faraday is turned into a Disruptor, shooting a disruption bomb that slows everything it hits."
+	},
+	"chicken_razor_team" : {
+		"name" : "Dummy Razor",
+		"description" : "Hardened Anti-Air Cluster Missile",
+		"helptext" : "The Dummy Razor is an AA missile launcher, shooting multiple missiles at once to deal high alpha damage, and has rather high dps for it's cost, but it's missiles has a tendency to miss."
+	},
+	"chicken_hacksaw_team" : {
+		"name" : "Dummy Hacksaw",
+		"description" : "Disrupting Anti-Air Turret",
+		"helptext" : "The Dummy Hacksaw uses a Disruption Beam to shoot at Aerial targets, slowing them down. The Beam also has some aoe in it."
+	},
+	"chicken_stinger_team" : {
+		"name" : "Dummy Stinger",
+		"description" : "High-Energy Laser Tower",
+		"helptext" : "The Dummy Stinger shoots constant bursts of High Power Lasers, having high dps, it also has longer range than the other turrets and has higher than average health."
+	},
+	"chicken_gauss_team" : {
+		"name" : "Dummy gauss",
+		"description" : "Popup Explosive Tower",
+		"helptext" : "The Dummy Gauss shoots a burst of explosive barrels, dealing high explosive damage, and has quick firing rate. It is also hardy and can take multiple damage, however it's range is low and is susceptible to artillery and skirmishers."
+	},
+	"chicken_thresher_team" : {
+		"name" : "Dummy Thresher",
+		"description" : "Anti-Air Flak Tower",
+		"helptext" : "The Dummy Thresher shoots hard hitting flak shots, decimating groups of air units in a few shots. It is also decently durable, able to take in a good amount of aerial attacks. A few of these turrets can shutdown any aerial attacks."
+	},
+	"chicken_desolator_team" : {
+		"name" : "Dummy Desolator",
+		"description" : "Hard-Hitting Defence Fortress",
+		"helptext" : "The Dummy Desolator is very similar to the original Desolator, however the heatray is removed in favor of a second cannon, having much faster fire rate than the original. It can also go to it's armored form significantly faster."
+	},
+	"chicken_lucifer_team" : {
+		"name" : "Dummy Lucifer",
+		"description" : "Rapid-Firing Laser Tower",
+		"helptext" : "The Dummy Laser rapidly fires laserbeams at targets, dealing significant single-target DPS, and has most of the range of the original Lucifer."
+	},
+	"chicken_chainsaw_team" : {
+		"name" : "Dummy Chainsaw",
+		"description" : "Long-Range Disrupting Anti-Air Tower",
+		"helptext" : "The Dummy Chainsaw is similar to Dummy Hacksaw, however it shoots extremely fast and has twice the range. It can be very hard to plan a strike with one of these in the field, but it has a slightly hard time dealing with very big groups of targets."
+	},
+	"chicken_artemis_team" : {
+		"name" : "Dummy Artemis",
+		"description" : "Long-Range Gauss Anti-Air Tower",
+		"helptext" : "The Dummy Artemis shoots a very fast high-power Gauss shot, dealing heavy damage at targets, the gauss shot also explodes every hit, decimating groups too close together. However it loses its value if the aerial units attack in spread out formations, unable to use its pierce and aoe to it's advantage."
+	},
+	"chicken_cerberus_team" : {
+		"name" : "Dummy Cerberus",
+		"description" : "Plasma Artillery Battery",
+		"helptext" : "The Dummy Cerberus is very similar to a normal Cerberus, however has better accuracy but less aoe, in addition to exceptionally fast projectile speed. It is weaker than the Cerberus due to it's lower cost and has less range."
+	},
+	"chicken_bigbertha_team" : {
+		"name" : "Dummy Big Bertha",
+		"description" : "Destructive Quake Cannon",
+		"helptext" : "The Dummy Big Bertha is a force of artillery destruction, it combines the quake's anti-terrain into it's projectile, while also doubling the damage at the cost of firing rate, this thing can ruin bases and defenses. It can only appear when Aggression Rating is very low, but when it does, prioritize removing it, and attempt to reclaim of whats left over as it drops alot of metal. When attempting to shoot it's first shot, it has to recharge first, taking double the time it needs to reload."
+	},
+	"chicken_caretaker_team" : {
+		"name" : "Dummy Caretaker",
+		"description" : "Construction Assistant"
+		"helptext" : "The Dummy Caretaker is basically the same as the normal caretaker, albeit a bit more durable. We can build this in order to access the Dummy version of the turrets, giving us more defense options to fight against them."
+	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
 		"description" : "All-Terrain Spores (Anti-Air/Skirm)",
