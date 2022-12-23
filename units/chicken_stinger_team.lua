@@ -37,7 +37,7 @@ return { chicken_stinger_team = {
   noAutoFire                    = false,
   noChaseCategory               = [[FIXEDWING LAND SHIP SATELLITE SWIM GUNSHIP SUB HOVER]],
   objectName                    = [[stingerclone_team.dae]],
-  script                        = [[chicken_stinger.lua]],
+  script                        = [[chicken_stinger_team.lua]],
   selfDestructAs                = [[MEDIUM_BUILDINGEX]],
 
   sfxtypes                      = {
@@ -113,6 +113,12 @@ return { chicken_stinger_team = {
 
 
   featureDefs                   = {
+    DEAD  = {
+      blocking         = false,
+      footprintX       = 3,
+      footprintZ       = 3,
+      object           = [[stud4.dae]],
+    },
   },
 
 } }

@@ -33,7 +33,7 @@ return { chicken_stardust_team = {
   maxSlope                      = 18,
   noChaseCategory               = [[FIXEDWING LAND SHIP SWIM GUNSHIP SUB HOVER]],
   objectName                    = [[stardustclone_team.dae]],
-  script                        = [[chicken_stardust.lua]],
+  script                        = [[chicken_stardust_team.lua]],
   selfDestructAs                = [[LARGE_BUILDINGEX]],
 
   sfxtypes                      = {
@@ -98,6 +98,12 @@ return { chicken_stardust_team = {
   },
 
   featureDefs                   = {
+    DEAD  = {
+      blocking         = false,
+      footprintX       = 3,
+      footprintZ       = 3,
+      object           = [[stud3.dae]],
+    },
   },
 
 } }

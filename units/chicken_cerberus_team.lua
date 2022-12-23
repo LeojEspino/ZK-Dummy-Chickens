@@ -33,7 +33,7 @@ return { chicken_cerberus_team = {
   noAutoFire                    = false,
   noChaseCategory               = [[FIXEDWING LAND SHIP SATELLITE SWIM GUNSHIP SUB HOVER]],
   objectName                    = [[cerberusclone_team.dae]],
-  script                        = [[chicken_cerberus.lua]],
+  script                        = [[chicken_cerberus_team.lua]],
   selfDestructAs                = [[LARGE_BUILDINGEX]],
   
   sfxtypes               = {
@@ -101,6 +101,12 @@ return { chicken_cerberus_team = {
 
 
   featureDefs                   = {
+    DEAD  = {
+      blocking         = false,
+      footprintX       = 5,
+      footprintZ       = 5,
+      object           = [[stud5.dae]],
+    },
   },
 
 } }

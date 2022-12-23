@@ -1,7 +1,7 @@
 return { chicken_desolator_team = {
   unitname                      = [[chicken_desolator_team]],
   name                          = [[Dummy Desolator]],
-  description                   = [[Hard-Hitting Defence Fortress]],
+  description                   = [[Hard-Hitting Defence Fortress - Power by connecting to a 50 energy grid]],
   activateWhenBuilt             = true,
   buildCostMetal                = 1800,
   builder                       = false,
@@ -44,7 +44,7 @@ return { chicken_desolator_team = {
   noChaseCategory               = [[FIXEDWING LAND SHIP SATELLITE SWIM GUNSHIP SUB HOVER]],
   objectName                    = [[desolatorclone_team.dae]],
   onoffable                     = true,
-  script                        = [[chicken_desolator.lua]],
+  script                        = [[chicken_desolator_team.lua]],
   selfDestructAs                = [[ESTOR_BUILDING]],
 
   sfxtypes            = {
@@ -111,6 +111,12 @@ return { chicken_desolator_team = {
 
 
   featureDefs                   = {
+    DEAD  = {
+      blocking         = false,
+      footprintX       = 4,
+      footprintZ       = 4,
+      object           = [[stud5.dae]],
+    },
   },
 
 } }

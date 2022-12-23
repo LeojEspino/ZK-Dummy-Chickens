@@ -43,7 +43,7 @@ return { chicken_razor_team = {
 
   },
 
-  script                        = [[chicken_razor.lua]],
+  script                        = [[chicken_razor_team.lua]],
   sightDistance                 = 660,
   useBuildingGroundDecal        = true,
   workerTime                    = 0,
@@ -109,6 +109,12 @@ return { chicken_razor_team = {
 
 
   featureDefs                   = {
+    DEAD  = {
+      blocking         = false,
+      footprintX       = 3,
+      footprintZ       = 3,
+      object           = [[stud3.dae]],
+    },
   },
 
 } }

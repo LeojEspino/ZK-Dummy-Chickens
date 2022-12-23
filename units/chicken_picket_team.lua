@@ -37,7 +37,7 @@ return { chicken_picket_team = {
   noAutoFire                    = false,
   noChaseCategory               = [[FIXEDWING LAND SINK TURRET SHIP SATELLITE SWIM GUNSHIP FLOAT SUB HOVER]],
   objectName                    = [[picketclone_team.dae]],
-  script                        = [[chicken_picket.lua]],
+  script                        = [[chicken_picket_team.lua]],
   selfDestructAs                = [[SMALL_BUILDINGEX]],
 
   sfxtypes                      = {
@@ -104,6 +104,12 @@ return { chicken_picket_team = {
 
 
   featureDefs                   = {
+    DEAD  = {
+      blocking         = false,
+      footprintX       = 2,
+      footprintZ       = 2,
+      object           = [[stud2.dae]],
+    },
   },
 
 } }

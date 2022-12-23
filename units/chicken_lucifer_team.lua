@@ -37,7 +37,7 @@ return { chicken_lucifer_team = {
   maxWaterDepth                 = 0,
   noChaseCategory               = [[FIXEDWING LAND SHIP SWIM GUNSHIP SUB HOVER]],
   objectName                    = [[luciferclone_team.dae]],
-  script                        = [[chicken_lucifer.lua]],
+  script                        = [[chicken_lucifer_team.lua]],
   selfdestructas                = [[ESTOR_BUILDING]],
   sightDistance                 = 660,
   useBuildingGroundDecal        = true,
@@ -96,6 +96,12 @@ return { chicken_lucifer_team = {
   },
 
   featureDefs                   = {
+    DEAD  = {
+      blocking         = false,
+      footprintX       = 4,
+      footprintZ       = 4,
+      object           = [[stud5.dae]],
+    },
   },
 
 } }

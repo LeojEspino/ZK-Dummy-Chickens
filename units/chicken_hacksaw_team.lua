@@ -30,7 +30,7 @@ return { chicken_hacksaw_team = {
   noAutoFire                    = false,
   noChaseCategory               = [[FIXEDWING LAND SINK TURRET SHIP SATELLITE SWIM GUNSHIP FLOAT SUB HOVER]],
   objectName                    = [[hacksawclone_team.dae]],
-  script                        = [[chicken_hacksaw.lua]],
+  script                        = [[chicken_hacksaw_team.lua]],
   selfDestructAs                = [[SMALL_BUILDINGEX]],
 
   sfxtypes                      = {
@@ -109,6 +109,12 @@ return { chicken_hacksaw_team = {
 
 
   featureDefs                   = {
+    DEAD  = {
+      blocking         = false,
+      footprintX       = 3,
+      footprintZ       = 3,
+      object           = [[stud3.dae]],
+    },
   },
 
 } }

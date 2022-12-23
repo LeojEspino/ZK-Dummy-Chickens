@@ -39,7 +39,7 @@ return { chicken_bigbertha_team = {
   maxWaterDepth                 = 0,
   noChaseCategory               = [[FIXEDWING LAND SHIP SWIM GUNSHIP SUB HOVER]],
   objectName                    = [[bigberthaclone_team.dae]],
-  script                        = [[chicken_bigbertha.lua]],
+  script                        = [[chicken_bigbertha_team.lua]],
   selfDestructAs                = [[ATOMIC_BLAST]],
 
   sfxtypes                      = {
@@ -109,6 +109,12 @@ return { chicken_bigbertha_team = {
   },
 
   featureDefs                   = {
+    DEAD  = {
+      blocking         = false,
+      footprintX       = 4,
+      footprintZ       = 4,
+      object           = [[bigberthaclonedead.dae]],
+    },
   },
 
 } }

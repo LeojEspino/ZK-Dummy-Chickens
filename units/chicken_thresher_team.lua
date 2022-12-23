@@ -33,7 +33,7 @@ return { chicken_thresher_team = {
   noAutoFire                    = false,
   noChaseCategory               = [[FIXEDWING LAND SINK TURRET SHIP SATELLITE SWIM GUNSHIP FLOAT SUB HOVER]],
   objectName                    = [[thresherclone_team.dae]],
-  script                        = [[chicken_thresher.lua]],
+  script                        = [[chicken_thresher_team.lua]],
   selfDestructAs                = [[MEDIUM_BUILDINGEX]],
   
   sfxtypes               = {
@@ -102,6 +102,12 @@ return { chicken_thresher_team = {
 
 
   featureDefs                   = {
+    DEAD  = {
+      blocking         = false,
+      footprintX       = 3,
+      footprintZ       = 3,
+      object           = [[stud4.dae]],
+    },
   },
 
 } }

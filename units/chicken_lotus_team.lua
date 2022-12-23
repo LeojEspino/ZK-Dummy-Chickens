@@ -35,7 +35,7 @@ return { chicken_lotus_team = {
   noAutoFire                    = false,
   noChaseCategory               = [[FIXEDWING LAND SHIP SATELLITE SWIM GUNSHIP SUB HOVER]],
   objectName                    = [[lotusclone_team.dae]],
-  script                        = [[chicken_lotus.lua]],
+  script                        = [[chicken_lotus_team.lua]],
   selfDestructAs                = [[SMALL_BUILDINGEX]],
 
   sfxtypes                      = {
@@ -109,6 +109,12 @@ return { chicken_lotus_team = {
 
 
   featureDefs                   = {
+    DEAD  = {
+      blocking         = false,
+      footprintX       = 2,
+      footprintZ       = 2,
+      object           = [[stud2.dae]],
+    },
   },
 
 } }

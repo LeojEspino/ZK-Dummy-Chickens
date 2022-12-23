@@ -37,7 +37,7 @@ return { chicken_faraday_team = {
   maxWaterDepth                 = 0,
   noChaseCategory               = [[FIXEDWING LAND SHIP SWIM GUNSHIP SUB HOVER]],
   objectName                    = [[faradayclone_team.dae]],
-  script                        = [[chicken_faraday.lua]],
+  script                        = [[chicken_faraday_team.lua]],
   selfDestructAs                = [[MEDIUM_BUILDINGEX]],
 
   sfxtypes                      = {
@@ -105,6 +105,12 @@ return { chicken_faraday_team = {
   },
 
   featureDefs                   = {
+    DEAD  = {
+      blocking         = false,
+      footprintX       = 2,
+      footprintZ       = 2,
+      object           = [[stud3.dae]],
+    },
   },
 
 } }

@@ -62,7 +62,7 @@ return { chicken_caretaker_team = {
   maxVelocity                   = 0,
   movementClass                 = [[KBOT2]],
   objectName                    = [[caretakerclone_team.dae]],
-  script                        = [[chicken_caretaker.lua]],
+  script                        = [[chicken_caretaker_team.lua]],
   selfDestructAs                = [[NANOBOOM2]],
   showNanoSpray                 = false,
   sightDistance                 = 380,
@@ -71,6 +71,12 @@ return { chicken_caretaker_team = {
   workerTime                    = 10,
 
   featureDefs                   = {
+    DEAD  = {
+      blocking         = false,
+      footprintX       = 3,
+      footprintZ       = 3,
+      object           = [[stud3.dae]],
+    },
   },
 
     weaponDefs = {

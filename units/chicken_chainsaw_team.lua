@@ -34,7 +34,7 @@ return { chicken_chainsaw_team = {
   noAutoFire                    = false,
   noChaseCategory               = [[FIXEDWING LAND SINK TURRET SHIP SATELLITE SWIM GUNSHIP FLOAT SUB HOVER]],
   objectName                    = [[chainsawclone_team.dae]],
-  script                        = [[chicken_chainsaw.lua]],
+  script                        = [[chicken_chainsaw_team.lua]],
   selfDestructAs                = [[LARGE_BUILDINGEX]],
   sightDistance                 = 848,
   useBuildingGroundDecal        = true,
@@ -108,6 +108,12 @@ return { chicken_chainsaw_team = {
 
 
   featureDefs                   = {
+    DEAD  = {
+      blocking         = false,
+      footprintX       = 4,
+      footprintZ       = 4,
+      object           = [[stud5.dae]],
+    },
   },
 
 } }

@@ -36,7 +36,7 @@ return { chicken_gauss_team = {
   noAutoFire                    = false,
   noChaseCategory               = [[FIXEDWING LAND SHIP SATELLITE SWIM GUNSHIP SUB HOVER]],
   objectName                    = [[gaussclone_team.dae]],
-  script                        = [[chicken_gauss.lua]],
+  script                        = [[chicken_gauss_team.lua]],
   selfDestructAs                = [[SMALL_BUILDINGEX]],
  
   sfxtypes               = {
@@ -117,6 +117,12 @@ return { chicken_gauss_team = {
 
 
   featureDefs                   = {
+    DEAD  = {
+      blocking         = false,
+      footprintX       = 3,
+      footprintZ       = 3,
+      object           = [[stud4.dae]],
+    },
   },
 
 } }
