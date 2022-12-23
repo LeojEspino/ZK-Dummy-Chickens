@@ -22,6 +22,7 @@ return { chicken_bigbertha_team = {
     selectionscalemult = 1,
 	neededlink  = 50,
     pylonrange  = 50,
+	keeptooltip = [[any string I want]],
 
     outline_x = 270,
     outline_y = 270,

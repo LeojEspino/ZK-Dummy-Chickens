@@ -22,6 +22,7 @@ return { chicken_lucifer_team = {
 
     neededlink     = 50,
     pylonrange     = 50,
+	keeptooltip = [[any string I want]],
 
     aimposoffset   = [[0 32 0]],
     midposoffset   = [[0 0 0]],

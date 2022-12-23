@@ -21,6 +21,7 @@ return { chicken_desolator_team = {
     bait_level_target_armor = 1,
     neededlink     = 50,
     pylonrange     = 50,
+	keeptooltip = [[any string I want]],
     extradrawrange = 430,
     aimposoffset   = [[0 30 0]],
     midposoffset   = [[0 0 0]],

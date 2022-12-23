@@ -18,6 +18,7 @@ return { chicken_artemis_team = {
   customParams                  = {
     neededlink     = 50,
     pylonrange     = 50,
+	keeptooltip = [[any string I want]],
     bait_level_default = 2,
 	priority_misc  = 1, -- Medium
   },
