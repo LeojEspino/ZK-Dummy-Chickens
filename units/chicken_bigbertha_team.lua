@@ -89,7 +89,7 @@ return { chicken_bigbertha_team = {
       },
       
       damage                  = {
-        default = 4500.5,
+        default = 4000.1,
       },
 
       explosionGenerator      = [[custom:bull_fade]],
