@@ -156,4 +156,50 @@ return {
 			},
 		},
 	},
+	["gunlance_stab"] = {
+        usedefaultexplosions = false,
+        sphere = {
+            air                = true,
+            class              = [[CSpherePartSpawner]],
+            count              = 1,
+            ground             = true,
+            water              = true,
+            underwater         = true,
+            properties = {
+                alpha              = 0.9, -- how transparent it is (1 is not, 0 is transparent)
+                color              = [[0.8, 0.5, 0.2]], -- change color here. RGBA
+                expansionspeed     = 5, -- how fast it expands
+                ttl                = 10, -- how long it lives
+            },
+        },
+    },
+	["shellshock"] = {
+        usedefaultexplosions = false,
+		groundflash = {
+            alwaysvisible      = true,
+            circlealpha        = 0.5,
+            circlegrowth       = 20,
+            flashalpha         = 0.5,
+            flashsize          = 5,
+            ttl                = 10,
+            color              = [[1.0, 1.0, 1.0]],
+        },
+    },
+	["wyvern_blast"] = {
+        usedefaultexplosions = false,
+        sphere = {
+            air                = true,
+            class              = [[CSpherePartSpawner]],
+            count              = 1,
+            ground             = true,
+            water              = true,
+            underwater         = true,
+            properties = {
+                alpha              = 0.9, -- how transparent it is (1 is not, 0 is transparent)
+                color              = [[0.8, 0.5, 0.2]], -- change color here. RGBA
+                expansionspeed     = 10, -- how fast it expands
+                ttl                = 10, -- how long it lives
+            },
+        },
+    },
 }
