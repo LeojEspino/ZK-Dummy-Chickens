@@ -218,6 +218,13 @@ eggDefs.chicken_stalker_egg = MergeTable(defaultEgg, {
   object      = [[stud3.dae]],
 })
 
+--Elite Tier
+eggDefs.chicken_ravager_egg = MergeTable(defaultEgg, {
+  metal       = 240,
+  reclaimTime = 240,
+  object      = [[stud4.dae]],
+})
+
 eggDefs.chicken_pigeon_egg = MergeTable(defaultEgg, {
   metal       = 15,
   reclaimTime = 15,
