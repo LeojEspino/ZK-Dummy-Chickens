@@ -509,6 +509,11 @@
 		"description" : "Advanced Burst",
 		"helptext" : "A Dummy holding a grenade launcher, it shoots explosive bouncing balls, and has an ability to shoot a spreadshot of mini balls, giving this dummy great crowd control. It is slightly slower than other Dummies but boast decent health."
 	},
+	"chicken_ravager" : {
+		"name" : "Dummy Ravager",
+		"description" : "Elite Brawler",
+		"helptext" : "A dangerous Brawler class, it has high dps for it's melee, every third attack of Wyvern Fire is replaced with Shellshock, an attack that hits everything near it. It has a Bastion form, giving it armor and access to Wyvern Fire for 3 seconds. After using that it usually follows it up with a Wyvern Blast, creating a line of explosions, dealing aoe damage and disrupting anything hit."
+	},
 	"chicken_stalker" : {
 		"name" : "Dummy Stalker",
 		"description" : "Advanced Assassin",
