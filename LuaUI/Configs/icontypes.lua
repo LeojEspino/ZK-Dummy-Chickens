@@ -1270,6 +1270,10 @@ local icontypes = {
     bitmap='icons/c_juggernaut.dds',
     size=1.5,
   },
+  c_ravager = {
+    bitmap='icons/c_ravager.dds',
+    size=1.75,
+  },
   chickena = {
     --bitmap='icons/chickena.dds',
     bitmap='icons/walkerassault.dds',
