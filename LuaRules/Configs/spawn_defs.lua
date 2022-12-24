@@ -72,7 +72,7 @@ defensePerWave			= 1	-- number of turrets added to defense pool every wave, mult
 defensePerBurrowKill	= 1	-- number of turrets added to defense pool for each burrow killed
 
 gracePeriod				= 180	   -- no chicken spawn in this period, seconds
-gracePenalty			= 15		-- reduced grace per player over one, seconds
+gracePenalty			= 0		-- reduced grace per player over one, seconds
 gracePeriodMin			= 90
 rampUpTime				= 0	-- if current time < ramp up time, wave size is multiplied by currentTime/rampUpTime; seconds
 
@@ -94,13 +94,13 @@ humanAggroMax			= 100
 humanAggroWaveFactor	= 1
 humanAggroWaveMax		= 5
 humanAggroDefenseFactor	= 0.5	-- turrets issued per point of PAR every wave, multiplied by playercount
-humanAggroTechTimeProgress	= 20	-- how much to increase chicken tech progress (* aggro), seconds
+humanAggroTechTimeProgress	= 10	-- how much to increase chicken tech progress (* aggro), seconds
 humanAggroTechTimeRegress	= 0	-- how much to reduce chicken tech progress (* aggro), seconds
 humanAggroQueenTimeFactor	= 1	-- burrow queen time is multiplied by this and aggro (after clamping)
 humanAggroQueenTimeMin	= 0	-- min value of aggro for queen time calc
 humanAggroQueenTimeMax	= 8
 
-techAccelPerPlayer		= 4		-- how much tech accel increases per player over one per wave, seconds
+techAccelPerPlayer		= 2		-- how much tech accel increases per player over one per wave, seconds
 techTimeFloorFactor		= 0.5	-- tech timer can never be less than this * real time
 techTimeMax				= 999999
 
@@ -140,21 +140,21 @@ end
 local chickenTypes = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_offense) or {
 	chicken				=  {time = -60,  squadSize = 3.6, obsolete = 5},
 -- Brawler
-	chicken_warrior     =  {time = 5,  squadSize = 1.8, obsolete = 20},
-	chicken_destroyer   =  {time = 10, squadSize = 0.9, obsolete = 40},
-	chicken_ravager     =  {time = 20, squadSize = 0.3},
+	chicken_warrior     =  {time = 5,  squadSize = 2.4, obsolete = 20},
+	chicken_destroyer   =  {time = 10, squadSize = 1.2, obsolete = 40},
+	chicken_ravager     =  {time = 20, squadSize = 0.4},
 -- Marksman
-	chicken_gunner      =  {time = 5,  squadSize = 1.8, obsolete = 20},
-	chicken_mercenary   =  {time = 10, squadSize = 0.9, obsolete = 40},
+	chicken_gunner      =  {time = 5,  squadSize = 2.4, obsolete = 20},
+	chicken_mercenary   =  {time = 10, squadSize = 1.2, obsolete = 40},
 -- Assasin
-	chicken_thief       =  {time = 5,  squadSize = 1.8, obsolete = 20},
-	chicken_stalker     =  {time = 10, squadSize = 0.9, obsolete = 40},
+	chicken_thief       =  {time = 5,  squadSize = 2.4, obsolete = 20},
+	chicken_stalker     =  {time = 10, squadSize = 1.2, obsolete = 40},
 -- Burst
-	chicken_mage        =  {time = 5,  squadSize = 1.8, obsolete = 20},
-	chicken_grenadier   =  {time = 10, squadSize = 0.9, obsolete = 40},
+	chicken_mage        =  {time = 5,  squadSize = 2.4, obsolete = 20},
+	chicken_grenadier   =  {time = 10, squadSize = 1.2, obsolete = 40},
 -- Tank
-	chicken_defender    =  {time = 5,  squadSize = 1.8, obsolete = 20},
-	chicken_juggernaut  =  {time = 10, squadSize = 0.9, obsolete = 40},
+	chicken_defender    =  {time = 5,  squadSize = 2.4, obsolete = 20},
+	chicken_juggernaut  =  {time = 10, squadSize = 1.2, obsolete = 40},
 	--chicken_pigeon		=  {time = 6,  squadSize = 1.4, obsolete = 35},
 	--chickens			=  {time = 12,  squadSize = 1, obsolete = 35},
 	--chickena			=  {time = 18,  squadSize = 0.5, obsolete = 40},
@@ -229,7 +229,7 @@ difficulties = {
 		queenHealthMod	 = 0.25,
 		maxBurrows       = 4,
 		specialPowers    = {},
-		techAccelPerPlayer = 1.3,
+		techAccelPerPlayer = 1,
 		techTimeFloorFactor = 0.2,
 		scoreMult        = 0.12,
 	},
@@ -245,7 +245,7 @@ difficulties = {
 		queenHealthMod	 = 0.33,
 		maxBurrows	   = 10,
 		specialPowers	 = {},
-		techAccelPerPlayer = 2,
+		techAccelPerPlayer = 1.5,
 		techTimeFloorFactor = 0.4,
 		scoreMult		 = 0.25,
 	},
@@ -258,7 +258,7 @@ difficulties = {
 		waveSizeMult	 = 0.8,
 		timeSpawnBonus   = .03,
 		queenHealthMod	 = 0.5,
-		techAccelPerPlayer = 4,
+		techAccelPerPlayer = 2,
 		scoreMult		 = 0.66,
 	},
 
@@ -278,7 +278,7 @@ difficulties = {
 		queenHealthMod	 = 1.5,
 		queenSpawnMult   = 5,
 		miniQueenTime	 = {0.5},
-		techAccelPerPlayer	= 5,
+		techAccelPerPlayer	= 3,
 		scoreMult		 = 1.25,
 		timeModifier	 = 0.875,
 	},
@@ -289,8 +289,6 @@ difficulties = {
 		waveSizeMult	 = 1.5,
 		timeSpawnBonus   = .06,
 		burrowWaveSize	 = 1.6,
-		gracePeriod		 = 150,
-		gracePeriodMin	 = 30,
 		burrowRespawnChance = 0.25,
 		--burrowRegressTime	= 25,
 		queenSpawnMult   = 5,
