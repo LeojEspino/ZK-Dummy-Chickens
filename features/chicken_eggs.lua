@@ -189,39 +189,39 @@ eggDefs.chicken_thief_egg = MergeTable(defaultEgg, {
 
 --Advanced Tier
 eggDefs.chicken_mercenary_egg = MergeTable(defaultEgg, {
-  metal       = 80,
-  reclaimTime = 80,
+  metal       = 120,
+  reclaimTime = 120,
   object      = [[stud3.dae]],
 })
 
 eggDefs.chicken_destroyer_egg = MergeTable(defaultEgg, {
-  metal       = 80,
-  reclaimTime = 80,
+  metal       = 120,
+  reclaimTime = 120,
   object      = [[stud3.dae]],
 })
 
 eggDefs.chicken_juggernaut_egg = MergeTable(defaultEgg, {
-  metal       = 80,
-  reclaimTime = 80,
+  metal       = 120,
+  reclaimTime = 120,
   object      = [[stud3.dae]],
 })
 
 eggDefs.chicken_grenadier_egg = MergeTable(defaultEgg, {
-  metal       = 80,
-  reclaimTime = 80,
+  metal       = 120,
+  reclaimTime = 120,
   object      = [[stud3.dae]],
 })
 
 eggDefs.chicken_stalker_egg = MergeTable(defaultEgg, {
-  metal       = 80,
-  reclaimTime = 80,
+  metal       = 120,
+  reclaimTime = 120,
   object      = [[stud3.dae]],
 })
 
 --Elite Tier
 eggDefs.chicken_ravager_egg = MergeTable(defaultEgg, {
-  metal       = 240,
-  reclaimTime = 240,
+  metal       = 360,
+  reclaimTime = 360,
   object      = [[stud4.dae]],
 })
 
