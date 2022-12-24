@@ -141,19 +141,20 @@ local chickenTypes = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOption
 	chicken				=  {time = -60,  squadSize = 3.6, obsolete = 5},
 -- Brawler
 	chicken_warrior     =  {time = 5,  squadSize = 1.8, obsolete = 20},
-	chicken_destroyer   =  {time = 10, squadSize = 0.9},
+	chicken_destroyer   =  {time = 10, squadSize = 0.9, obsolete = 40},
+	chicken_ravager     =  {time = 20, squadSize = 0.3},
 -- Marksman
 	chicken_gunner      =  {time = 5,  squadSize = 1.8, obsolete = 20},
-	chicken_mercenary   =  {time = 10, squadSize = 0.9},
--- Burst
-	chicken_mage        =  {time = 5,  squadSize = 1.8, obsolete = 20},
-	chicken_grenadier   =  {time = 10, squadSize = 0.9},
--- Tank
-	chicken_defender    =  {time = 5,  squadSize = 1.8, obsolete = 20},
-	chicken_juggernaut  =  {time = 10, squadSize = 0.9},
+	chicken_mercenary   =  {time = 10, squadSize = 0.9, obsolete = 40},
 -- Assasin
 	chicken_thief       =  {time = 5,  squadSize = 1.8, obsolete = 20},
-	chicken_stalker     =  {time = 10, squadSize = 0.9},
+	chicken_stalker     =  {time = 10, squadSize = 0.9, obsolete = 40},
+-- Burst
+	chicken_mage        =  {time = 5,  squadSize = 1.8, obsolete = 20},
+	chicken_grenadier   =  {time = 10, squadSize = 0.9, obsolete = 40},
+-- Tank
+	chicken_defender    =  {time = 5,  squadSize = 1.8, obsolete = 20},
+	chicken_juggernaut  =  {time = 10, squadSize = 0.9, obsolete = 40},
 	--chicken_pigeon		=  {time = 6,  squadSize = 1.4, obsolete = 35},
 	--chickens			=  {time = 12,  squadSize = 1, obsolete = 35},
 	--chickena			=  {time = 18,  squadSize = 0.5, obsolete = 40},
