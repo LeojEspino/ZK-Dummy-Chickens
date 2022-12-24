@@ -302,6 +302,7 @@ local medRangeSkirmieeArray = NameToDefID({
 	"striderscorpion",
 	"chicken_mage",
 	"chicken_grenadier",
+	"chicken_ravager",
 })
 
 for name, data in pairs(UnitDefNames) do -- add all comms to mid ranged skirm because they might be short ranged (and also explode)
@@ -2114,6 +2115,12 @@ local behaviourConfig = {
 		name = "chicken_juggernaut",
 		swarms = longRangeSwarmieeArray,
 		maxSwarmLeeway = 35,
+	},
+	{
+		name = "chicken_ravager",
+		swarms = lowRangeSwarmieeArray,
+		fightOnlyUnits = medRangeExplodables,
+		maxSwarmLeeway = 300,
 	},
 	
 	-- Ward fire only units.
