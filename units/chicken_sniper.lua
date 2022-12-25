@@ -160,7 +160,7 @@ return { chicken_sniper = {
 	  noExplode               = true,
 
       damage                  = {
-        default = 450,
+        default = 600,
       },
 	  customParams            = {
 	    single_hit = true,
