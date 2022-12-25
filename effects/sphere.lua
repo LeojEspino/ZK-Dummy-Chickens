@@ -202,4 +202,56 @@ return {
             },
         },
     },
+	["sniper_rifle"] = {
+        usedefaultexplosions = false,
+		groundflash = {
+            alwaysvisible      = true,
+            circlealpha        = 1,
+            circlegrowth       = 10,
+            flashalpha         = 1,
+            flashsize          = 10,
+            ttl                = 5,
+            color              = [[0.0, 0.5, 0.8]],
+        },
+        sphere = {
+            air                = true,
+            class              = [[CSpherePartSpawner]],
+            count              = 1,
+            ground             = true,
+            water              = true,
+            underwater         = true,
+            properties = {
+                alpha              = 1, -- how transparent it is (1 is not, 0 is transparent)
+                color              = [[0.0, 0.5, 0.8]], -- change color here. RGBA
+                expansionspeed     = 5, -- how fast it expands
+                ttl                = 5, -- how long it lives
+            },
+        },
+    },
+	["headhunter"] = {
+        usedefaultexplosions = false,
+		groundflash = {
+            alwaysvisible      = true,
+            circlealpha        = 1,
+            circlegrowth       = 30,
+            flashalpha         = 1,
+            flashsize          = 10,
+            ttl                = 5,
+            color              = [[0.0, 0.5, 0.8]],
+        },
+        sphere = {
+            air                = true,
+            class              = [[CSpherePartSpawner]],
+            count              = 1,
+            ground             = true,
+            water              = true,
+            underwater         = true,
+            properties = {
+                alpha              = 1, -- how transparent it is (1 is not, 0 is transparent)
+                color              = [[0.0, 0.5, 0.8]], -- change color here. RGBA
+                expansionspeed     = 15, -- how fast it expands
+                ttl                = 5, -- how long it lives
+            },
+        },
+    },
 }
