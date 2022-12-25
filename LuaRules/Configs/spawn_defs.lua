@@ -142,11 +142,11 @@ local chickenTypes = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOption
 -- Brawler
 	chicken_warrior     =  {time = 5,  squadSize = 2.4, obsolete = 20},
 	chicken_destroyer   =  {time = 10, squadSize = 1.2, obsolete = 40},
-	chicken_ravager     =  {time = 20, squadSize = 0.4},
+	chicken_ravager     =  {time = 20, squadSize = 0.6},
 -- Marksman
 	chicken_gunner      =  {time = 5,  squadSize = 2.4, obsolete = 20},
 	chicken_mercenary   =  {time = 10, squadSize = 1.2, obsolete = 40},
-	chicken_sniper      =  {time = 20, squadSize = 0.4},
+	chicken_sniper      =  {time = 20, squadSize = 0.6},
 -- Assasin
 	chicken_thief       =  {time = 5,  squadSize = 2.4, obsolete = 20},
 	chicken_stalker     =  {time = 10, squadSize = 1.2, obsolete = 40},
@@ -285,7 +285,7 @@ difficulties = {
 	},
 	
 	['Chicken: Suicidal'] = {
-		chickenSpawnRate = 45,
+		chickenSpawnRate = 30,
 		burrowSpawnRate  = 40,
 		waveSizeMult	 = 1.25,
 		timeSpawnBonus   = .06,
