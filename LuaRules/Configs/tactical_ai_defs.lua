@@ -67,6 +67,7 @@ local longRangeSwarmieeArray = NameToDefID({
 	"shiparty",
 	"cloakarty",
 	"amphsupport",
+	"chicken_sniper",
 })
 
 local medRangeSwarmieeArray = NameToDefID({
@@ -2121,6 +2122,12 @@ local behaviourConfig = {
 		swarms = lowRangeSwarmieeArray,
 		fightOnlyUnits = medRangeExplodables,
 		maxSwarmLeeway = 300,
+	},
+	{
+		name = "chicken_sniper",
+		skirms = artyRangeSkirmieeArray,
+		skirmRadar = true,
+		skirmLeeway = 40,
 	},
 	
 	-- Ward fire only units.
