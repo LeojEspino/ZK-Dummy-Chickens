@@ -53,8 +53,8 @@ return { chicken_ravager = {
     },
 
   },
-  sightDistance       = 512,
-  sonarDistance       = 512,
+  sightDistance       = 660,
+  sonarDistance       = 660,
   turnRate            = 3000,
   upright             = true,
   workerTime          = 0,

@@ -51,8 +51,8 @@ return { chicken_destroyer = {
     },
 
   },
-  sightDistance       = 1024,
-  sonarDistance       = 1024,
+  sightDistance       = 660,
+  sonarDistance       = 660,
   turnRate            = 3000,
   upright             = true,
   workerTime          = 0,

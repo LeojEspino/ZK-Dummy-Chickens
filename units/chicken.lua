@@ -51,8 +51,8 @@ return { chicken = {
     },
 
   },
-  sightDistance       = 256,
-  sonarDistance       = 256,
+  sightDistance       = 330,
+  sonarDistance       = 330,
   turnRate            = 3000,
   upright             = true,
   workerTime          = 0,
