@@ -509,15 +509,20 @@
 		"description" : "Advanced Burst",
 		"helptext" : "A Dummy holding a grenade launcher, it shoots explosive bouncing balls, and has an ability to shoot a spreadshot of mini balls, giving this dummy great crowd control. It is slightly slower than other Dummies but boast decent health."
 	},
+	"chicken_stalker" : {
+		"name" : "Dummy Stalker",
+		"description" : "Advanced Assassin",
+		"helptext" : "A deadly cloaked Dummy, it wields two scimitars to attack and has a devastating but small spin attack that deals high damage on the second spin, however just like other Assassins it has relatively low hp."
+	},
 	"chicken_ravager" : {
 		"name" : "Dummy Ravager",
 		"description" : "Elite Brawler",
 		"helptext" : "A dangerous Brawler class, it has high dps for it's melee, every third attack of Wyvern Fire is replaced with Shellshock, an attack that hits everything near it. It has a Bastion form, giving it armor and access to Wyvern Fire for 3 seconds. After using that it usually follows it up with a Wyvern Blast, creating a line of explosions, dealing aoe damage and disrupting anything hit."
 	},
-	"chicken_stalker" : {
-		"name" : "Dummy Stalker",
-		"description" : "Advanced Assassin",
-		"helptext" : "A deadly cloaked Dummy, it wields two scimitars to attack and has a devastating but small spin attack that deals high damage on the second spin, however just like other Assassins it has relatively low hp."
+	"chicken_sniper" : {
+		"name" : "Dummy Sniper",
+		"description" : "Elite Marksman",
+		"helptext" : "A very high ranged Marksman, it shoots bullets from far away while retreating from anything that gets too close, it's Bouncing Bullets disrupt enemies hit, and Headhunter pierces through enemies and deals high damage, though when trying to aim requires to stand still for a moment. It's hp is however, low for it's tier, and it cannot attack Air at all."
 	},
 	"chicken_lotus" : {
 		"name" : "Dummy Lotus",
