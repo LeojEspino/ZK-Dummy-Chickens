@@ -63,12 +63,12 @@ return { chicken_trickster = {
     {
       def                = [[LMB1]],
       mainDir            = [[0 0 1]],
-      onlyTargetCategory = [[SWIM LAND SUB SINK TURRET FLOAT SHIP HOVER]],
+      onlyTargetCategory = [[SWIM LAND SUB SINK TURRET FLOAT SHIP HOVER FIXEDWING GUNSHIP]],
     },
 	{
       def                = [[AB1]],
       mainDir            = [[0 0 1]],
-      onlyTargetCategory = [[SWIM LAND SUB SINK TURRET FLOAT SHIP HOVER]],
+      onlyTargetCategory = [[SWIM LAND SUB SINK TURRET FLOAT SHIP HOVER FIXEDWING GUNSHIP]],
     },
 
   },
