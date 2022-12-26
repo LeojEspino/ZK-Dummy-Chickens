@@ -524,6 +524,11 @@
 		"description" : "Elite Marksman",
 		"helptext" : "A very high ranged Marksman, it shoots bullets from far away while retreating from anything that gets too close, it's Bouncing Bullets disrupt enemies hit, and Headhunter pierces through enemies and deals high damage, though when trying to aim requires to stand still for a moment. It's hp is however, low for it's tier, and it cannot attack Air at all."
 	},
+	"chicken_trickster" : {
+		"name" : "Dummy Trickster",
+		"description" : "Elite Assassin",
+		"helptext" : "The Dummy Trickster is a short-ranged, high dps class that can quickly deal damage using Knife Party, and can go into the frontline faster using Vanishing Act, however Vanishing Act creates an effect that can give away where it is, and it has abyssmal hp for it's tier."
+	},
 	"chicken_lotus" : {
 		"name" : "Dummy Lotus",
 		"description" : "Burst Laser Tower",
