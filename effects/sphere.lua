@@ -254,4 +254,16 @@ return {
             },
         },
     },
+	["vanishing_act"] = {
+        usedefaultexplosions = false,
+		groundflash = {
+            alwaysvisible      = true,
+            circlealpha        = 0.5,
+            circlegrowth       = 15,
+            flashalpha         = 0,
+            flashsize          = 5,
+            ttl                = 5,
+            color              = [[1.0, 1.0, 1.0]],
+        },
+    },
 }
