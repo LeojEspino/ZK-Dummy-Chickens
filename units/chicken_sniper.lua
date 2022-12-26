@@ -24,7 +24,6 @@ return { chicken_sniper = {
     outline_yoff = 15,
   },
 
-  damageModifier      = 0.5,
   explodeAs           = [[NOWEAPON]],
   footprintX          = 2,
   footprintZ          = 2,
