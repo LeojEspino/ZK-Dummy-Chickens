@@ -224,6 +224,8 @@ local veryShortRangeSkirmieeArray = NameToDefID({
 	"chicken_destroyer",
 	"chicken_juggernaut",
 	"chicken_stalker",
+	"remote_detonation",
+	"cross_explosion",
 })
 
 local shortRangeSkirmieeArray = NameToDefID({
@@ -305,6 +307,7 @@ local medRangeSkirmieeArray = NameToDefID({
 	"chicken_grenadier",
 	"chicken_ravager",
 	"chicken_trickster",
+	"chicken_bomber",
 })
 
 for name, data in pairs(UnitDefNames) do -- add all comms to mid ranged skirm because they might be short ranged (and also explode)
@@ -2138,6 +2141,16 @@ local behaviourConfig = {
 		fightOnlyUnits = medRangeExplodables,
 		maxSwarmLeeway = 30,
 		minSwarmLeeway = 75,
+		skirmLeeway = 10,
+	},
+	{
+		name = "chicken_bomber",
+
+		skirms = lowMedRangeSkirmieeArray,
+		swarms = medRangeSwarmieeArray,
+		fightOnlyUnits = medRangeExplodables,
+		maxSwarmLeeway = 10,
+		minSwarmLeeway = 300,
 		skirmLeeway = 10,
 	},
 	
