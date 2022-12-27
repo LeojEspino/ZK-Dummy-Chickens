@@ -532,7 +532,7 @@
 	"chicken_bomber" : {
 		"name" : "Dummy Bomber",
 		"description" : "Elite Burst",
-		"helptext" : "The Dummy Bomber uses an array of bombs, most notably its big bomb, which when thrown out, will explode after 5 seconds and deal massive big aoe damage, and the square bomb can act as a proximity mine, however both Bombs can be destroyed without exploding. The Dummy Bomber is also decently durable."
+		"helptext" : "The Dummy Bomber uses an array of bombs, most notably its big bomb, which when thrown out, will explode after 5 seconds and deal massive big aoe damage, and the square bomb can act as a proximity mine, however both Bombs can be destroyed without exploding. The Dummy Bomber is also decently durable. It cannot attack aerial targets."
 	},
 	"chicken_lotus" : {
 		"name" : "Dummy Lotus",
