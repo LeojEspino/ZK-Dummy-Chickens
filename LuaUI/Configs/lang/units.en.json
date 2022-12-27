@@ -529,6 +529,11 @@
 		"description" : "Elite Assassin",
 		"helptext" : "The Dummy Trickster is a short-ranged, high dps class that can quickly deal damage using Knife Party, and can go into the frontline faster using Vanishing Act, however Vanishing Act creates an effect that can give away where it is, and it has abyssmal hp for it's tier."
 	},
+	"chicken_bomber" : {
+		"name" : "Dummy Bomber",
+		"description" : "Elite Burst",
+		"helptext" : "The Dummy Bomber uses an array of bombs, most notably its big bomb, which when thrown out, will explode after 5 seconds and deal massive big aoe damage, and the square bomb can act as a proximity mine, however both Bombs can be destroyed without exploding. The Dummy Bomber is also decently durable."
+	},
 	"chicken_lotus" : {
 		"name" : "Dummy Lotus",
 		"description" : "Burst Laser Tower",
