@@ -77,6 +77,7 @@ return { chicken_mage = {
       collideFeature          = false,
       collideFriendly         = false,
 	  areaOfEffect            = 100,
+	  edgeEffectiveness       = 1,
 	  turret                  = true,
 
       damage                  = {

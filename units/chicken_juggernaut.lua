@@ -117,6 +117,7 @@ return { chicken_juggernaut = {
 	  size                    = 0,
 	  reloadtime              = 5,
       areaOfEffect            = 200,
+	  edgeEffectiveness       = 1,
       craterBoost             = 0,
       craterMult              = 1,
       explosionSpeed          = 10,
