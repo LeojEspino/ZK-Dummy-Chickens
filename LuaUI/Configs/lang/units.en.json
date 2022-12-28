@@ -534,6 +534,11 @@
 		"description" : "Elite Burst",
 		"helptext" : "The Dummy Bomber uses an array of bombs, most notably its big bomb, which when thrown out, will explode after 5 seconds and deal massive big aoe damage, and the square bomb can act as a proximity mine, however both Bombs can be destroyed without exploding. The Dummy Bomber is also decently durable. It cannot attack aerial targets."
 	},
+	"chicken_admiral" : {
+		"name" : "Dummy Admiral",
+		"description" : "Elite Tank",
+		"helptext" : "The Dummy Admiral is a force to reckon with, while it doesn't have very high hp like it's other cousins, it still is high for it's artillery range. It's artillery shot is inaccurate but explode and Admiral can summon Dive Bombing planes to attack the enemy. It's main attack has high-range and can shred targets that it consistently hits."
+	},
 	"chicken_lotus" : {
 		"name" : "Dummy Lotus",
 		"description" : "Burst Laser Tower",
