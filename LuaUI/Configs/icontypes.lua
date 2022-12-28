@@ -1286,6 +1286,10 @@ local icontypes = {
     bitmap='icons/c_bomber.dds',
     size=1.75,
   },
+  c_admiral = {
+    bitmap='icons/c_admiral.dds',
+    size=1.75,
+  },
   chickena = {
     --bitmap='icons/chickena.dds',
     bitmap='icons/walkerassault.dds',
