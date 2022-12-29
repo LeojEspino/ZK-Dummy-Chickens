@@ -64,7 +64,7 @@ burrowSpawnRate			= 45		-- faster in games with many players, seconds
 chickenSpawnRate		= 50
 waveRatio				= 0.6	   -- waves are composed by two types of chicken, waveRatio% of one and (1-waveRatio)% of the other
 baseWaveSize			= 2.5		 -- multiplied by malus, 1 = 1 squadSize of chickens
-waveSizeMult			= 0.8
+waveSizeMult			= 0.75
 --forceBurrowRespawn	 = false	-- burrows always respawn even if the modoption is set otherwise
 queenSpawnMult			= 4		 -- how many times bigger is a queen hatch than a normal burrow hatch
 
@@ -138,27 +138,27 @@ end
 
 -- times in minutes
 local chickenTypes = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_offense) or {
-	chicken				=  {time = -60,  squadSize = 3.6, obsolete = 5},
+	chicken				=  {time = -60,  squadSize = 3.6, obsolete = 7.5},
 -- Brawler
-	chicken_warrior     =  {time = 5,  squadSize = 2.4, obsolete = 20},
-	chicken_destroyer   =  {time = 10, squadSize = 1.2, obsolete = 40},
-	chicken_ravager     =  {time = 20, squadSize = 0.6},
+	chicken_warrior     =  {time = 7.5,  squadSize = 2.4, obsolete = 30},
+	chicken_destroyer   =  {time = 15, squadSize = 1.2, obsolete = 50},
+	chicken_ravager     =  {time = 30, squadSize = 0.5},
 -- Marksman
-	chicken_gunner      =  {time = 5,  squadSize = 2.4, obsolete = 20},
-	chicken_mercenary   =  {time = 10, squadSize = 1.2, obsolete = 40},
-	chicken_sniper      =  {time = 20, squadSize = 0.6},
+	chicken_gunner      =  {time = 7.5,  squadSize = 2.4, obsolete = 30},
+	chicken_mercenary   =  {time = 15, squadSize = 1.2, obsolete = 50},
+	chicken_sniper      =  {time = 30, squadSize = 0.5},
 -- Assasin
-	chicken_thief       =  {time = 5,  squadSize = 2.4, obsolete = 20},
-	chicken_stalker     =  {time = 10, squadSize = 1.2, obsolete = 40},
-	chicken_trickster   =  {time = 20, squadSize = 0.6},
+	chicken_thief       =  {time = 7.5,  squadSize = 2.4, obsolete = 30},
+	chicken_stalker     =  {time = 15, squadSize = 1.2, obsolete = 50},
+	chicken_trickster   =  {time = 30, squadSize = 0.5},
 -- Burst
-	chicken_mage        =  {time = 5,  squadSize = 2.4, obsolete = 20},
-	chicken_grenadier   =  {time = 10, squadSize = 1.2, obsolete = 40},
-	chicken_bomber      =  {time = 20, squadSize = 0.6},
+	chicken_mage        =  {time = 7.5,  squadSize = 2.4, obsolete = 30},
+	chicken_grenadier   =  {time = 15, squadSize = 1.2, obsolete = 50},
+	chicken_bomber      =  {time = 30, squadSize = 0.5},
 -- Tank
-	chicken_defender    =  {time = 5,  squadSize = 2.4, obsolete = 20},
-	chicken_juggernaut  =  {time = 10, squadSize = 1.2, obsolete = 40},
-	chicken_admiral     =  {time = 20, squadSize = 0.6},
+	chicken_defender    =  {time = 7.5,  squadSize = 2.4, obsolete = 30},
+	chicken_juggernaut  =  {time = 15, squadSize = 1.2, obsolete = 50},
+	chicken_admiral     =  {time = 30, squadSize = 0.5},
 	--chicken_pigeon		=  {time = 6,  squadSize = 1.4, obsolete = 35},
 	--chickens			=  {time = 12,  squadSize = 1, obsolete = 35},
 	--chickena			=  {time = 18,  squadSize = 0.5, obsolete = 40},
