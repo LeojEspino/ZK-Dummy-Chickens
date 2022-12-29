@@ -2159,7 +2159,7 @@ local behaviourConfig = {
 
 		swarms = lowRangeSwarmieeArray,
 		fightOnlyUnits = medRangeExplodables,
-		maxSwarmLeeway = 510,
+		maxSwarmLeeway = 310,
 		minSwarmLeeway = 600,
 	},
 	
