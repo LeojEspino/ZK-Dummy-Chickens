@@ -158,7 +158,7 @@ return { chicken_admiral = {
 
       explosionGenerator      = [[custom:high_explosive_rounds]],
 	  model                   = [[admiralshot2.dae]],
-      range                   = 1200,
+      range                   = 1000,
       reloadtime              = 4,
       size                    = 5,
       soundStart              = [[dummy/shipartilleryshot]],
