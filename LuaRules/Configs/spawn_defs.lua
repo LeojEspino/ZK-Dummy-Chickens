@@ -64,7 +64,7 @@ burrowSpawnRate			= 45		-- faster in games with many players, seconds
 chickenSpawnRate		= 50
 waveRatio				= 0.6	   -- waves are composed by two types of chicken, waveRatio% of one and (1-waveRatio)% of the other
 baseWaveSize			= 2.5		 -- multiplied by malus, 1 = 1 squadSize of chickens
-waveSizeMult			= 0.75
+waveSizeMult			= 1
 --forceBurrowRespawn	 = false	-- burrows always respawn even if the modoption is set otherwise
 queenSpawnMult			= 4		 -- how many times bigger is a queen hatch than a normal burrow hatch
 
@@ -138,27 +138,27 @@ end
 
 -- times in minutes
 local chickenTypes = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_offense) or {
-	chicken				=  {time = -60,  squadSize = 3.6, obsolete = 7.5},
+	chicken				=  {time = -60,  squadSize = 4, obsolete = 7.5},
 -- Brawler
-	chicken_warrior     =  {time = 7.5,  squadSize = 2.4, obsolete = 30},
-	chicken_destroyer   =  {time = 15, squadSize = 1.2, obsolete = 50},
-	chicken_ravager     =  {time = 30, squadSize = 0.5},
+	chicken_warrior     =  {time = 7.5,  squadSize = 3, obsolete = 30},
+	chicken_destroyer   =  {time = 15, squadSize = 1.5, obsolete = 50},
+	chicken_ravager     =  {time = 30, squadSize = 0.75},
 -- Marksman
-	chicken_gunner      =  {time = 7.5,  squadSize = 2.4, obsolete = 30},
-	chicken_mercenary   =  {time = 15, squadSize = 1.2, obsolete = 50},
-	chicken_sniper      =  {time = 30, squadSize = 0.5},
+	chicken_gunner      =  {time = 7.5,  squadSize = 3, obsolete = 30},
+	chicken_mercenary   =  {time = 15, squadSize = 1.5, obsolete = 50},
+	chicken_sniper      =  {time = 30, squadSize = 0.75},
 -- Assasin
-	chicken_thief       =  {time = 7.5,  squadSize = 2.4, obsolete = 30},
-	chicken_stalker     =  {time = 15, squadSize = 1.2, obsolete = 50},
-	chicken_trickster   =  {time = 30, squadSize = 0.5},
+	chicken_thief       =  {time = 7.5,  squadSize = 3, obsolete = 30},
+	chicken_stalker     =  {time = 15, squadSize = 1.5, obsolete = 50},
+	chicken_trickster   =  {time = 30, squadSize = 0.75},
 -- Burst
-	chicken_mage        =  {time = 7.5,  squadSize = 2.4, obsolete = 30},
-	chicken_grenadier   =  {time = 15, squadSize = 1.2, obsolete = 50},
-	chicken_bomber      =  {time = 30, squadSize = 0.5},
+	chicken_mage        =  {time = 7.5,  squadSize = 3, obsolete = 30},
+	chicken_grenadier   =  {time = 15, squadSize = 1.5, obsolete = 50},
+	chicken_bomber      =  {time = 30, squadSize = 0.75},
 -- Tank
-	chicken_defender    =  {time = 7.5,  squadSize = 2.4, obsolete = 30},
-	chicken_juggernaut  =  {time = 15, squadSize = 1.2, obsolete = 50},
-	chicken_admiral     =  {time = 30, squadSize = 0.5},
+	chicken_defender    =  {time = 7.5,  squadSize = 3, obsolete = 30},
+	chicken_juggernaut  =  {time = 15, squadSize = 1.5, obsolete = 50},
+	chicken_admiral     =  {time = 30, squadSize = 0.75},
 	--chicken_pigeon		=  {time = 6,  squadSize = 1.4, obsolete = 35},
 	--chickens			=  {time = 12,  squadSize = 1, obsolete = 35},
 	--chickena			=  {time = 18,  squadSize = 0.5, obsolete = 40},
@@ -196,7 +196,6 @@ local supporters = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions(
   --chickenspire =  {time = 50, squadSize = 0.1},
   --chicken_shield =  {time = 30, squadSize = 0.4},
   chicken_caretaker     = {time = 30, squadSize = 0.1},
-  chicken_dodo          = {time = 20, squadSize = 2},
   seismic               = {time = 30, squadSize = 0.1},
   --chicken_spidermonkey =  {time = 20, squadSize = 0.6},
 }
@@ -259,7 +258,7 @@ difficulties = {
 		burrowSpawnRate  = 50,
 		gracePeriod	  = 180,
 		rampUpTime	   = 480,
-		waveSizeMult	 = 0.6,
+		waveSizeMult	 = 0.75,
 		timeSpawnBonus   = .03,
 		queenHealthMod	 = 0.5,
 		techAccelPerPlayer = 2,
@@ -276,7 +275,7 @@ difficulties = {
 	['Chicken: Hard'] = {
 		chickenSpawnRate = 45,
 		burrowSpawnRate  = 45,
-		waveSizeMult	 = 1,
+		waveSizeMult	 = 1.25,
 		timeSpawnBonus   = .05,
 		burrowWaveSize	 = 1.3,
 		queenHealthMod	 = 1.5,
@@ -290,7 +289,7 @@ difficulties = {
 	['Chicken: Suicidal'] = {
 		chickenSpawnRate = 30,
 		burrowSpawnRate  = 30,
-		waveSizeMult	 = 1,
+		waveSizeMult	 = 1.5,
 		timeSpawnBonus   = .06,
 		burrowWaveSize	 = 1.4,
 		burrowRespawnChance = 0.25,
