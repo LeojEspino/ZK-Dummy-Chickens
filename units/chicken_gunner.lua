@@ -81,7 +81,7 @@ return { chicken_gunner = {
 	  turret                  = true,
 
       damage                  = {
-        default = 30,
+        default = 15,
       },
 
       explosionGenerator      = [[custom:NONE]],

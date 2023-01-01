@@ -94,8 +94,8 @@ return { chicken_stalker = {
 	  turret                  = true,
 
       damage                  = {
-        default = 200,
-        planes  = 200,
+        default = 100,
+        planes  = 100,
       },
 
       explosionGenerator      = [[custom:NONE]],
@@ -124,14 +124,14 @@ return { chicken_stalker = {
 	  range                   = 0,
 	  size                    = 0,
 	  reloadtime              = 5,
-      areaOfEffect            = 200,
+      areaOfEffect            = 220,
       craterBoost             = 0,
       craterMult              = 0,
       edgeEffectiveness       = 1,
       explosionSpeed          = 10,
       soundHit                = [[dummy/stalkerswing]],
       damage = {
-        default               = 200,
+        default               = 100,
       },
 	  customparams = {
 	    nofriendlyfire = 1,
@@ -151,13 +151,13 @@ return { chicken_stalker = {
 	  range                   = 0,
 	  size                    = 0,
 	  reloadtime              = 5,
-      areaOfEffect            = 200,
+      areaOfEffect            = 220,
       craterBoost             = 0,
       craterMult              = 0,
       edgeEffectiveness       = 1,
       explosionSpeed          = 10,
       damage = {
-        default               = 800,
+        default               = 400,
       },
 	  customparams = {
 	    nofriendlyfire = 1,

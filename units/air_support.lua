@@ -76,7 +76,7 @@ return { air_support = {
       },
 
       damage                  = {
-        default = 375.1,
+        default = 187.5,
       },
 
       explosionGenerator      = [[custom:high_explosive_rounds]],

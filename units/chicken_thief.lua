@@ -84,8 +84,8 @@ return { chicken_thief = {
 	  turret                  = true,
 
       damage                  = {
-        default = 150,
-        planes  = 150,
+        default = 75,
+        planes  = 75,
       },
 
       explosionGenerator      = [[custom:NONE]],

@@ -25,7 +25,7 @@ return { chicken_ravager = {
     outline_yoff = 15,
   },
 
-  damageModifier      = 0.5,
+  damageModifier      = 0.33,
   explodeAs           = [[NOWEAPON]],
   footprintX          = 2,
   footprintZ          = 2,
@@ -101,8 +101,8 @@ return { chicken_ravager = {
 	  edgeEffectiveness       = 1,
 
       damage                  = {
-        default = 175,
-        planes  = 175,
+        default = 87.5,
+        planes  = 87.5,
       },
 	  
 	  customparams = {
@@ -144,7 +144,7 @@ return { chicken_ravager = {
       impulseBoost            = 0,
       impulseFactor           = 0.4,
       damage = {
-        default               = 150,
+        default               = 75,
       },
 	  customparams = {
 	    nofriendlyfire = 1,
@@ -165,8 +165,8 @@ return { chicken_ravager = {
 	  turret                  = true,
 
       damage                  = {
-        default = 150,
-        planes  = 150,
+        default = 75,
+        planes  = 75,
       },
 
       explosionGenerator      = [[custom:NONE]],
@@ -204,11 +204,11 @@ return { chicken_ravager = {
       impulseBoost            = 0,
       impulseFactor           = 0.4,
       damage = {
-        default               = 250,
+        default               = 125,
       },
 	  customparams = {
 	    nofriendlyfire = 1,
-		timeslow_damagefactor = 1,
+		timeslow_damagefactor = 2,
 	  },
 	  turret                  = true,
 	  waterWeapon             = true,

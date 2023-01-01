@@ -90,7 +90,7 @@ return { chicken_sniper = {
 	  turret                  = true,
 
       damage                  = {
-        default = 150,
+        default = 112.5,
       },
 
       explosionGenerator      = [[custom:NONE]],
@@ -98,7 +98,7 @@ return { chicken_sniper = {
       impactOnly              = true,
       impulseBoost            = 0,
       impulseFactor           = 0.4,
-      range                   = 1000,
+      range                   = 1200,
       reloadtime              = 1,
       size                    = 5,
       soundStart              = [[dummy/snipershot]],
@@ -124,10 +124,10 @@ return { chicken_sniper = {
 	  numbounce               = 2,
 
       damage                  = {
-        default = 150,
+        default = 75,
       },
 	  customparams            = {
-	    timeslow_damagefactor = 1,
+	    timeslow_damagefactor = 2,
 	  },
 
       explosionGenerator      = [[custom:NONE]],
@@ -135,7 +135,7 @@ return { chicken_sniper = {
       impactOnly              = true,
       impulseBoost            = 0,
       impulseFactor           = 0.4,
-      range                   = 1000,
+      range                   = 1200,
       reloadtime              = 5,
       size                    = 5,
       soundStart              = [[dummy/sniperdouble]],
@@ -159,7 +159,7 @@ return { chicken_sniper = {
 	  noExplode               = true,
 
       damage                  = {
-        default = 600,
+        default = 150,
       },
 	  customParams            = {
 	    single_hit = true,
@@ -170,7 +170,7 @@ return { chicken_sniper = {
       impactOnly              = true,
       impulseBoost            = 0,
       impulseFactor           = 0.4,
-      range                   = 1000,
+      range                   = 1200,
       reloadtime              = 5,
       size                    = 5,
       soundStart              = [[dummy/sniperheavyshot]],

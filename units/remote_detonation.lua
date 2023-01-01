@@ -67,7 +67,7 @@ return { remote_detonation = {
       name               = [[Remote Detonation]],
       soundHit           = [[dummy/bombexplode]],
       damage = {
-        default          = 250.1,
+        default          = 125.1,
       },
 	  customparams = {
 	    nofriendlyfire = 1,

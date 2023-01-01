@@ -90,8 +90,7 @@ return { chicken_bomber = {
 	  numBounce               = 3,
 
       damage                  = {
-        default = 150,
-        planes  = 150,
+        default = 75,
       },
 	  
 	  customparams = {

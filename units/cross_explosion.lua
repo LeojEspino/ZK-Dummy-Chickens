@@ -28,7 +28,7 @@ return { cross_explosion = {
   iconType               = [[mine]],
   idleTime               = 300,
   initCloaked            = true,
-  maxDamage              = 1000,
+  maxDamage              = 500,
   maxSlope               = 255,
   maxVelocity            = 0,
   noAutoFire             = false,
@@ -62,7 +62,7 @@ return { cross_explosion = {
       name               = [[Cross Explosion]],
       soundHit           = [[dummy/bombbigexplode]],
       damage = {
-        default          = 1000.1,
+        default          = 500.1,
       },
 	  customparams = {
 	    nofriendlyfire = 1,

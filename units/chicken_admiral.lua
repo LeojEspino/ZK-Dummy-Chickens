@@ -95,7 +95,7 @@ return { chicken_admiral = {
 	  turret                  = true,
 
       damage                  = {
-        default = 120,
+        default = 60,
       },
 
       explosionGenerator      = [[custom:NONE]],
@@ -153,7 +153,7 @@ return { chicken_admiral = {
       },
 
       damage                  = {
-        default = 150,
+        default = 75,
       },
 
       explosionGenerator      = [[custom:high_explosive_rounds]],

@@ -87,7 +87,7 @@ return { chicken_trickster = {
 	  turret                  = true,
 
       damage                  = {
-        default = 150,
+        default = 75,
       },
 
       explosionGenerator      = [[custom:NONE]],
@@ -120,7 +120,7 @@ return { chicken_trickster = {
 	  turret                  = true,
 
       damage                  = {
-        default = 150,
+        default = 75,
       },
 
       explosionGenerator      = [[custom:NONE]],
