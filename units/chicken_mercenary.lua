@@ -86,8 +86,8 @@ return { chicken_mercenary = {
 	  turret                  = true,
 
       damage                  = {
-        default = 90,
-        planes  = 90,
+        default = 60,
+        planes  = 60,
       },
 
       explosionGenerator      = [[custom:NONE]],
@@ -117,8 +117,8 @@ return { chicken_mercenary = {
 	  turret                  = true,
 
       damage                  = {
-        default = 127.5,
-        planes  = 127.5,
+        default = 85,
+        planes  = 85,
       },
 
       explosionGenerator      = [[custom:NONE]],
