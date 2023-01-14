@@ -2159,8 +2159,8 @@ local behaviourConfig = {
 
 		swarms = lowRangeSwarmieeArray,
 		fightOnlyUnits = medRangeExplodables,
-		maxSwarmLeeway = 310,
-		minSwarmLeeway = 600,
+		maxSwarmLeeway = 400,
+		minSwarmLeeway = 500,
 	},
 	
 	-- Ward fire only units.
