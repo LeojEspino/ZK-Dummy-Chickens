@@ -13,7 +13,7 @@ return { roost = {
   customParams      = {
   },
   
-  energyMake        = 5,
+  energyMake        = 2,
   explodeAs         = [[MEDIUM_BUILDINGEX]],
   footprintX        = 4,
   footprintZ        = 4,
@@ -24,7 +24,7 @@ return { roost = {
   maxDamage         = 4000,
   maxSlope          = 36,
   maxVelocity       = 0,
-  metalMake         = 2.5,
+  metalMake         = 1,
   noAutoFire        = false,
   objectName        = [[spawner.dae]],
   script            = [[roost.lua]],
