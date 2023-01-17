@@ -539,6 +539,11 @@
 		"description" : "Elite Tank",
 		"helptext" : "The Dummy Admiral is a force to reckon with, while it doesn't have very high hp like it's other cousins, it still is high for it's artillery range. It's artillery shot is inaccurate but explode and Admiral can summon Dive Bombing planes to attack the enemy. It's main attack has high-range and can shred targets that it consistently hits."
 	},
+	"chicken_swift" : {
+		"name" : "Dummy Swift",
+		"description" : "Swarm Fighter",
+		"helptext" : "Small fighters based on the Swift, they opted for dps instead of alpha strikes, and they are also very fast, however doesn't have the boost like Swift does. Often times it can't take advantage of it's dps that much due to how fighters work."
+	},
 	"chicken_raptor" : {
 		"name" : "Dummy Raptor",
 		"description" : "Alpha Strike Fighter",
