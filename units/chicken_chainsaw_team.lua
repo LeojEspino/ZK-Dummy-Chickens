@@ -78,7 +78,7 @@ return { chicken_chainsaw_team = {
       craterMult              = 0,
 
       damage                  = {
-          default = 60,
+          default = 30,
       },
 	  
 	  customParams           = {

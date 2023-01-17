@@ -75,7 +75,7 @@ return { chicken_chainsaw = {
       craterMult              = 0,
 
       damage                  = {
-          default = 60,
+          default = 30,
       },
 	  
 	  customParams           = {

@@ -79,8 +79,8 @@ return { chicken_artemis = {
 	  },
 
       damage                  = {
-        default = 200.1,
-		planes  = 2000.1,
+        default = 245.1,
+		planes  = 2450.1,
       },
 
       explosionGenerator      = [[custom:gauss_hit_h]],
