@@ -342,6 +342,11 @@ effectUnitDefs = {
 		--{class='AirJet', options={color={0.6,0.1,0.0}, width=3, length=40, piece="DroneMain", texture2=":c:bitmaps/gpl/lups/jet2.bmp", onActive=true}},
 		{class='Ribbon', options={width=1, size=24, piece="DroneMain"}},
 	},
+	chicken_swift = {
+		{class='AirJet', options={color={0.6,0.1,0.0}, width=5, length=60, piece="thruster", texture2=":c:bitmaps/gpl/lups/jet2.bmp", onActive=true, noIconDraw = true}},
+		{class='Ribbon', options={width=1, piece="wingtip1", noIconDraw = true}},
+		{class='Ribbon', options={width=1, piece="wingtip2", noIconDraw = true}},
+	},
 	chicken_raptor = {
 		{class='AirJet', options={color={0.8,0.1,0.0}, width=5, length=45, jitterWidthScale=2, distortion=0.01, piece="lthruster", texture2=":c:bitmaps/gpl/lups/jet2.bmp", onActive=true, noIconDraw = true}},
 		{class='AirJet', options={color={0.8,0.1,0.0}, width=5, length=45, jitterWidthScale=2, distortion=0.01, piece="rthruster", texture2=":c:bitmaps/gpl/lups/jet2.bmp", onActive=true, noIconDraw = true}},
