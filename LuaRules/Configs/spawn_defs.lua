@@ -196,7 +196,7 @@ local supporters = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions(
   --chickenspire =  {time = 50, squadSize = 0.1},
   --chicken_shield =  {time = 30, squadSize = 0.4},
   chicken_raptor        = {time = 30, squadSize = 1},
-  chicken_caretaker     = {time = 30, squadSize = 0.1},
+  chicken_caretaker     = {time = 30, squadSize = 0.25},
   seismic               = {time = 30, squadSize = 0.1},
   --chicken_spidermonkey =  {time = 20, squadSize = 0.6},
 }
