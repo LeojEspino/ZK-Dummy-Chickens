@@ -65,7 +65,7 @@ return { chicken_thief = {
     {
       def                = [[WEAPON]],
       mainDir            = [[0 0 1]],
-      onlyTargetCategory = [[SWIM LAND SUB SINK TURRET FLOAT SHIP HOVER FIXEDWING GUNSHIP]],
+      onlyTargetCategory = [[SWIM LAND SUB SINK TURRET FLOAT SHIP HOVER]],
     },
 
   },
