@@ -148,8 +148,14 @@ eggDefs.chicken_bigbertha_egg = MergeTable(defaultEgg, {
   object      = [[bigberthaclonedead.dae]],
 })
 
---The Dummy
+--The Supports
+eggDefs.chicken_raptor_egg = MergeTable(defaultEgg, {
+  metal       = 180,
+  reclaimTime = 180,
+  object      = [[stud3.dae]],
+})
 
+--The Dummy
 eggDefs.chicken_egg = MergeTable(defaultEgg, {
   metal       = 20,
   reclaimTime = 20,
