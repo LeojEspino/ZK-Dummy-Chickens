@@ -175,19 +175,19 @@ local chickenTypes = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOption
 }
 
 local defenders = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions().campaign_chicken_types_defense) or {
-  chicken_lotus         = {time = 5, squadSize = 1, cost = 1, obsolete = 10 },
-  chicken_picket        = {time = 5, squadSize = 1, cost = 1, obsolete = 10 },
-  chicken_stardust      = {time = 10, squadSize = 1, cost = 2, obsolete = 20 },
-  chicken_faraday       = {time = 10, squadSize = 1, cost = 2, obsolete = 20 },
-  chicken_razor         = {time = 10, squadSize = 1, cost = 2, obsolete = 20 },
-  chicken_hacksaw       = {time = 10, squadSize = 1, cost = 2, obsolete = 20 },
-  chicken_stinger       = {time = 20, squadSize = 1, cost = 3, obsolete = 40 },
-  chicken_gauss         = {time = 20, squadSize = 1, cost = 3, obsolete = 40 },
-  chicken_thresher      = {time = 20, squadSize = 1, cost = 3, obsolete = 40 },
-  chicken_desolator     = {time = 40, squadSize = 1, cost = 5 },
-  chicken_lucifer       = {time = 40, squadSize = 1, cost = 5 },
-  chicken_chainsaw      = {time = 40, squadSize = 1, cost = 5 },
-  chicken_artemis       = {time = 40, squadSize = 1, cost = 5 },
+  chicken_lotus         = {time = 7.5, squadSize = 1, cost = 1, obsolete = 15 },
+  chicken_picket        = {time = 7.5, squadSize = 1, cost = 1, obsolete = 15 },
+  chicken_stardust      = {time = 15, squadSize = 1, cost = 2, obsolete = 30 },
+  chicken_faraday       = {time = 15, squadSize = 1, cost = 2, obsolete = 30 },
+  chicken_razor         = {time = 15, squadSize = 1, cost = 2, obsolete = 30 },
+  chicken_hacksaw       = {time = 15, squadSize = 1, cost = 2, obsolete = 30 },
+  chicken_stinger       = {time = 30, squadSize = 1, cost = 3, obsolete = 50 },
+  chicken_gauss         = {time = 30, squadSize = 1, cost = 3, obsolete = 50 },
+  chicken_thresher      = {time = 30, squadSize = 1, cost = 3, obsolete = 50 },
+  chicken_desolator     = {time = 50, squadSize = 1, cost = 5 },
+  chicken_lucifer       = {time = 50, squadSize = 1, cost = 5 },
+  chicken_chainsaw      = {time = 50, squadSize = 1, cost = 5 },
+  chicken_artemis       = {time = 50, squadSize = 1, cost = 5 },
   chicken_cerberus      = {time = 9000, squadSize = 1, cost = 5}, --Used for spawning eggs
   chicken_bigbertha     = {time = 9000, squadSize = 1, cost = 5}, --Used for spawning eggs
 }
