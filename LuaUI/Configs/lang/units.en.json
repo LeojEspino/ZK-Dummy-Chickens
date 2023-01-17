@@ -539,6 +539,11 @@
 		"description" : "Elite Tank",
 		"helptext" : "The Dummy Admiral is a force to reckon with, while it doesn't have very high hp like it's other cousins, it still is high for it's artillery range. It's artillery shot is inaccurate but explode and Admiral can summon Dive Bombing planes to attack the enemy. It's main attack has high-range and can shred targets that it consistently hits."
 	},
+	"chicken_raptor" : {
+		"name" : "Dummy Raptor",
+		"description" : "Alpha Strike Fighter",
+		"helptext" : "Powerful fighters, they can quickly respond to aerial threats and hit them with their hard-hitting missiles, and finish off anything that lived with their laser. However they are fragile and can't always attack with the laser, and they often times only able to get 1 missile out before dying."
+	},
 	"chicken_lotus" : {
 		"name" : "Dummy Lotus",
 		"description" : "Burst Laser Tower",
