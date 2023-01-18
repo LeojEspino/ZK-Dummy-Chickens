@@ -141,8 +141,8 @@ return { chicken_raptor = {
       },
 
       damage                  = {
-        default = 60.1,
-        planes  = 600.1,
+        default = 50.1,
+        planes  = 500.1,
       },
 
       explosionGenerator      = [[custom:WEAPEXP_PUFF]],

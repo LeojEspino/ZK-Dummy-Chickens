@@ -106,8 +106,8 @@ return { chicken_swift = {
       },
 
       damage                  = {
-        default = 1.0,
-        planes  = 10.1,
+        default = 0.7,
+        planes  = 7.0,
       },
 
       explosionGenerator      = [[custom:flash_teal7]],
