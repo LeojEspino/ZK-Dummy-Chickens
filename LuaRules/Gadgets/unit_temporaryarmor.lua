@@ -31,6 +31,7 @@ local CHECKTIME = 3 -- 10 hz or about 100ms
 local spValidUnitID = Spring.ValidUnitID
 local spSetUnitArmored = Spring.SetUnitArmored
 local INLOS = {inlos = true}
+local debugMode = true
 
 -- Config --
 local configs = {}
@@ -49,6 +50,9 @@ for i = 1, #WeaponDefs do -- Iterate through every weapon def. WeaponDefs is an 
 			watchWeapons[#watchWeapons + 1] = i -- Add to watch weapon table so we can filter stuff out we don't need.
 			if needsCaching then
 				Script.SetWatchWeapon(i, true)
+			end
+			if debugMode then
+				Spring.Echo("[ArmorStates] Added WeaponID " .. i .. " to gadget")
 			end
 		else -- something went wrong
 			Spring.Echo("[ArmorStates]: missing armor value for " .. weaponDef.name .. " (ID " .. i .. ").")
@@ -89,6 +93,7 @@ local function UpdateArmor(unitID, value, duration)
 	spSetUnitArmored(unitID, true, value)
 	Spring.SetUnitRulesParam(unitID, "temporaryarmor", value, INLOS)
 	Spring.SetUnitRulesParam(unitID, "temporaryarmorduration", duration, INLOS)
+	if debugMode then Spring.Echo("Update Armor: " .. unitID .. ", " .. value) end
 end
 	
 
@@ -110,13 +115,14 @@ local function AddUnit(unitID, value, duration)
 end
 
 function gadget:UnitDestroyed(unitID)
-	if IterableMap.InMap(unitID) then
-		IterableMap.Remove(unitID)
+	if IterableMap.InMap(handledUnits, unitID) then
+		IterableMap.Remove(handledUnits, unitID)
 	end
 	armoredUnits[unitID] = nil
 end
 
 function gadget:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, weaponDefID, projectileID, attackerID, attackerDefID, attackerTeam)
+	if debugMode then Spring.Echo("UnitPreDamaged: " .. unitID .. ", " .. weaponDefID) end
 	local armorerTeam = (bufferProjectiles[projectileID] and bufferProjectiles[projectileID].teamID) or attackerTeam
 	if not armorerTeam then return 0, 0 end
 	if (not configs[weaponDefID].alliedOnly) or Spring.AreTeamsAllied(unitTeam, armorerTeam) then
