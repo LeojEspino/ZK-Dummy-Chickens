@@ -110,6 +110,7 @@ local function AddUnit(unitID, value, duration)
 		end
 	else
 		IterableMap.Add(handledUnits, unitID, {duration = duration, armorValue = value})
+		UpdateArmor(unitID, value, duration)
 	end
 end
 
