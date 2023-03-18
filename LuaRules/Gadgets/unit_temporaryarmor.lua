@@ -109,8 +109,7 @@ local function AddUnit(unitID, value, duration)
 			UpdateArmor(unitID, newValue, newDuration)
 		end
 	else
-		local data = {duration = duration, data.armorValue}
-		IterableMap.Add(handledUnits, unitID, data)
+		IterableMap.Add(handledUnits, unitID, {duration = duration, armorValue = value})
 	end
 end
 
