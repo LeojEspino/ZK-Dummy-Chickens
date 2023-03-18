@@ -138,7 +138,7 @@ function gadget:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, w
 		local wd = WeaponDefs[weaponDefID]
 		local potentialDamage = wd.damages[0] -- probably default?
 		local mult = (damage / potentialDamage)
-		AddUnit(unitID, configs[weaponDefID].value * mult, configs[weaponDefID].duration * mult)
+		AddUnit(unitID, 1 - (configs[weaponDefID].value * mult), configs[weaponDefID].duration * mult)
 	end
 	if bufferProjectiles[projectileID] and not bufferProjectiles[projectileID].willBeDeleted then
 		local f = Spring.GetGameFrame() + (CHECKTIME * 10)
