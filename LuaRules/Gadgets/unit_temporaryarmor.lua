@@ -121,7 +121,7 @@ function gadget:UnitDestroyed(unitID)
 	armoredUnits[unitID] = nil
 end
 --              UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, weaponDefID, projectileID, attackerID, attackerDefID, attackerTeam)
-function gadget:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, weaponDefID, projectileID, attackerID, attackerDefID, attackerTeam)
+function gadget:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, weaponDefID, attackerID, attackerDefID, attackerTeam, projectileID)
 	local armorerTeam = (bufferProjectiles[projectileID] and bufferProjectiles[projectileID].teamID) or attackerTeam
 	if debugMode then Spring.Echo("UnitPreDamaged: " .. unitID .. ", weaponDefID: " .. weaponDefID .. ", attackerTeam: " .. tostring(attackerTeam) .. ", AttackerID: " .. tostring(armorerTeam)) end
 	if not armorerTeam then 
