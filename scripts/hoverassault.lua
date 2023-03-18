@@ -147,7 +147,7 @@ function script.Create()
 	while (select(5, Spring.GetUnitHealth(unitID)) < 1) do
 		Sleep (100)
 	end
-	GG.(unitID,true)
+	GG.SetUnitArmor(unitID, armorValue)
 end
 
 local function Close()
