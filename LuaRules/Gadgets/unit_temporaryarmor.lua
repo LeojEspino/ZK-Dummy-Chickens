@@ -125,7 +125,7 @@ function gadget:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, w
 	if debugMode then Spring.Echo("UnitPreDamaged: " .. unitID .. ", " .. weaponDefID) end
 	local armorerTeam = (bufferProjectiles[projectileID] and bufferProjectiles[projectileID].teamID) or attackerTeam
 	if not armorerTeam then if debugMode then Spring.Echo("No Armorer Team") end return 0, 0 end
-	if debugMode then Spring.Echo("UnitPreDamaged: Teams are allied: " .. tostring(Spring.AreTeamsAllied(unitTeam, armorerTeam)))
+	if debugMode then Spring.Echo("UnitPreDamaged: Teams are allied: " .. tostring(Spring.AreTeamsAllied(unitTeam, armorerTeam))) end
 	if (not configs[weaponDefID].alliedOnly) or Spring.AreTeamsAllied(unitTeam, armorerTeam) then
 		local potentialDamage = WeaponDefs[weaponDefID].damages["default"]
 		local mult = (damage / potentialDamage)
