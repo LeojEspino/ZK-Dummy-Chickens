@@ -90,7 +90,12 @@ local function CleanUpUnit(unitID)
 end
 
 local function UpdateArmor(unitID, value, duration)
-	spSetUnitArmored(unitID, true, value)
+	if armoredUnits[unitID] then
+		local newValue = math.max(value * armoredUnits[unitID], MAXARMOR)
+		spSetUnitArmored(unitID, true, newValue)
+	else
+		spSetUnitArmored(unitID, true, value)
+	end
 	Spring.SetUnitRulesParam(unitID, "temporaryarmor", value, INLOS)
 	Spring.SetUnitRulesParam(unitID, "temporaryarmorduration", duration, INLOS)
 	if debugMode then Spring.Echo("Update Armor: " .. unitID .. ", " .. value) end
