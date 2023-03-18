@@ -135,7 +135,10 @@ function gadget:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, w
 		Spring.Echo("UnitPreDamaged: Teams are allied: " .. tostring(allyCheck)) 
 	end
 	if allyCheck then
-		local potentialDamage = WeaponDefs[weaponDefID].damage.default
+		local wd = WeaponDefs[weaponDefID]
+		for k, v in pairs(wd.damages) do
+			Spring.Echo(k .. ": " .. tostring(v))
+		end
 		local mult = (damage / potentialDamage)
 		AddUnit(unitID, configs[weaponDefID].value * mult, configs[weaponDefID].duration * mult)
 	end
