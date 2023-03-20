@@ -9,12 +9,13 @@ local turret = piece 'turret'
 local flare = piece 'flare'
 
 local SIG_Aim = 2
+local armorValue = UnitDefs[unitDefID].armoredMultiple
 
 function script.Create()
     Turn(door1, y_axis, math.rad(-75), 2.5)
 	Turn(door2, y_axis, math.rad(-75), 2.5)
 	
-    Spring.SetUnitArmored (unitID, true)
+    GG.SetUnitArmor(unitID, armorValue)
 end
 
 function script.QueryWeapon(num)
@@ -36,10 +37,10 @@ function script.FireWeapon(num)
     Turn(door1, y_axis, math.rad(0), 5)
 	Turn(door2, y_axis, math.rad(0), 5)
 	
-	Spring.SetUnitArmored (unitID, false)
+	GG.SetUnitArmor(unitID, 1.0)
 	Sleep(3500)
 	Turn(door1, y_axis, math.rad(-75), 2.5)
 	Turn(door2, y_axis, math.rad(-75), 2.5)
 	
-	Spring.SetUnitArmored (unitID, true)
+	GG.SetUnitArmor(unitID, armorValue)
 end

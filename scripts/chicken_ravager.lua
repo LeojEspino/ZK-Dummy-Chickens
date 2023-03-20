@@ -15,6 +15,7 @@ local flare3 = piece 'flare3'
 local flare4 = piece 'flare4'
 local flare5 = piece 'flare5'
 local flare6 = piece 'flare6'
+local armorValue = UnitDefs[unitDefID].armoredMultiple
 
 local step = true
 local aiming = false
@@ -203,7 +204,7 @@ local function Bastion()
 	Turn(rarm, z_axis, math.rad(75), 12)
 	Sleep(200)
 	ab1 = true
-	Spring.SetUnitArmored (unitID, true)
+	GG.SetUnitArmor(unitID, armorValue)
 	
 	Turn(body, x_axis, math.rad(0), 6)
     Turn(head, x_axis, math.rad(0), 6)
@@ -216,7 +217,7 @@ local function Bastion()
 	Turn(rarm, z_axis, math.rad(75), 12)
 	Sleep(3000)
 	ab1 = false
-	Spring.SetUnitArmored (unitID, false)
+	GG.SetUnitArmor(unitID, 1.0)
 	Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 1)
 	GG.UpdateUnitAttributes(unitID)
 	Signal(SIG_Aim)

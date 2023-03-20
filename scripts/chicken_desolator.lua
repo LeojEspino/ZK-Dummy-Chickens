@@ -11,6 +11,7 @@ local lflare = piece 'lflare'
 local rflare = piece 'rflare'
 local lshell = piece 'lshell'
 local rshell = piece 'rshell'
+local armorValue = UnitDefs[unitDefID].armoredMultiple
 
 local shot = false
 local on = true
@@ -23,7 +24,7 @@ local function Open()
     Signal(close)
 	SetSignalMask(open)
 	
-	Spring.SetUnitArmored(unitID,false)
+	GG.SetUnitArmor(unitID, 1.0)
 	
 	Move(rshell, x_axis, 0, 5)
 	Move(lshell, x_axis, 0, 5)
@@ -53,7 +54,7 @@ local function Close()
 	Move(lshell, x_axis, 7.1, 5)
 	WaitForMove(lshell, x_axis)
 	
-	Spring.SetUnitArmored(unitID,true)
+	GG.SetUnitArmor(unitID, armorValue)
 end
 
 function script.Activate()
