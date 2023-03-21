@@ -36,6 +36,7 @@ return { chicken_caretaker_team = {
 	  [[chicken_lucifer_team]],
 	  [[chicken_cerberus_team]],
 	  [[chicken_bigbertha_team]],
+	  [[chicken_aegis_team]],
   },
   
   customParams                  = {

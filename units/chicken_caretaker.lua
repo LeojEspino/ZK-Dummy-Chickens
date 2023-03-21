@@ -36,6 +36,7 @@ return { chicken_caretaker = {
 	  [[chicken_lucifer]],
 	  [[chicken_cerberus]],
 	  [[chicken_bigbertha]],
+	  [[chicken_aegis]],
   },
   
   customParams                  = {
