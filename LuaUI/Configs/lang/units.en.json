@@ -629,6 +629,16 @@
 		"description" : "Construction Assistant"
 		"helptext" : "The Dummy Caretaker is basically the same as the normal caretaker, albeit a bit more durable. We can build this in order to access the Dummy version of the turrets, giving us more defense options to fight against them."
 	},
+	"chicken_aspis" : {
+		"name" : "Dummy Aspis",
+		"description" : "Armor Field Walker"
+		"helptext" : "The Dummy Aspis trades its shield for a field that makes units around it more armored, allowing armies to become much harder to take down, however it becomes very expensive to make."
+	},
+	"chicken_aegis" : {
+		"name" : "Dummy Aegis",
+		"description" : "Area Armor Field"
+		"helptext" : "The Dummy Aegis replaces is the static version of Dummy Aspis, having more durability and more range than it, its armor duration also lasts longer."
+	},
 	"chicken_lotus_team" : {
 		"name" : "Dummy Lotus",
 		"description" : "Burst Laser Tower",
@@ -708,6 +718,16 @@
 		"name" : "Dummy Caretaker",
 		"description" : "Construction Assistant"
 		"helptext" : "The Dummy Caretaker is basically the same as the normal caretaker, albeit a bit more durable. We can build this in order to access the Dummy version of the turrets, giving us more defense options to fight against them."
+	},
+	"chicken_aspis_team" : {
+		"name" : "Dummy Aspis",
+		"description" : "Armor Field Walker"
+		"helptext" : "The Dummy Aspis trades its shield for a field that makes units around it more armored, allowing armies to become much harder to take down, however it becomes very expensive to make."
+	},
+	"chicken_aegis_team" : {
+		"name" : "Dummy Aegis",
+		"description" : "Area Armor Field"
+		"helptext" : "The Dummy Aegis replaces is the static version of Dummy Aspis, having more durability and more range than it, its armor duration also lasts longer."
 	},
 	"chicken_sporeshooter" : {
 		"name" : "Sporeshooter",
