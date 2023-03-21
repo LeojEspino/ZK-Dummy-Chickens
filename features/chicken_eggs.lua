@@ -136,6 +136,12 @@ eggDefs.chicken_artemis_egg = MergeTable(defaultEgg, {
   object      = [[stud5.dae]],
 })
 
+eggDefs.chicken_aegis_egg = MergeTable(defaultEgg, {
+  metal       = 420,
+  reclaimTime = 420,
+  object      = [[stud3.dae]],
+})
+
 eggDefs.chicken_cerberus_egg = MergeTable(defaultEgg, {
   metal       = 720,
   reclaimTime = 720,
@@ -158,6 +164,12 @@ eggDefs.chicken_raptor_egg = MergeTable(defaultEgg, {
 eggDefs.chicken_raptor_egg = MergeTable(defaultEgg, {
   metal       = 180,
   reclaimTime = 180,
+  object      = [[stud3.dae]],
+})
+
+eggDefs.chicken_aspis_egg = MergeTable(defaultEgg, {
+  metal       = 500,
+  reclaimTime = 500,
   object      = [[stud3.dae]],
 })
 
