@@ -2162,6 +2162,20 @@ local behaviourConfig = {
 		maxSwarmLeeway = 400,
 		minSwarmLeeway = 500,
 	},
+	{
+		name = "chicken_aspis",
+		flees = armedLand,
+		fleeLeeway = 100,
+		fleeDistance = 100,
+		minFleeRange = 250,
+	},
+	{
+		name = "chicken_aspis_team",
+		flees = armedLand,
+		fleeLeeway = 100,
+		fleeDistance = 100,
+		minFleeRange = 250,
+	},
 	
 	-- Ward fire only units.
 	{
