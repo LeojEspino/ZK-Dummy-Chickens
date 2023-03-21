@@ -326,4 +326,28 @@ return {
             },
         },
     },
+	["armorfield1"] = {
+        usedefaultexplosions = false,
+		groundflash = {
+            alwaysvisible      = true,
+            circlealpha        = 0.5,
+            circlegrowth       = 5,
+            flashalpha         = 0.1,
+            flashsize          = 300,
+            ttl                = 60,
+            color              = [[0.9, 0.8, 0.3]],
+        },
+    },
+	["armorfield2"] = {
+        usedefaultexplosions = false,
+		groundflash = {
+            alwaysvisible      = true,
+            circlealpha        = 0.5,
+            circlegrowth       = 6.25,
+            flashalpha         = 0.1,
+            flashsize          = 375,
+            ttl                = 60,
+            color              = [[0.9, 0.8, 0.3]],
+        },
+    },
 }
