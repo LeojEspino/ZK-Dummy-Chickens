@@ -31,7 +31,7 @@ local CHECKTIME = 3 -- 10 hz or about 100ms
 local spValidUnitID = Spring.ValidUnitID
 local spSetUnitArmored = Spring.SetUnitArmored
 local INLOS = {inlos = true}
-local debugMode = true
+local debugMode = false
 
 -- Config --
 local configs = {}
@@ -42,11 +42,13 @@ for i = 1, #WeaponDefs do -- Iterate through every weapon def. WeaponDefs is an 
 		local armorDuration = math.ceil((tonumber(weaponDef.customParams.armor_duration) or 3) * 30) -- in seconds
 		local impactEnemies = weaponDef.customParams.affects_enemy ~= nil
 		local needsCaching = weaponDef.customParams.needscaching ~= nil -- use this to prevent lua errors on activated abilities.
+		local noScaling = weaponDef.customParams.noscaling ~= nil -- use this to stop all scaling
+		local noTimeScaling = noScaling or weaponDef.customParams.notimescaling ~= nil
 		if weaponDef.customParams.armor_duration == nil then
 			Spring.Echo("[ArmorStates]: missing duration for " .. weaponDef.name .. " (ID " .. i .. "). Defaulting to 3s!")
 		end
 		if armorValue and armorDuration then
-			configs[i] = {value = armorValue, duration = armorDuration, alliedOnly = not impactEnemies} -- store the info in the metatable.
+			configs[i] = {value = armorValue, duration = armorDuration, alliedOnly = not impactEnemies, noScaling = noScaling, noTimeScaling = noTimeScaling} -- store the info in the metatable.
 			watchWeapons[#watchWeapons + 1] = i -- Add to watch weapon table so we can filter stuff out we don't need.
 			if needsCaching then
 				Script.SetWatchWeapon(i, true)
@@ -87,6 +89,9 @@ local function CleanUpUnit(unitID)
 		spSetUnitArmored(unitID, false)
 	end
 	IterableMap.Remove(handledUnits, unitID)
+	Spring.SetUnitRulesParam(unitID, "temporaryarmorduration", nil)
+	Spring.SetUnitRulesParam(unitID, "temporaryarmormaxduration", nil)
+	Spring.SetUnitRulesParam(unitID, "temporaryarmor", nil)
 end
 
 local function UpdateArmor(unitID, value, duration)
@@ -98,6 +103,7 @@ local function UpdateArmor(unitID, value, duration)
 	end
 	Spring.SetUnitRulesParam(unitID, "temporaryarmor", value, INLOS)
 	Spring.SetUnitRulesParam(unitID, "temporaryarmorduration", duration, INLOS)
+	Spring.SetUnitRulesParam(unitID, "temporaryarmormaxduration", duration, INLOS)
 	if debugMode then Spring.Echo("Update Armor: " .. unitID .. ", " .. value) end
 end
 	
@@ -136,14 +142,23 @@ function gadget:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, w
 		return 0, 0 
 	end
 	local allyCheck = not configs[weaponDefID].alliedOnly or Spring.AreTeamsAllied(unitTeam, armorerTeam)
-	if debugMode then 
+	if debugMode then
 		Spring.Echo("UnitPreDamaged: Teams are allied: " .. tostring(allyCheck)) 
 	end
 	if allyCheck then
-		local wd = WeaponDefs[weaponDefID]
-		local potentialDamage = wd.damages[0] -- probably default?
-		local mult = (damage / potentialDamage)
-		AddUnit(unitID, 1 - (configs[weaponDefID].value * mult), configs[weaponDefID].duration * mult)
+		local mult
+		if configs[weaponDefID].noScaling then
+			mult = 1
+		else
+			local wd = WeaponDefs[weaponDefID]
+			local potentialDamage = wd.damages[0] -- probably default?
+			mult = damage / potentialDamage
+		end
+		local duration = configs[weaponDefID].duration
+		if not (configs[weaponDefID].noScaling or configs[weaponDefID].noTimeScaling) then
+			duration = duration * mult
+		end
+		AddUnit(unitID, 1 - (configs[weaponDefID].value * mult), duration)
 	end
 	if bufferProjectiles[projectileID] and not bufferProjectiles[projectileID].willBeDeleted then
 		local f = Spring.GetGameFrame() + (CHECKTIME * 10)
