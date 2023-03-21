@@ -188,6 +188,7 @@ local defenders = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions()
   chicken_lucifer       = {time = 50, squadSize = 1, cost = 5 },
   chicken_chainsaw      = {time = 50, squadSize = 1, cost = 5 },
   chicken_artemis       = {time = 50, squadSize = 1, cost = 5 },
+  chicken_aegis         = {time = 50, squadSize = 1/12, cost = 5 },
   chicken_cerberus      = {time = 9000, squadSize = 1, cost = 5}, --Used for spawning eggs
   chicken_bigbertha     = {time = 9000, squadSize = 1, cost = 5}, --Used for spawning eggs
 }
@@ -198,6 +199,7 @@ local supporters = Spring.Utilities.CustomKeyToUsefulTable(Spring.GetModOptions(
   chicken_swift         = {time = 10, squadSize = 1.25, obsolete = 30},
   chicken_raptor        = {time = 30, squadSize = 0.75},
   chicken_caretaker     = {time = 30, squadSize = 0.25},
+  chicken_aspis         = {time = 30, squadSize = 1/12},
   seismic               = {time = 30, squadSize = 0.1},
   --chicken_spidermonkey =  {time = 20, squadSize = 0.6},
 }
