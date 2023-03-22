@@ -76,8 +76,8 @@ return { chicken_aspis = {
       },
 	  
       customParams           = {
-	    grants_armor = 0.5,
-		armor_duration = 6,
+	    grants_armor = 0.66,
+		armor_duration = 8,
 		needsCaching = 1,
 		noTimeScaling = 1,
 		lups_noshockwave = [[1]],
@@ -91,7 +91,7 @@ return { chicken_aspis = {
       myGravity               = 10,
       noSelfDamage            = true,
       range                   = 0,
-      reloadtime              = 3,
+      reloadtime              = 2,
       soundHitVolume          = 1,
       turret                  = true,
       weaponType              = [[Cannon]],

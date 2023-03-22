@@ -70,7 +70,7 @@ return { chicken_aegis_team = {
 	  
       customParams           = {
 	    grants_armor = 0.66,
-		armor_duration = 9,
+		armor_duration = 12,
 		needsCaching = 1,
 		noTimeScaling = 1,
 		lups_noshockwave = [[1]],
@@ -84,7 +84,7 @@ return { chicken_aegis_team = {
       myGravity               = 10,
       noSelfDamage            = true,
       range                   = 0,
-      reloadtime              = 3,
+      reloadtime              = 2,
       soundHitVolume          = 1,
       turret                  = true,
       weaponType              = [[Cannon]],
