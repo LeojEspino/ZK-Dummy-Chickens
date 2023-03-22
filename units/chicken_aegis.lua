@@ -3,7 +3,7 @@ return { chicken_aegis = {
   name                          = [[Dummy Aegis]],
   description                   = [[Area Armor Field]],
   activateWhenBuilt             = true,
-  buildCostMetal                = 1050,
+  buildCostMetal                = 1250,
   builder                       = false,
   buildingGroundDecalDecaySpeed = 30,
   buildingGroundDecalSizeX      = 4,
@@ -69,10 +69,10 @@ return { chicken_aegis = {
       },
 	  
       customParams           = {
-	    grants_armor = 0.66,
+	    grants_armor = 0.33,
 		armor_duration = 12,
 		needsCaching = 1,
-		noTimeScaling = 1,
+		noScaling = 1,
 		noStacking = 1,
 		lups_noshockwave = [[1]],
       },

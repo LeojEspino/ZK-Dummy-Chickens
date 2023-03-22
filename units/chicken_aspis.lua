@@ -5,7 +5,7 @@ return { chicken_aspis = {
   acceleration           = 0.75,
   activateWhenBuilt      = true,
   brakeRate              = 4.5,
-  buildCostMetal         = 1250,
+  buildCostMetal         = 1500,
   buildPic               = [[aspisclone.png]],
   canGuard               = true,
   canMove                = true,
@@ -76,10 +76,10 @@ return { chicken_aspis = {
       },
 	  
       customParams           = {
-	    grants_armor = 0.66,
+	    grants_armor = 0.33,
 		armor_duration = 8,
 		needsCaching = 1,
-		noTimeScaling = 1,
+		noScaling = 1,
 		noStacking = 1,
 		lups_noshockwave = [[1]],
       },
