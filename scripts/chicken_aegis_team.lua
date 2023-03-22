@@ -61,7 +61,7 @@ function AutoAttack_Thread()
 	Signal(SIG_ACTIVATE)
 	SetSignalMask(SIG_ACTIVATE)
 	while true do
-	    Sleep(3000)
+	    Sleep(2000)
 		EmitSfx(glow, GG.Script.FIRE_W1)
 	end
 end
