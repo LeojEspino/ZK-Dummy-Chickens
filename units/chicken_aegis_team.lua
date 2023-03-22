@@ -73,6 +73,7 @@ return { chicken_aegis_team = {
 		armor_duration = 12,
 		needsCaching = 1,
 		noTimeScaling = 1,
+		noStacking = 1,
 		lups_noshockwave = [[1]],
       },
 	  

@@ -80,6 +80,7 @@ return { chicken_aspis = {
 		armor_duration = 8,
 		needsCaching = 1,
 		noTimeScaling = 1,
+		noStacking = 1,
 		lups_noshockwave = [[1]],
       },
 	  
