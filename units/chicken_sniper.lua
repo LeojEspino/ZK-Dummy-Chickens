@@ -127,7 +127,7 @@ return { chicken_sniper = {
         default = 75,
       },
 	  customparams            = {
-	    timeslow_damagefactor = 2,
+	    timeslow_damagefactor = 1,
 	  },
 
       explosionGenerator      = [[custom:NONE]],

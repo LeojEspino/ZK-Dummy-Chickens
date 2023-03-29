@@ -208,7 +208,7 @@ return { chicken_ravager = {
       },
 	  customparams = {
 	    nofriendlyfire = 1,
-		timeslow_damagefactor = 2,
+		timeslow_damagefactor = 1,
 	  },
 	  turret                  = true,
 	  waterWeapon             = true,
