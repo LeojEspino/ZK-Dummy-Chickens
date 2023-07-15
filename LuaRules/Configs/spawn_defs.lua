@@ -230,7 +230,7 @@ difficulties = {
 		burrowSpawnRate  = 180,
 		gracePeriod      = 450,
 		rampUpTime       = 1200,
-		waveSizeMult     = 0.2,
+		waveSizeMult     = 0.3,
 		timeSpawnBonus   = 0.010, -- how much each time level increases spawn size
 		queenTime        = 60*60,
 		queenHealthMod	 = 0.25,
@@ -238,7 +238,7 @@ difficulties = {
 		specialPowers    = {},
 		techAccelPerPlayer = 1,
 		techTimeFloorFactor = 0.2,
-		scoreMult        = 0.12,
+		scoreMult        = 0.25,
 	},
 	
 	['Chicken: Very Easy'] = {
@@ -246,7 +246,7 @@ difficulties = {
 		burrowSpawnRate  = 90,
 		gracePeriod	  = 300,
 		rampUpTime	   = 900,
-		waveSizeMult	 = 0.4,
+		waveSizeMult	 = 0.6,
 		timeSpawnBonus   = .025,	 -- how much each time level increases spawn size
 		queenTime		 = 40*60,
 		queenHealthMod	 = 0.33,
@@ -254,7 +254,7 @@ difficulties = {
 		specialPowers	 = {},
 		techAccelPerPlayer = 1.5,
 		techTimeFloorFactor = 0.4,
-		scoreMult		 = 0.25,
+		scoreMult		 = 0.5,
 	},
 
 	['Chicken: Easy'] = {
@@ -262,40 +262,41 @@ difficulties = {
 		burrowSpawnRate  = 50,
 		gracePeriod	  = 180,
 		rampUpTime	   = 480,
-		waveSizeMult	 = 0.6,
+		waveSizeMult	 = 0.8,
 		timeSpawnBonus   = .03,
 		queenHealthMod	 = 0.5,
 		techAccelPerPlayer = 2,
-		scoreMult		 = 0.66,
+		scoreMult		 = 1,
 	},
 
 	['Chicken: Normal'] = {
-	    waveSizeMult	 = 0.8,
+	    waveSizeMult	 = 1,
 		chickenSpawnRate = 50,
 		burrowSpawnRate  = 45,
 		timeSpawnBonus   = .04,
 		miniQueenTime	= {0.6},
+		scoreMult = 1.5
 	},
 
 	['Chicken: Hard'] = {
 		chickenSpawnRate = 45,
 		burrowSpawnRate  = 45,
-		waveSizeMult	 = 1,
+		waveSizeMult	 = 1.1,
 		timeSpawnBonus   = .05,
 		burrowWaveSize	 = 1.3,
 		queenHealthMod	 = 1.5,
 		queenSpawnMult   = 5,
 		miniQueenTime	 = {0.5},
 		techAccelPerPlayer	= 3,
-		burrowRegressTime   = 45,
-		scoreMult		 = 1.5,
-		timeModifier	 = 0.875,
+		burrowRegressTime   = 60,
+		scoreMult		 = 2,
+		timeModifier	 = 0.85,
 	},
 	
 	['Chicken: Suicidal'] = {
 		chickenSpawnRate = 30,
 		burrowSpawnRate  = 30,
-		waveSizeMult	 = 1.10,
+		waveSizeMult	 = 1.15,
 		timeSpawnBonus   = .06,
 		burrowWaveSize	 = 1.3,
 		burrowRespawnChance = 0.25,
@@ -305,10 +306,10 @@ difficulties = {
 		queenHealthMod	 = 2,
 		miniQueenTime	 = {0.45}, --{0.37, 0.75},
 		endMiniQueenWaves	= 6,
-		techAccelPerPlayer	= 6,
-		burrowRegressTime   = 60,
-		timeModifier	 = 0.75,
-		scoreMult		 = 2,
+		techAccelPerPlayer	= 3,
+		burrowRegressTime   = 90,
+		timeModifier	 = 0.70,
+		scoreMult		 = 3,
 	},
 
 	['Chicken: Custom'] = {
