@@ -6,6 +6,7 @@ return { remote_detonation = {
   buildCostMetal         = 0,
   builder                = false,
   buildPic               = [[remote_detonation.png]],
+  buildTime              = 1,
   canGuard               = false,
   canMove                = false,
   canPatrol              = false,

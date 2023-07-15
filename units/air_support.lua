@@ -6,6 +6,7 @@ return { air_support = {
   buildCostMetal      = 0,
   builder             = false,
   buildPic            = [[air_support.png]],
+  buildTime           = 1,
   canFly              = true,
   canGuard            = true,
   canMove             = true,

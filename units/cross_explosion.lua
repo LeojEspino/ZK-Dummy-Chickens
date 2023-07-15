@@ -6,6 +6,7 @@ return { cross_explosion = {
   buildCostMetal         = 0,
   builder                = false,
   buildPic               = [[cross_explosion.png]],
+  buildtime              = 1,
   canGuard               = false,
   canMove                = false,
   canPatrol              = false,
