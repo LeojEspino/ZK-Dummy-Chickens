@@ -1,6 +1,7 @@
 
 include "constants.lua"
 
+local spawn = piece 'spawn'
 local base = piece 'base'
 local body = piece 'body' 
 local head = piece 'head' 
@@ -13,10 +14,45 @@ local knife = piece 'knife'
 local step = true
 local aiming = false
 local swung = false
+local spawned = false
 
 local isTurning = false
 local SIG_Walk = 2
 local SIG_Aim = 4
+
+function script.Create()
+    local x, y, z
+    local healthToRemove = UnitDefs[unitDefID].health * 0.25
+    local healthToAdd = UnitDefs[unitDefID].health - healthToRemove
+    Spring.SetUnitHealth(unitID, healthToRemove)
+    Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 0)
+    GG.UpdateUnitAttributes(unitID)
+   
+    Hide(body)
+    Hide(head)
+    Hide(larm)
+    Hide(rarm)
+    Hide(lleg)
+    Hide(rleg)
+    Hide(knife)
+   
+    Sleep(10000)
+    x, y, z = Spring.GetUnitPosition(unitID)
+    Spring.AddUnitDamage(unitID, -healthToAdd)
+    Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 1)
+    GG.UpdateUnitAttributes(unitID)
+    Spring.SpawnCEG ("spawning2_assassin", x, y, z, 10, 1, 1, 1, 0)
+    spawned = true
+   
+    Hide(spawn)
+    Show(body)
+    Show(head)
+    Show(larm)
+    Show(rarm)
+    Show(lleg)
+    Show(rleg)
+    Show(knife)
+end
 
 local function Walk()
     Signal(SIG_Walk)
@@ -101,7 +137,7 @@ function script.StopMoving()
 end
 
 local function RestoreAfterDelay()
-	Sleep(1000)
+	Sleep(2000)
 	aiming = false
     
 	Turn(base, z_axis, math.rad(0), 10)
@@ -135,39 +171,42 @@ function script.AimWeapon(num, heading, pitch)
 	Signal(SIG_Aim)
 	SetSignalMask(SIG_Aim)
 	aiming = true
-
-    Turn(base, z_axis, heading, 10)
-    Turn(body, x_axis, math.rad(0), 6)
-	Turn(head, x_axis, math.rad(0), 6)
-	Turn(larm, y_axis, math.rad(75), 12)
-	if not swung then
-	    Turn(body, z_axis, math.rad(-45), 12)
-		Turn(head, z_axis, math.rad(45), 12)
-		Turn(larm, x_axis, math.rad(0), 12)
-		Turn(rarm, x_axis, math.rad(90), 24)
-		Turn(rarm, y_axis, math.rad(-30), 24)
-		Turn(rarm, z_axis, math.rad(-90), 24)
-		WaitForTurn(base, z_axis)
-		WaitForTurn(body, z_axis)
-		WaitForTurn(rarm, y_axis)
-		WaitForTurn(rarm, z_axis)
-		StartThread(RestoreAfterDelay)
-		return true
-	elseif swung then
-	    Turn(body, z_axis, math.rad(90), 12)
-		Turn(head, z_axis, math.rad(-90), 12)
-		Turn(larm, x_axis, math.rad(90), 12)
-		Turn(rarm, x_axis, math.rad(90), 12)
-		Turn(rarm, y_axis, math.rad(-90), 12)
-		Turn(rarm, z_axis, math.rad(0), 24)
-		WaitForTurn(base, z_axis)
-		WaitForTurn(body, z_axis)
-		WaitForTurn(rarm, y_axis)
-		WaitForTurn(rarm, z_axis)
-		StartThread(RestoreAfterDelay)
-		return true
-	else
+    if not spawned then
 	    return false
+	else
+        Turn(base, z_axis, heading, 10)
+        Turn(body, x_axis, math.rad(0), 6)
+	    Turn(head, x_axis, math.rad(0), 6)
+	    Turn(larm, y_axis, math.rad(75), 12)
+	    if not swung then
+	        Turn(body, z_axis, math.rad(-45), 12)
+		    Turn(head, z_axis, math.rad(45), 12)
+		    Turn(larm, x_axis, math.rad(0), 12)
+		    Turn(rarm, x_axis, math.rad(90), 24)
+		    Turn(rarm, y_axis, math.rad(-30), 24)
+		    Turn(rarm, z_axis, math.rad(-90), 24)
+		    WaitForTurn(base, z_axis)
+		    WaitForTurn(body, z_axis)
+		    WaitForTurn(rarm, y_axis)
+		    WaitForTurn(rarm, z_axis)
+		    StartThread(RestoreAfterDelay)
+		    return true
+	    elseif swung then
+	        Turn(body, z_axis, math.rad(90), 12)
+		    Turn(head, z_axis, math.rad(-90), 12)
+		    Turn(larm, x_axis, math.rad(90), 12)
+		    Turn(rarm, x_axis, math.rad(90), 12)
+		    Turn(rarm, y_axis, math.rad(-90), 12)
+		    Turn(rarm, z_axis, math.rad(0), 24)
+		    WaitForTurn(base, z_axis)
+		    WaitForTurn(body, z_axis)
+		    WaitForTurn(rarm, y_axis)
+		    WaitForTurn(rarm, z_axis)
+		    StartThread(RestoreAfterDelay)
+		    return true
+	    else
+	        return false
+	    end
 	end
 end
 
@@ -194,11 +233,15 @@ function script.FireWeapon(num)
 end
 
 function script.Killed(recentDamage, maxHealth)
-    Explode(body, SFX.FALL)
-	Explode(head, SFX.FALL)
-	Explode(larm, SFX.FALL)
-	Explode(rarm, SFX.FALL)
-	Explode(lleg, SFX.FALL)
-	Explode(rleg, SFX.FALL)
-	Explode(knife, SFX.FALL)
+    if spawned then
+        Explode(body, SFX.FALL)
+	    Explode(head, SFX.FALL)
+	    Explode(larm, SFX.FALL)
+	    Explode(rarm, SFX.FALL)
+	    Explode(lleg, SFX.FALL)
+	    Explode(rleg, SFX.FALL)
+	    Explode(knife, SFX.FALL)
+	else
+	    Explode(spawn, SFX.FALL)
+	end
 end

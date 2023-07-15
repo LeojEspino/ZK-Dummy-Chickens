@@ -1,6 +1,8 @@
 
 include "constants.lua"
 
+local spawn1 = piece 'spawn1'
+local spawn2 = piece 'spawn2'
 local base = piece 'base'
 local body = piece 'body' 
 local head = piece 'head' 
@@ -17,10 +19,48 @@ local aiming = false
 local buff = false
 local ability1 = false
 local cooldown1 = false
+local spawned = false
 
 local isTurning = false
 local SIG_Walk = 2
 local SIG_Aim = 4
+
+function script.Create()
+    local x, y, z
+    local healthToRemove = UnitDefs[unitDefID].health * 0.25
+    local healthToAdd = UnitDefs[unitDefID].health - healthToRemove
+    Spring.SetUnitHealth(unitID, healthToRemove)
+    Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 0)
+    GG.UpdateUnitAttributes(unitID)
+   
+    Hide(body)
+    Hide(head)
+    Hide(larm)
+    Hide(rarm)
+    Hide(lleg)
+    Hide(rleg)
+    Hide(gun)
+	Hide(knife)
+   
+    Sleep(40000)
+    x, y, z = Spring.GetUnitPosition(unitID)
+    Spring.AddUnitDamage(unitID, -healthToAdd)
+    Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 1)
+    GG.UpdateUnitAttributes(unitID)
+    Spring.SpawnCEG ("spawning3_marksman", x, y, z, 10, 1, 1, 1, 0)
+    spawned = true
+   
+    Hide(spawn1)
+	Hide(spawn2)
+    Show(body)
+    Show(head)
+    Show(larm)
+    Show(rarm)
+    Show(lleg)
+    Show(rleg)
+    Show(gun)
+	Show(knife)
+end
 
 local function Walk()
     Signal(SIG_Walk)
@@ -115,7 +155,7 @@ function script.StopMoving()
 end
 
 local function RestoreAfterDelay()
-	Sleep(1000)
+	Sleep(2000)
 	aiming = false
     
 	Turn(base, z_axis, math.rad(0), 10)
@@ -216,7 +256,7 @@ local function GunBuff()
 	
 	Sleep(2800)
 	buff = false
-	Sleep(4000)
+	Sleep(7000)
 	cooldown1 = false
 end
 
@@ -224,53 +264,57 @@ function script.AimWeapon(num, heading, pitch)
 	Signal(SIG_Aim)
 	aiming = true
 	
-	if not cooldown1 then
-	    StartThread(GunBuff)
-		return false
-    elseif num == 1 and not buff and not ability1 then
-	    SetSignalMask(SIG_Aim)
-		Turn(base, z_axis, heading, 10)
-		Turn(body, x_axis, math.rad(0), 6)
-	    Turn(head, x_axis, math.rad(0), 6)
-	    Turn(body, z_axis, math.rad(90), 24)
-		Move(body, z_axis, 0, 60)
-	    Turn(head, z_axis, math.rad(-90), 24)
-	    Turn(larm, x_axis, math.rad(0), 12)
-	    Turn(larm, y_axis, math.rad(45), 12)
-	    Turn(larm, z_axis, math.rad(0), 12)
-	    Turn(rarm, x_axis, math.rad(0), 24)
-	    Turn(rarm, y_axis, math.rad(-90), 24)
-	    Turn(rarm, z_axis, math.rad(-90), 24)
-		Move(rarm, y_axis, 0, 30)
-		Move(rarm, z_axis, 0, 60)
-		WaitForTurn(base, z_axis)
-	    WaitForTurn(body, z_axis)
-	    WaitForTurn(body, z_axis)
-	    StartThread(RestoreAfterDelay)
-	    return true
-	elseif num == 2 and buff and not ability1 then
-	    SetSignalMask(SIG_Aim)
-		Turn(base, z_axis, heading, 10)
-		Turn(body, x_axis, math.rad(0), 6)
-	    Turn(head, x_axis, math.rad(0), 6)
-	    Turn(body, z_axis, math.rad(90), 24)
-		Move(body, z_axis, 0, 60)
-	    Turn(head, z_axis, math.rad(-90), 24)
-	    Turn(larm, x_axis, math.rad(0), 12)
-	    Turn(larm, y_axis, math.rad(45), 12)
-	    Turn(larm, z_axis, math.rad(0), 12)
-	    Turn(rarm, x_axis, math.rad(0), 24)
-	    Turn(rarm, y_axis, math.rad(-90), 24)
-	    Turn(rarm, z_axis, math.rad(-90), 24)
-		Move(rarm, y_axis, 0, 30)
-		Move(rarm, z_axis, 0, 60)
-		WaitForTurn(base, z_axis)
-	    WaitForTurn(body, z_axis)
-	    WaitForTurn(body, z_axis)
-	    StartThread(RestoreAfterDelay)
-	    return true
-	else
+	if not spawned then
 	    return false
+	else
+	    if not cooldown1 then
+	        StartThread(GunBuff)
+		    return false
+        elseif num == 1 and not buff and not ability1 then
+	        SetSignalMask(SIG_Aim)
+		    Turn(base, z_axis, heading, 10)
+		    Turn(body, x_axis, math.rad(0), 6)
+	        Turn(head, x_axis, math.rad(0), 6)
+	        Turn(body, z_axis, math.rad(90), 24)
+		    Move(body, z_axis, 0, 60)
+	        Turn(head, z_axis, math.rad(-90), 24)
+	        Turn(larm, x_axis, math.rad(0), 12)
+	        Turn(larm, y_axis, math.rad(45), 12)
+	        Turn(larm, z_axis, math.rad(0), 12)
+	        Turn(rarm, x_axis, math.rad(0), 24)
+	        Turn(rarm, y_axis, math.rad(-90), 24)
+	        Turn(rarm, z_axis, math.rad(-90), 24)
+		    Move(rarm, y_axis, 0, 30)
+		    Move(rarm, z_axis, 0, 60)
+		    WaitForTurn(base, z_axis)
+	        WaitForTurn(body, z_axis)
+	        WaitForTurn(body, z_axis)
+	        StartThread(RestoreAfterDelay)
+	        return true
+	    elseif num == 2 and buff and not ability1 then
+	        SetSignalMask(SIG_Aim)
+		    Turn(base, z_axis, heading, 10)
+		    Turn(body, x_axis, math.rad(0), 6)
+	        Turn(head, x_axis, math.rad(0), 6)
+	        Turn(body, z_axis, math.rad(90), 24)
+		    Move(body, z_axis, 0, 60)
+	        Turn(head, z_axis, math.rad(-90), 24)
+	        Turn(larm, x_axis, math.rad(0), 12)
+	        Turn(larm, y_axis, math.rad(45), 12)
+	        Turn(larm, z_axis, math.rad(0), 12)
+	        Turn(rarm, x_axis, math.rad(0), 24)
+	        Turn(rarm, y_axis, math.rad(-90), 24)
+	        Turn(rarm, z_axis, math.rad(-90), 24)
+		    Move(rarm, y_axis, 0, 30)
+		    Move(rarm, z_axis, 0, 60)
+		    WaitForTurn(base, z_axis)
+	        WaitForTurn(body, z_axis)
+	        WaitForTurn(body, z_axis)
+	        StartThread(RestoreAfterDelay)
+	        return true
+	    else
+	        return false
+	    end
 	end
 end
 
@@ -286,12 +330,17 @@ function script.FireWeapon(num)
 end
 
 function script.Killed(recentDamage, maxHealth)
-    Explode(body, SFX.FALL)
-	Explode(head, SFX.FALL)
-	Explode(larm, SFX.FALL)
-	Explode(rarm, SFX.FALL)
-	Explode(lleg, SFX.FALL)
-	Explode(rleg, SFX.FALL)
-	Explode(gun, SFX.FALL)
-	Explode(knife, SFX.FALL)
+    if spawned then
+        Explode(body, SFX.FALL)
+	    Explode(head, SFX.FALL)
+	    Explode(larm, SFX.FALL)
+	    Explode(rarm, SFX.FALL)
+	    Explode(lleg, SFX.FALL)
+	    Explode(rleg, SFX.FALL)
+	    Explode(gun, SFX.FALL)
+	    Explode(knife, SFX.FALL)
+	else
+	    Explode(spawn1, SFX.FALL)
+		Explode(spawn2, SFX.FALL)
+	end
 end

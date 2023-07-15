@@ -1,6 +1,7 @@
 
 include "constants.lua"
 
+local spawn = piece 'spawn'
 local base = piece 'base'
 local body = piece 'body' 
 local head = piece 'head' 
@@ -27,9 +28,44 @@ local cooldown1 = false
 local ab2 = false
 local cooldown2 = false
 local ab2aim = false
+local spawned = false
 
 local SIG_Walk = 2
 local SIG_Aim = 4
+
+function script.Create()
+    local x, y, z
+    local healthToRemove = UnitDefs[unitDefID].health * 0.25
+    local healthToAdd = UnitDefs[unitDefID].health - healthToRemove
+    Spring.SetUnitHealth(unitID, healthToRemove)
+    Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 0)
+    GG.UpdateUnitAttributes(unitID)
+   
+    Hide(body)
+    Hide(head)
+    Hide(larm)
+    Hide(rarm)
+    Hide(lleg)
+    Hide(rleg)
+    Hide(gunlance)
+   
+    Sleep(160000)
+    x, y, z = Spring.GetUnitPosition(unitID)
+    Spring.AddUnitDamage(unitID, -healthToAdd)
+    Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 1)
+    GG.UpdateUnitAttributes(unitID)
+    Spring.SpawnCEG ("spawning4_brawler", x, y, z, 10, 1, 1, 1, 0)
+    spawned = true
+   
+    Hide(spawn)
+    Show(body)
+    Show(head)
+    Show(larm)
+    Show(rarm)
+    Show(lleg)
+    Show(rleg)
+    Show(gunlance)
+end
 
 local function Walk()
     Signal(SIG_Walk)
@@ -113,7 +149,7 @@ function script.StopMoving()
 end
 
 local function RestoreAfterDelay()
-	Sleep(1000)
+	Sleep(2000)
 	aiming = false
     
 	Turn(base, z_axis, math.rad(0), 10)
@@ -240,7 +276,7 @@ local function Bastion()
     Turn(rarm, x_axis, math.rad(0), 12)
 	Turn(rarm, y_axis, math.rad(-15), 12)
 	Turn(rarm, z_axis, math.rad(0), 24)
-	Sleep(3900)
+	Sleep(4900)
 	cooldown1 = false
 end
 
@@ -298,63 +334,67 @@ local function WyvernBlast()
 	aiming = false
 	Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 1)
 	GG.UpdateUnitAttributes(unitID)
-	Sleep(7000)
+	Sleep(8750)
 	cooldown2 = false
 end
 
 function script.AimWeapon(num, heading, pitch)
-	if ab1 and num == 3 then
-	    Signal(SIG_Aim)
-	    SetSignalMask(SIG_Aim)
-	    Turn(base, z_axis, heading, 10)
-		Turn(body, x_axis, math.rad(0), 6)
-        Turn(head, x_axis, math.rad(0), 6)
-        Turn(body, z_axis, math.rad(-75), 12)
-	    Turn(head, z_axis, math.rad(75), 12)
-	    Turn(larm, x_axis, math.rad(90), 12)
-	    Turn(larm, y_axis, math.rad(30), 12)
-	    Turn(rarm, x_axis, math.rad(15), 6)
-	    Turn(rarm, y_axis, math.rad(0), 6)
-	    Turn(rarm, z_axis, math.rad(75), 12)
-		WaitForTurn(base, z_axis)
-	    return true
-    elseif not cooldown1 and not lmb2 and not ab2 and num == 3 then
-	    aiming = true
-	    StartThread(Bastion)
-		return false
-    elseif not cooldown2 and not lmb2 and not ab2 and num == 3 then
-	    StartThread(WyvernBlast)
+    if not spawned then
 	    return false
-	elseif ab2aim then
-	    Turn(base, z_axis, heading, 10)
-		return false
-	elseif shot2 and not lmb2 and not ab1 and not ab2 and num == 1 then
-	    aiming = true
-	    Turn(base, z_axis, heading, 10)
-		WaitForTurn(base, z_axis)
-	    StartThread(Shellshock)
-	    return false
-	elseif not lmb2 and not ab1 and not ab2 and num == 1 then
-	    aiming = true
-	    Signal(SIG_Aim)
-	    SetSignalMask(SIG_Aim)
-		Turn(base, z_axis, heading, 10)
-        Turn(body, x_axis, math.rad(0), 6)
-	    Turn(head, x_axis, math.rad(0), 6)
-        Turn(larm, x_axis, math.rad(15), 12)
-	    Turn(larm, y_axis, math.rad(75), 12)
-	    Turn(body, z_axis, math.rad(-75), 12)
-	    Turn(head, z_axis, math.rad(75), 12)
-	    Turn(rarm, x_axis, math.rad(30), 6)
-	    Turn(rarm, y_axis, math.rad(-30), 6)
-	    Turn(rarm, z_axis, math.rad(60), 12)
-	    WaitForTurn(base, z_axis)
-	    WaitForTurn(body, z_axis)
-	    WaitForTurn(rarm, y_axis)
-	    WaitForTurn(rarm, z_axis)
-	    StartThread(RestoreAfterDelay)
-	    return true
-    end
+	else
+	    if ab1 and num == 3 then
+	        Signal(SIG_Aim)
+	        SetSignalMask(SIG_Aim)
+	        Turn(base, z_axis, heading, 10)
+		    Turn(body, x_axis, math.rad(0), 6)
+            Turn(head, x_axis, math.rad(0), 6)
+            Turn(body, z_axis, math.rad(-75), 12)
+	        Turn(head, z_axis, math.rad(75), 12)
+	        Turn(larm, x_axis, math.rad(90), 12)
+	        Turn(larm, y_axis, math.rad(30), 12)
+	        Turn(rarm, x_axis, math.rad(15), 6)
+	        Turn(rarm, y_axis, math.rad(0), 6)
+	        Turn(rarm, z_axis, math.rad(75), 12)
+		    WaitForTurn(base, z_axis)
+	        return true
+        elseif not cooldown1 and not lmb2 and not ab2 and num == 3 then
+	        aiming = true
+	        StartThread(Bastion)
+		    return false
+        elseif not cooldown2 and not lmb2 and not ab2 and num == 3 then
+	        StartThread(WyvernBlast)
+	        return false
+	    elseif ab2aim then
+	        Turn(base, z_axis, heading, 10)
+		    return false
+	    elseif shot2 and not lmb2 and not ab1 and not ab2 and num == 1 then
+	        aiming = true
+	        Turn(base, z_axis, heading, 10)
+		    WaitForTurn(base, z_axis)
+	        StartThread(Shellshock)
+	        return false
+	    elseif not lmb2 and not ab1 and not ab2 and num == 1 then
+	        aiming = true
+	        Signal(SIG_Aim)
+	        SetSignalMask(SIG_Aim)
+		    Turn(base, z_axis, heading, 10)
+            Turn(body, x_axis, math.rad(0), 6)
+	        Turn(head, x_axis, math.rad(0), 6)
+            Turn(larm, x_axis, math.rad(15), 12)
+	        Turn(larm, y_axis, math.rad(75), 12)
+	        Turn(body, z_axis, math.rad(-75), 12)
+	        Turn(head, z_axis, math.rad(75), 12)
+	        Turn(rarm, x_axis, math.rad(30), 6)
+	        Turn(rarm, y_axis, math.rad(-30), 6)
+	        Turn(rarm, z_axis, math.rad(60), 12)
+	        WaitForTurn(base, z_axis)
+	        WaitForTurn(body, z_axis)
+	        WaitForTurn(rarm, y_axis)
+	        WaitForTurn(rarm, z_axis)
+	        StartThread(RestoreAfterDelay)
+	        return true
+        end
+	end
 end
 
 function script.FireWeapon(num)
@@ -389,11 +429,15 @@ function script.FireWeapon(num)
 end
 
 function script.Killed(recentDamage, maxHealth)
-    Explode(body, SFX.FALL)
-	Explode(head, SFX.FALL)
-	Explode(larm, SFX.FALL)
-	Explode(rarm, SFX.FALL)
-	Explode(lleg, SFX.FALL)
-	Explode(rleg, SFX.FALL)
-	Explode(gunlance, SFX.FALL)
+    if spawned then
+        Explode(body, SFX.FALL)
+	    Explode(head, SFX.FALL)
+	    Explode(larm, SFX.FALL)
+	    Explode(rarm, SFX.FALL)
+	    Explode(lleg, SFX.FALL)
+	    Explode(rleg, SFX.FALL)
+	    Explode(gunlance, SFX.FALL)
+	else
+	    Explode(spawn, SFX.FALL)
+	end
 end

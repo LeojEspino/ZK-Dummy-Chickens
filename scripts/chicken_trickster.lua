@@ -1,6 +1,8 @@
 
 include "constants.lua"
 
+local spawn1 = piece 'spawn1'
+local spawn2 = piece 'spawn2'
 local base = piece 'base'
 local body = piece 'body' 
 local head = piece 'head' 
@@ -19,14 +21,45 @@ local armed = false
 local cooldown1 = false
 local cooldown2 = false
 local ab1 = false
+local spawned = false
 
 local SIG_Walk = 2
 local SIG_Aim = 4
 local SIG_Vanish = 8
 
 function script.Create()
+    local x, y, z
+    local healthToRemove = UnitDefs[unitDefID].health * 0.25
+    local healthToAdd = UnitDefs[unitDefID].health - healthToRemove
+    Spring.SetUnitHealth(unitID, healthToRemove)
+    Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 0)
+    GG.UpdateUnitAttributes(unitID)
+   
+	Hide(body)
+    Hide(head)
+    Hide(larm)
+    Hide(rarm)
+    Hide(lleg)
+    Hide(rleg)
     Hide(lknife)
 	Hide(rknife)
+   
+    Sleep(160000)
+    x, y, z = Spring.GetUnitPosition(unitID)
+    Spring.AddUnitDamage(unitID, -healthToAdd)
+    Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 1)
+    GG.UpdateUnitAttributes(unitID)
+    Spring.SpawnCEG ("spawning4_assassin", x, y, z, 10, 1, 1, 1, 0)
+    spawned = true
+   
+    Hide(spawn1)
+	Hide(spawn2)
+    Show(body)
+    Show(head)
+    Show(larm)
+    Show(rarm)
+    Show(lleg)
+    Show(rleg)
 end
 
 local function KnifeParty()
@@ -86,7 +119,7 @@ local function VanishingAct()
 	Sleep(1500)
 	Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 1)
 	GG.UpdateUnitAttributes(unitID)
-	Sleep(3000)
+	Sleep(3500)
 	cooldown2 = false
 end
 
@@ -175,7 +208,7 @@ function script.StopMoving()
 end
 
 local function RestoreAfterDelay()
-	Sleep(1000)
+	Sleep(2000)
 	aiming = false
     
 	Turn(base, z_axis, math.rad(0), 10)
@@ -209,52 +242,56 @@ function script.AimWeapon(num, heading, pitch)
 	Signal(SIG_Aim)
 	aiming = true
 	
-    Turn(base, z_axis, heading, 10)
-    Turn(body, x_axis, math.rad(0), 6)
-	Turn(head, x_axis, math.rad(0), 6)
-	if armed and not ab1 and num == 2 then
-	    SetSignalMask(SIG_Aim)
-		Turn(rarm, y_axis, math.rad(-90), 24)
-		Turn(larm, y_axis, math.rad(90), 24)
-		WaitForTurn(rarm, y_axis)
-	    StartThread(RestoreAfterDelay)
-	    return true
-	elseif not cooldown1 and not armed then
-	    StartThread(KnifeParty)
-		return false
-	elseif cooldown1 and not armed then
-	    if not swung and num == 1 then
+	if not spawned then
+	    return false
+	else
+        Turn(base, z_axis, heading, 10)
+        Turn(body, x_axis, math.rad(0), 6)
+	    Turn(head, x_axis, math.rad(0), 6)
+	    if armed and not ab1 and num == 2 then
 	        SetSignalMask(SIG_Aim)
-	        Turn(body, z_axis, math.rad(-90), 12)
-	    	Turn(head, z_axis, math.rad(90), 12)
-	    	Turn(rarm, x_axis, math.rad(0), 12)
-	    	Turn(rarm, y_axis, math.rad(-90), 24)
-	    	Turn(rarm, z_axis, math.rad(0), 24)
-	    	Turn(larm, x_axis, math.rad(0), 12)
-	        Turn(larm, y_axis, math.rad(90), 12)
-	    	Turn(larm, z_axis, math.rad(0), 24)
-	    	WaitForTurn(base, z_axis)
-	    	WaitForTurn(body, z_axis)
-	    	WaitForTurn(rarm, y_axis)
-	    	WaitForTurn(rarm, z_axis)
-	    	StartThread(RestoreAfterDelay)
-	    	return true
-	    elseif swung and num == 1 then
-	        SetSignalMask(SIG_Aim)
-	        Turn(body, z_axis, math.rad(90), 12)
-	    	Turn(head, z_axis, math.rad(-90), 12)
-	    	Turn(rarm, x_axis, math.rad(0), 12)
-	    	Turn(rarm, y_axis, math.rad(-90), 12)
-	    	Turn(rarm, z_axis, math.rad(0), 24)
-	    	Turn(larm, x_axis, math.rad(0), 12)
-	    	Turn(larm, y_axis, math.rad(90), 24)
-	    	Turn(larm, z_axis, math.rad(0), 24)
-	    	WaitForTurn(base, z_axis)
-	    	WaitForTurn(body, z_axis)
-	    	WaitForTurn(rarm, y_axis)
-	    	WaitForTurn(rarm, z_axis)
-	    	StartThread(RestoreAfterDelay)
-	    	return true
+		    Turn(rarm, y_axis, math.rad(-90), 24)
+		    Turn(larm, y_axis, math.rad(90), 24)
+		    WaitForTurn(rarm, y_axis)
+	        StartThread(RestoreAfterDelay)
+	        return true
+	    elseif not cooldown1 and not armed then
+	        StartThread(KnifeParty)
+		    return false
+	    elseif cooldown1 and not armed then
+	        if not swung and num == 1 then
+	            SetSignalMask(SIG_Aim)
+	            Turn(body, z_axis, math.rad(-90), 12)
+	    	    Turn(head, z_axis, math.rad(90), 12)
+	    	    Turn(rarm, x_axis, math.rad(0), 12)
+	    	    Turn(rarm, y_axis, math.rad(-90), 24)
+	    	    Turn(rarm, z_axis, math.rad(0), 24)
+	    	    Turn(larm, x_axis, math.rad(0), 12)
+	            Turn(larm, y_axis, math.rad(90), 12)
+	    	    Turn(larm, z_axis, math.rad(0), 24)
+	    	    WaitForTurn(base, z_axis)
+	    	    WaitForTurn(body, z_axis)
+	    	    WaitForTurn(rarm, y_axis)
+	    	    WaitForTurn(rarm, z_axis)
+	    	    StartThread(RestoreAfterDelay)
+	    	    return true
+	        elseif swung and num == 1 then
+	            SetSignalMask(SIG_Aim)
+	            Turn(body, z_axis, math.rad(90), 12)
+	    	    Turn(head, z_axis, math.rad(-90), 12)
+	    	    Turn(rarm, x_axis, math.rad(0), 12)
+	    	    Turn(rarm, y_axis, math.rad(-90), 12)
+	    	    Turn(rarm, z_axis, math.rad(0), 24)
+	    	    Turn(larm, x_axis, math.rad(0), 12)
+	    	    Turn(larm, y_axis, math.rad(90), 24)
+	    	    Turn(larm, z_axis, math.rad(0), 24)
+	    	    WaitForTurn(base, z_axis)
+	    	    WaitForTurn(body, z_axis)
+	    	    WaitForTurn(rarm, y_axis)
+	    	    WaitForTurn(rarm, z_axis)
+	    	    StartThread(RestoreAfterDelay)
+	    	    return true
+	        end
 	    end
 	end
 end
@@ -293,10 +330,15 @@ function script.FireWeapon(num)
 end
 
 function script.Killed(recentDamage, maxHealth)
-    Explode(body, SFX.FALL)
-	Explode(head, SFX.FALL)
-	Explode(larm, SFX.FALL)
-	Explode(rarm, SFX.FALL)
-	Explode(lleg, SFX.FALL)
-	Explode(rleg, SFX.FALL)
+    if spawned then
+        Explode(body, SFX.FALL)
+	    Explode(head, SFX.FALL)
+	    Explode(larm, SFX.FALL)
+	    Explode(rarm, SFX.FALL)
+	    Explode(lleg, SFX.FALL)
+	    Explode(rleg, SFX.FALL)
+	else
+	    Explode(spawn1, SFX.FALL)
+		Explode(spawn2, SFX.FALL)
+	end
 end

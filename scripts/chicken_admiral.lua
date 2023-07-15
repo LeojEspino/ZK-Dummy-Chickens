@@ -1,6 +1,7 @@
 
 include "constants.lua"
 
+local spawn = piece 'spawn'
 local base = piece 'base'
 local body = piece 'body' 
 local head = piece 'head' 
@@ -23,11 +24,44 @@ local shot0 = true
 local shot1 = false
 local shot2 = false
 local shot3 = false
-cooldown = false
+local spawned = false
+local cooldown = false
 
 local SIG_Walk = 2
 local SIG_Aim = 4
 local SIG_Air = 8
+
+function script.Create()
+    local x, y, z
+    local healthToRemove = UnitDefs[unitDefID].health * 0.25
+    local healthToAdd = UnitDefs[unitDefID].health - healthToRemove
+    Spring.SetUnitHealth(unitID, healthToRemove)
+    Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 0)
+    GG.UpdateUnitAttributes(unitID)
+   
+    Hide(body)
+    Hide(head)
+    Hide(larm)
+    Hide(rarm)
+    Hide(lleg)
+    Hide(rleg)
+	
+    Sleep(160000)
+    x, y, z = Spring.GetUnitPosition(unitID)
+    Spring.AddUnitDamage(unitID, -healthToAdd)
+    Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 1)
+    GG.UpdateUnitAttributes(unitID)
+    Spring.SpawnCEG ("spawning4_tank", x, y, z, 10, 1, 1, 1, 0)
+    spawned = true
+   
+    Hide(spawn)
+    Show(body)
+    Show(head)
+    Show(larm)
+    Show(rarm)
+    Show(lleg)
+    Show(rleg)
+end
 
 local function Walk()
     Signal(SIG_Walk)
@@ -80,7 +114,7 @@ function script.StopMoving()
 end
 
 local function RestoreAfterDelay()
-	Sleep(1000)
+	Sleep(2000)
 	aiming = false
     
 	Turn(base, z_axis, math.rad(0), 10)
@@ -114,7 +148,7 @@ local function AirSupport()
     cooldown = true
     EmitSfx(lplane, GG.Script.FIRE_W4)
 	EmitSfx(rplane, GG.Script.FIRE_W4)
-	Sleep(6000)
+	Sleep(7500)
 	cooldown = false
 end
 
@@ -122,19 +156,24 @@ function script.AimWeapon(num, heading, pitch)
 	Signal(SIG_Aim)
 	SetSignalMask(SIG_Aim)
 	aiming = true
-    if not cooldown then
-	    StartThread(AirSupport)
-	end
-	if num == 4 then
-	    return false
-	end
 	
-    Turn(base, z_axis, heading, 10)
-    Turn(body, x_axis, math.rad(0), 6)
-	Turn(head, x_axis, math.rad(0), 6)
-	WaitForTurn(base, z_axis)
-	StartThread(RestoreAfterDelay)
-	return true
+	if not spawned then
+	    return false
+	else
+	    if not cooldown then
+	        StartThread(AirSupport)
+	    end
+	    if num == 4 then
+	        return false
+	    end
+	
+        Turn(base, z_axis, heading, 10)
+        Turn(body, x_axis, math.rad(0), 6)
+	    Turn(head, x_axis, math.rad(0), 6)
+	    WaitForTurn(base, z_axis)
+	    StartThread(RestoreAfterDelay)
+	    return true
+	end
 end
 
 
@@ -168,10 +207,14 @@ function script.FireWeapon(num)
 end
 
 function script.Killed(recentDamage, maxHealth)
-    Explode(body, SFX.FALL)
-	Explode(head, SFX.FALL)
-	Explode(larm, SFX.FALL)
-	Explode(rarm, SFX.FALL)
-	Explode(lleg, SFX.FALL)
-	Explode(rleg, SFX.FALL)
+    if spawned then
+        Explode(body, SFX.FALL)
+	    Explode(head, SFX.FALL)
+	    Explode(larm, SFX.FALL)
+	    Explode(rarm, SFX.FALL)
+	    Explode(lleg, SFX.FALL)
+	    Explode(rleg, SFX.FALL)
+	else
+	    Explode(spawn, SFX.FALL)
+	end
 end

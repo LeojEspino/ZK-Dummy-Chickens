@@ -1,6 +1,7 @@
 
 include "constants.lua"
 
+local spawn = piece 'spawn'
 local base = piece 'base'
 local body = piece 'body' 
 local head = piece 'head' 
@@ -20,12 +21,20 @@ local cooldown1 = false
 local cooldown2 = false
 local lmbaim = false
 local crtaim = false
+local spawned = false
 
 local SIG_Walk = 2
 local SIG_Aim = 4
 local SIG_Delay = 8
 
 function script.Create()
+    local x, y, z
+    local healthToRemove = UnitDefs[unitDefID].health * 0.25
+    local healthToAdd = UnitDefs[unitDefID].health - healthToRemove
+    Spring.SetUnitHealth(unitID, healthToRemove)
+    Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 0)
+    GG.UpdateUnitAttributes(unitID)
+    
     Move(larm, y_axis, -5, 1000)
 	Move(rarm, x_axis, -5, 1000)
     Move(rarm, y_axis, 5, 1000)
@@ -36,7 +45,32 @@ function script.Create()
     Turn(rarm, x_axis, math.rad(30), 12)
 	Turn(rarm, y_axis, math.rad(75), 12)
 	Turn(rarm, z_axis, math.rad(90), 24)
+	Hide(body)
+    Hide(head)
+    Hide(larm)
+    Hide(rarm)
+    Hide(lleg)
+    Hide(rleg)
+    Hide(rifle)
+   
+    Sleep(160000)
+    x, y, z = Spring.GetUnitPosition(unitID)
+    Spring.AddUnitDamage(unitID, -healthToAdd)
+    Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 1)
+    GG.UpdateUnitAttributes(unitID)
+    Spring.SpawnCEG ("spawning4_marksman", x, y, z, 10, 1, 1, 1, 0)
+    spawned = true
+   
+    Hide(spawn)
+    Show(body)
+    Show(head)
+    Show(larm)
+    Show(rarm)
+    Show(lleg)
+    Show(rleg)
+    Show(rifle)
 end
+
 local function Walk()
     Signal(SIG_Walk)
 	SetSignalMask(SIG_Walk)
@@ -155,11 +189,11 @@ local function Delay1()
 	GG.UpdateUnitAttributes(unitID)
     delaying = true
 	delay = true
-	Sleep(500)
+	Sleep(1000)
 	delay = false
 	Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 1)
 	GG.UpdateUnitAttributes(unitID)
-	Sleep(500)
+	Sleep(1000)
 	StartThread(RestoreAfterDelay)
 	delaying = false
 	lmbaim = false
@@ -171,11 +205,11 @@ local function Delay2()
 	GG.UpdateUnitAttributes(unitID)
     delaying = true
 	delay = true
-	Sleep(1000)
+	Sleep(2000)
 	delay = false
 	Spring.SetUnitRulesParam(unitID, "selfMoveSpeedChange", 1)
 	GG.UpdateUnitAttributes(unitID)
-	Sleep(500)
+	Sleep(1000)
 	StartThread(RestoreAfterDelay)
 	delaying = false
 	crtaim = false
@@ -183,13 +217,13 @@ end
 
 local function Cooldown1()
     cooldown1 = true
-    Sleep(4000)
+    Sleep(5250)
 	cooldown1 = false
 end
 
 local function Cooldown2()
     cooldown2 = true
-    Sleep(4000)
+    Sleep(5250)
 	cooldown2 = false
 end
 
@@ -197,52 +231,55 @@ function script.AimWeapon(num, heading, pitch)
 	Signal(SIG_Aim)
 	Signal(SIG_Delay)
 	aiming = true
-
-    Turn(base, z_axis, heading, 10)
-    Turn(body, x_axis, math.rad(0), 6)
-	Turn(head, x_axis, math.rad(0), 6)
-	if not recoil and not lmbaim and not cooldown2 and num == 3 then
-	    Turn(body, z_axis, math.rad(-75), 12)
-		Turn(head, z_axis, math.rad(75), 12)
-		Turn(larm, x_axis, math.rad(105), 6)
-	    Turn(larm, y_axis, math.rad(-90), 6)
-	    Turn(larm, z_axis, math.rad(0), 6)
-		Turn(rarm, x_axis, math.rad(15), 6)
-	    Turn(rarm, y_axis, math.rad(90), 6)
-	    Turn(rarm, z_axis, math.rad(90), 24)
-		if not delaying then
-		    StartThread(Delay2)
-		end
-		WaitForTurn(base, z_axis)
-		WaitForTurn(body, z_axis)
-		return not delay
-	elseif not recoil and not lmbaim and not crtaim and not cooldown1 and cooldown2 and num == 2 then
-	    Turn(body, z_axis, math.rad(-75), 12)
-		Turn(head, z_axis, math.rad(75), 12)
-		Turn(larm, x_axis, math.rad(105), 6)
-	    Turn(larm, y_axis, math.rad(-90), 6)
-	    Turn(larm, z_axis, math.rad(0), 6)
-		Turn(rarm, x_axis, math.rad(15), 6)
-	    Turn(rarm, y_axis, math.rad(90), 6)
-	    Turn(rarm, z_axis, math.rad(90), 24)
-		WaitForTurn(base, z_axis)
-		WaitForTurn(body, z_axis)
-		return true
-	elseif not recoil and not crtaim and cooldown1 and cooldown2 and num == 1 then
-	    Turn(body, z_axis, math.rad(-75), 12)
-		Turn(head, z_axis, math.rad(75), 12)
-		Turn(larm, x_axis, math.rad(105), 6)
-	    Turn(larm, y_axis, math.rad(-90), 6)
-	    Turn(larm, z_axis, math.rad(0), 6)
-		Turn(rarm, x_axis, math.rad(15), 6)
-	    Turn(rarm, y_axis, math.rad(90), 6)
-	    Turn(rarm, z_axis, math.rad(90), 24)
-		if not delaying then
-		    StartThread(Delay1)
-		end
-		WaitForTurn(base, z_axis)
-		WaitForTurn(body, z_axis)
-		return not delay
+    if not spawned then
+	    return false
+	else
+        Turn(base, z_axis, heading, 10)
+        Turn(body, x_axis, math.rad(0), 6)
+	    Turn(head, x_axis, math.rad(0), 6)
+	    if not recoil and not lmbaim and not cooldown2 and num == 3 then
+	        Turn(body, z_axis, math.rad(-75), 12)
+		    Turn(head, z_axis, math.rad(75), 12)
+		    Turn(larm, x_axis, math.rad(105), 6)
+	        Turn(larm, y_axis, math.rad(-90), 6)
+	        Turn(larm, z_axis, math.rad(0), 6)
+		    Turn(rarm, x_axis, math.rad(15), 6)
+	        Turn(rarm, y_axis, math.rad(90), 6)
+	        Turn(rarm, z_axis, math.rad(90), 24)
+		    if not delaying then
+		        StartThread(Delay2)
+		    end
+		    WaitForTurn(base, z_axis)
+		    WaitForTurn(body, z_axis)
+		    return not delay
+	    elseif not recoil and not lmbaim and not crtaim and not cooldown1 and cooldown2 and num == 2 then
+	        Turn(body, z_axis, math.rad(-75), 12)
+		    Turn(head, z_axis, math.rad(75), 12)
+		    Turn(larm, x_axis, math.rad(105), 6)
+	        Turn(larm, y_axis, math.rad(-90), 6)
+	        Turn(larm, z_axis, math.rad(0), 6)
+		    Turn(rarm, x_axis, math.rad(15), 6)
+	        Turn(rarm, y_axis, math.rad(90), 6)
+	        Turn(rarm, z_axis, math.rad(90), 24)
+		    WaitForTurn(base, z_axis)
+		    WaitForTurn(body, z_axis)
+		    return true
+	    elseif not recoil and not crtaim and cooldown1 and cooldown2 and num == 1 then
+	        Turn(body, z_axis, math.rad(-75), 12)
+		    Turn(head, z_axis, math.rad(75), 12)
+		    Turn(larm, x_axis, math.rad(105), 6)
+	        Turn(larm, y_axis, math.rad(-90), 6)
+	        Turn(larm, z_axis, math.rad(0), 6)
+		    Turn(rarm, x_axis, math.rad(15), 6)
+	        Turn(rarm, y_axis, math.rad(90), 6)
+	        Turn(rarm, z_axis, math.rad(90), 24)
+		    if not delaying then
+		        StartThread(Delay1)
+		    end
+		    WaitForTurn(base, z_axis)
+		    WaitForTurn(body, z_axis)
+		    return not delay
+	    end
 	end
 end
 
@@ -332,11 +369,15 @@ function script.FireWeapon(num)
 end
 
 function script.Killed(recentDamage, maxHealth)
-    Explode(body, SFX.FALL)
-	Explode(head, SFX.FALL)
-	Explode(larm, SFX.FALL)
-	Explode(rarm, SFX.FALL)
-	Explode(lleg, SFX.FALL)
-	Explode(rleg, SFX.FALL)
-	Explode(rifle, SFX.FALL)
+    if spawned then
+        Explode(body, SFX.FALL)
+	    Explode(head, SFX.FALL)
+	    Explode(larm, SFX.FALL)
+	    Explode(rarm, SFX.FALL)
+	    Explode(lleg, SFX.FALL)
+	    Explode(rleg, SFX.FALL)
+	    Explode(rifle, SFX.FALL)
+	else
+	    Explode(spawn, SFX.FALL)
+	end
 end
