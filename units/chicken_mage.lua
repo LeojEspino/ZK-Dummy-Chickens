@@ -28,7 +28,6 @@ return { chicken_mage = {
   footprintX          = 2,
   footprintZ          = 2,
   iconType            = [[c_mage]],
-  idleAutoHeal        = 20,
   idleTime            = 300,
   maxDamage           = 400,
   maxSlope            = 36,

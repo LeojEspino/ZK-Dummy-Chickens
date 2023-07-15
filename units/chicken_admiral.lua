@@ -28,7 +28,6 @@ return { chicken_admiral = {
   footprintX          = 2,
   footprintZ          = 2,
   iconType            = [[c_admiral]],
-  idleAutoHeal        = 20,
   idleTime            = 300,
   maxDamage           = 3450,
   maxSlope            = 36,

@@ -29,7 +29,6 @@ return { chicken_trickster = {
   footprintX          = 2,
   footprintZ          = 2,
   iconType            = [[c_trickster]],
-  idleAutoHeal        = 20,
   idleTime            = 300,
   maxDamage           = 1900,
   maxSlope            = 36,

@@ -28,7 +28,6 @@ return { chicken_juggernaut = {
   footprintX          = 2,
   footprintZ          = 2,
   iconType            = [[c_juggernaut]],
-  idleAutoHeal        = 20,
   idleTime            = 300,
   maxDamage           = 2650,
   maxSlope            = 36,

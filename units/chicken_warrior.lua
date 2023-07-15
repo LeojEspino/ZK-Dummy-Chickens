@@ -28,7 +28,6 @@ return { chicken_warrior = {
   footprintX          = 2,
   footprintZ          = 2,
   iconType            = [[c_warrior]],
-  idleAutoHeal        = 20,
   idleTime            = 300,
   maxDamage           = 650,
   maxSlope            = 36,

@@ -28,7 +28,6 @@ return { chicken_grenadier = {
   footprintX          = 2,
   footprintZ          = 2,
   iconType            = [[c_grenadier]],
-  idleAutoHeal        = 20,
   idleTime            = 300,
   maxDamage           = 1250,
   maxSlope            = 36,

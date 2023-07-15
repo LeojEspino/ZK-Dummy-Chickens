@@ -28,7 +28,6 @@ return { chicken_bomber = {
   footprintX          = 2,
   footprintZ          = 2,
   iconType            = [[c_bomber]],
-  idleAutoHeal        = 20,
   idleTime            = 300,
   maxDamage           = 2750,
   maxSlope            = 36,

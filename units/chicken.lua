@@ -28,7 +28,6 @@ return { chicken = {
   footprintX          = 1,
   footprintZ          = 1,
   iconType            = [[chicken]],
-  idleAutoHeal        = 20,
   idleTime            = 300,
   maxDamage           = 200,
   maxSlope            = 36,

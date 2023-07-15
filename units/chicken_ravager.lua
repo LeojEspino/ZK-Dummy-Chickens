@@ -30,7 +30,6 @@ return { chicken_ravager = {
   footprintX          = 2,
   footprintZ          = 2,
   iconType            = [[c_ravager]],
-  idleAutoHeal        = 20,
   idleTime            = 300,
   maxDamage           = 3600,
   maxSlope            = 36,

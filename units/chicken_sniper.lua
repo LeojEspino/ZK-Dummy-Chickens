@@ -28,7 +28,6 @@ return { chicken_sniper = {
   footprintX          = 2,
   footprintZ          = 2,
   iconType            = [[c_sniper]],
-  idleAutoHeal        = 20,
   idleTime            = 300,
   maxDamage           = 2100,
   maxSlope            = 36,

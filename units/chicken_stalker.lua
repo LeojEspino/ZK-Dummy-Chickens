@@ -29,7 +29,6 @@ return { chicken_stalker = {
   footprintX          = 2,
   footprintZ          = 2,
   iconType            = [[c_stalker]],
-  idleAutoHeal        = 20,
   idleTime            = 300,
   maxDamage           = 800,
   maxSlope            = 36,

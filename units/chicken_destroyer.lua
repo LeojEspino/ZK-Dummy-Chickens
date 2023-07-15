@@ -28,7 +28,6 @@ return { chicken_destroyer = {
   footprintX          = 2,
   footprintZ          = 2,
   iconType            = [[c_destroyer]],
-  idleAutoHeal        = 20,
   idleTime            = 300,
   maxDamage           = 1750,
   maxSlope            = 36,
