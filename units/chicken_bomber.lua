@@ -99,7 +99,7 @@ return { chicken_bomber = {
       explosionGenerator      = [[custom:bouncing_bomb]],
 	  model                   = [[bombershot1.dae]],
       range                   = 400,
-      reloadtime              = 0.6,
+      reloadtime              = 1.2,
       soundStart              = [[dummy/knifethrow]],
       targetborder            = 10,
       tolerance               = 5000,
@@ -131,7 +131,7 @@ return { chicken_bomber = {
 
 	  model                   = [[bombershot2.dae]],
       range                   = 400,
-      reloadtime              = 5,
+      reloadtime              = 6.3,
 	  soundStart              = [[dummy/knifethrow]],
       targetborder            = 10,
       tolerance               = 5000,
@@ -163,7 +163,7 @@ return { chicken_bomber = {
 
 	  model                   = [[bombershot3.dae]],
       range                   = 400,
-      reloadtime              = 6,
+      reloadtime              = 7.5,
 	  soundStart              = [[dummy/knifethrow]],
       targetborder            = 10,
       tolerance               = 5000,
