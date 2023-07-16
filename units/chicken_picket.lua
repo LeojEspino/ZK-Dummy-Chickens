@@ -74,6 +74,7 @@ return { chicken_picket = {
 	  
 	  customParams            = {
 	    setunitsonfire = "1",
+		single_hit = true,
 	  },
 
       fireStarter             = 100,

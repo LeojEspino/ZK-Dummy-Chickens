@@ -80,6 +80,7 @@ return { chicken_picket_team = {
 	  
 	  customParams            = {
 	    setunitsonfire = "1",
+		single_hit = true,
 	  },
 
       fireStarter             = 100,
