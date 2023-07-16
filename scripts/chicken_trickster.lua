@@ -128,7 +128,7 @@ local function Walk()
 	SetSignalMask(SIG_Walk)
 
 	while true do
-	    if not cooldown2 then
+	    if not cooldown2 and spawned then
 		    StartThread(VanishingAct)
 		end
 	    if not aiming then
